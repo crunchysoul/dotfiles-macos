@@ -1,0 +1,8 @@
+[user]
+	name = crunchysoul
+	email = zzzcca12@gmail.com
+[color]
+	ui = true
+[core]
+	editor = vim
+	excludesfile = /Users/joshuazhao/.gitignore_global
