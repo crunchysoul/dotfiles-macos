@@ -151,6 +151,7 @@ alias brewup='brew update; brew upgrade; brew prune; brew cleanup; brew cask cle
 alias bcs='brew cask search'
 alias bci='brew cask install'
 alias bcl='brew cask list'
+alias bco='brew cask outdated'
 alias bs='brew search'
 alias bi='brew install'
 alias bl='brew list'
