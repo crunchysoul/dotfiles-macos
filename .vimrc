@@ -37,6 +37,12 @@ Plug 'lervag/vimtex'
 " vimIM:
 "Plug 'vim-scripts/VimIM'
 
+" YCM:
+Plug 'Valloric/YouCompleteMe'
+
+"vim-ruby/vim-ruby:
+Plug 'vim-ruby/vim-ruby'
+
 " List ends here. Plugins become visible to Vim after this call:
 call plug#end()
 
@@ -76,6 +82,9 @@ set expandtab           " use spaces instead of tabs
 " Text wrap:
 set textwidth=80
 set wrap linebreak nolist
+
+" ruler:
+set colorcolumn=80
 
 " Folding:
 set foldenable          " enable folding
