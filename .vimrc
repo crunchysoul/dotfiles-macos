@@ -38,10 +38,44 @@ Plug 'lervag/vimtex'
 "Plug 'vim-scripts/VimIM'
 
 " YCM:
-Plug 'Valloric/YouCompleteMe'
+"Plug 'Valloric/YouCompleteMe'
 
 "vim-ruby/vim-ruby:
 Plug 'vim-ruby/vim-ruby'
+
+" Auto closer:
+Plug 'jiangmiao/auto-pairs'
+
+" Track the engine.
+"Plug 'SirVer/ultisnips'
+
+" Vim-snipmate
+Plug 'garbas/vim-snipmate'
+
+" Prequriesite for snipmate
+Plug 'MarcWeber/vim-addon-mw-utils'
+Plug 'tomtom/tlib_vim'
+
+" Surround:
+Plug 'tpope/vim-surround'
+
+" Snippets are separated from the engine. Add this if you want them:
+Plug 'honza/vim-snippets'
+
+" Supertab:
+Plug 'ervandew/supertab'
+
+" Solarized:
+Plug 'altercation/vim-colors-solarized'
+
+" Indent line:
+Plug 'nathanaelkane/vim-indent-guides'
+
+" Comment tool: CTRL + __
+Plug 'vim-scripts/tComment'
+
+" tpope/vim-endwise:
+Plug 'tpope/vim-endwise'
 
 " List ends here. Plugins become visible to Vim after this call:
 call plug#end()
@@ -52,6 +86,16 @@ call plug#end()
 "*****************************************************************************
 " General Vim Config:
 "*****************************************************************************
+
+"colorscheme material
+set background=dark   " background for colorscheme
+"let g:solarized_termcolors=256
+colorscheme solarized   " colorscheme
+" solarized options 
+"let g:solarized_visibility = "high"
+"let g:solarized_contrast = "high"
+"let g:solarized_termtrans = 1
+call togglebg#map("<F5>")
 
 set guifontwide=STSong:h14      " gvim Chinesefont
 set hidden              " speed up
@@ -86,6 +130,9 @@ set wrap linebreak nolist
 " ruler:
 set colorcolumn=80
 
+" line space:
+set linespace=2
+
 " Folding:
 set foldenable          " enable folding
 set foldlevelstart=10   " open most folds by default
@@ -97,7 +144,10 @@ nnoremap <space> za
 
 " Set line number colour:
 "highlight LineNr ctermbg=16
-highlight LineNr ctermfg=grey 
+"highlight LineNr ctermfg=grey 
+highlight LineNr ctermfg=238 
+"highlight clear LineNr
+highlight clear SignColumn
 
 " Set leader key, default is \:
 " let mapleader=","
@@ -114,7 +164,7 @@ nnoremap <leader>u :GundoToggle<CR>
 " tab key to switch windows (and current file path)
 " set autochdir
 " map <Tab> <C-W>W:cd %:p:h<CR>:<CR>
-map <Tab> <C-W>W
+"map <Tab> <C-W>W
 
 " map gT/gt to H/L for switch tabs:(conflict move window)
 "nnoremap H gT
@@ -190,6 +240,9 @@ let g:airline#extensions#tabline#tab_nr_type = 1
 " using powerline fonts:
 let g:airline_powerline_fonts = 1
 
+" theme:
+"let g:airline_theme='dark'
+
 
 
 
@@ -206,9 +259,9 @@ if has('gui_running')
     set guifontwide=STSong:h14      " gvim Chinesefont
     set guioptions-=L               " hide left scrollbar
     set guioptions-=r               " hide right scrollbar
-    set background=dark             " background for colorscheme
-    colorscheme gruvbox
-    let g:airline_theme='bubblegum'
+    set background=light             " background for colorscheme
+    colorscheme solarized
+    let g:airline_theme='solarized'
 endif
 
 
