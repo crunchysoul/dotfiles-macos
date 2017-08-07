@@ -147,6 +147,7 @@ export PATH="$HOME/Library/TeX/texbin:$PATH"
 # My Alias:
 ##############################################################################
 
+alias vim=nvim
 alias brewup='brew update; brew upgrade; brew prune; brew cleanup; brew cask cleanup; brew doctor'
 alias bcs='brew cask search'
 alias bci='brew cask install'

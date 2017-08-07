@@ -1,8 +1,12 @@
 "*****************************************************************************
+" Switched to Neovim 2017-08-07.
+" nvim: ~/.config/nvim/init.vim
+"*****************************************************************************
+
+"*****************************************************************************
 " vim-plug:
 " https://github.com/junegunn/vim-plug
 "*****************************************************************************
-
 " Plugins will be downloaded under the specified directory:
 call plug#begin('~/.vim/plugged')
 
@@ -22,9 +26,6 @@ Plug 'vim-airline/vim-airline-themes'
 " XTerm colour table:
 Plug 'guns/xterm-color-table.vim'
 
-" Colorschemes packs:
-Plug 'flazz/vim-colorschemes'
-
 " NERDTree-git-plugin:
 Plug 'xuyuanp/nerdtree-git-plugin'
 
@@ -34,20 +35,11 @@ Plug 'tpope/vim-fugitive'
 " Latex lervag/vimtex:
 Plug 'lervag/vimtex'
 
-" vimIM:
-"Plug 'vim-scripts/VimIM'
-
-" YCM:
-"Plug 'Valloric/YouCompleteMe'
-
 "vim-ruby/vim-ruby:
 Plug 'vim-ruby/vim-ruby'
 
 " Auto closer:
 Plug 'jiangmiao/auto-pairs'
-
-" Track the engine.
-"Plug 'SirVer/ultisnips'
 
 " Vim-snipmate
 Plug 'garbas/vim-snipmate'
@@ -65,9 +57,6 @@ Plug 'honza/vim-snippets'
 " Supertab:
 Plug 'ervandew/supertab'
 
-" Solarized:
-Plug 'altercation/vim-colors-solarized'
-
 " Indent line:
 Plug 'nathanaelkane/vim-indent-guides'
 
@@ -77,31 +66,57 @@ Plug 'vim-scripts/tComment'
 " tpope/vim-endwise:
 Plug 'tpope/vim-endwise'
 
+" Dash for vim:
+Plug 'rizzatti/dash.vim'
+
+" Solarized for Neovim
+Plug 'frankier/neovim-colors-solarized-truecolor-only'
+
+" Monokai
+Plug 'crusoexia/vim-monokai'
+
+" Molokai
+Plug 'tomasr/molokai'
+
+" Base16
+Plug 'chriskempson/base16-vim'
+
+
+"*****************************************************************************
+" YCM:
+"Plug 'Valloric/YouCompleteMe'
+
+" Track the engine.
+"Plug 'SirVer/ultisnips'
+
+" Colorschemes packs:
+" NOT USED - Color issue for vim
+"Plug 'flazz/vim-colorschemes'
+
+" Solarized
+"Plug 'altercation/vim-colors-solarized'
+
 " List ends here. Plugins become visible to Vim after this call:
 call plug#end()
 
 
+"*****************************************************************************
+" Colorscheme Vim Config:
+"*****************************************************************************
+syntax enable            " enable syntax processing
+set background=dark
+"set background=light
+colorscheme solarized 
+call togglebg#map("<F5>")
 
 
 "*****************************************************************************
 " General Vim Config:
 "*****************************************************************************
-
-"colorscheme material
-set background=dark   " background for colorscheme
-"let g:solarized_termcolors=256
-colorscheme solarized   " colorscheme
-" solarized options 
-"let g:solarized_visibility = "high"
-"let g:solarized_contrast = "high"
-"let g:solarized_termtrans = 1
-call togglebg#map("<F5>")
-
 set guifontwide=STSong:h14      " gvim Chinesefont
 set hidden              " speed up
 set history=100         " speed up
 
-syntax enable           " enable syntax processing
 set number              " line numbers
 set cursorline          " highlight the current line
 set scrolloff=8
@@ -131,7 +146,7 @@ set wrap linebreak nolist
 set colorcolumn=80
 
 " line space:
-set linespace=2
+set linespace=3
 
 " Folding:
 set foldenable          " enable folding
@@ -145,9 +160,9 @@ nnoremap <space> za
 " Set line number colour:
 "highlight LineNr ctermbg=16
 "highlight LineNr ctermfg=grey 
-highlight LineNr ctermfg=238 
-"highlight clear LineNr
-highlight clear SignColumn
+"highlight LineNr ctermfg=238 
+"highlight clear LineNr ctermbg
+"highlight clear SignColumn
 
 " Set leader key, default is \:
 " let mapleader=","
@@ -185,12 +200,9 @@ nnoremap j gj
 nnoremap k gk
 
 
-
-
 "*****************************************************************************
 " vim-NERDTree config:
 "*****************************************************************************
-
 " open NERDTree when open vim by default:
 au VimEnter *  NERDTree
 
@@ -222,12 +234,9 @@ map <Leader>r <esc>:NERDTreeFind<cr>
 let g:nerdtree_tabs_open_on_console_startup = 1
 
 
-
-
 "*****************************************************************************
 " airline-vim config:
 "*****************************************************************************
-
 " enables the statusline by default:
 set laststatus=2
 
@@ -244,12 +253,9 @@ let g:airline_powerline_fonts = 1
 "let g:airline_theme='dark'
 
 
-
-
 "*****************************************************************************
 " gvim(MacVim) specific Config:
 "*****************************************************************************
-
 if has('gui_running')
     "set encoding=utf-8
     "set fileencoding=chinese
@@ -265,12 +271,17 @@ if has('gui_running')
 endif
 
 
+"*****************************************************************************
+" Neovim specific Config:
+"*****************************************************************************
+if has('nvim')
+    set termguicolors
+endif
 
 
 "*****************************************************************************
 " Latex (latexmk/vimtex) Config: in ~/.latexmk file
 "*****************************************************************************
-
 " Diasble callback function to avoid terminal servername warning:
 let g:vimtex_compiler_latexmk = {'callback' : 0}
 
@@ -280,4 +291,6 @@ let g:tex_fast = "cmMprs"
 let g:tex_conceal = ""
 let g:tex_fold_enabled = 0
 let g:tex_comment_nospell = 1
+
+
 
