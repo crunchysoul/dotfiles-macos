@@ -1,3 +1,4 @@
+
 "*****************************************************************************
 " Switched to Neovim 2017-08-07.
 " nvim: ~/.config/nvim/init.vim
@@ -113,6 +114,7 @@ call togglebg#map("<F5>")
 "*****************************************************************************
 " General Vim Config:
 "*****************************************************************************
+
 set guifontwide=STSong:h14      " gvim Chinesefont
 set hidden              " speed up
 set history=100         " speed up
@@ -146,7 +148,7 @@ set wrap linebreak nolist
 set colorcolumn=80
 
 " line space:
-set linespace=3
+set linespace=2
 
 " Folding:
 set foldenable          " enable folding
@@ -199,6 +201,11 @@ set lazyredraw
 nnoremap j gj
 nnoremap k gk
 
+" Map exit Paste mode:
+:set nopaste
+set pastetoggle=<f2>
+"inoremap <silent><f2><C-\><C-n>:set nopaste<CR>
+"inoremap <silent><f2>:set nopaste<CR>
 
 "*****************************************************************************
 " vim-NERDTree config:
@@ -270,7 +277,7 @@ if has('gui_running')
     let g:airline_theme='solarized'
 endif
 
-
+au InsertLeave * set nopaste
 "*****************************************************************************
 " Neovim specific Config:
 "*****************************************************************************
