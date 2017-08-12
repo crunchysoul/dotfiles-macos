@@ -130,7 +130,7 @@ export PATH="$HOME/Library/Haskell/bin:$PATH"
 
 # Git bare repository dotfiles:
 # https://developer.atlassian.com/blog/2016/02/best-way-to-store-dotfiles-git-bare-repo/
-#alias config='/usr/local/bin/git --git-dir=/Users/joshuazhao/.myconfig/ --work-tree=/Users/joshuazhao'
+alias config='/usr/local/bin/git --git-dir=/Users/joshuazhao/.dotconfig/ --work-tree=/Users/joshuazhao'
 
 # NVM $PATH and load:
 export NVM_DIR="$HOME/.nvm"
@@ -147,7 +147,7 @@ export PATH="$HOME/Library/TeX/texbin:$PATH"
 # My Alias:
 ##############################################################################
 
-alias vim=nvim
+#alias vim=nvim
 alias brewup='brew update; brew upgrade; brew prune; brew cleanup; brew cask cleanup; brew doctor'
 alias bcs='brew cask search'
 alias bci='brew cask install'
@@ -163,5 +163,4 @@ alias song='spotify status'
 alias cfga='config add'
 alias cfgc='config commit -m'
 alias cfgp='config push'
-alias cfgs='config status'
-alias config='/usr/local/bin/git --git-dir=/Users/joshuazhao/.dotconfig/ --work-tree=/Users/joshuazhao'
+alias glogfun='git log -1 | cowsay -f dragon-and-cow | lolcat'
