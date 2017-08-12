@@ -147,7 +147,7 @@ export PATH="$HOME/Library/TeX/texbin:$PATH"
 # My Alias:
 ##############################################################################
 
-#alias vim=nvim
+alias vim=nvim
 alias brewup='brew update; brew upgrade; brew prune; brew cleanup; brew cask cleanup; brew doctor'
 alias bcs='brew cask search'
 alias bci='brew cask install'
@@ -164,3 +164,4 @@ alias cfga='config add'
 alias cfgc='config commit -m'
 alias cfgp='config push'
 alias glogfun='git log -1 | cowsay -f dragon-and-cow | lolcat'
+alias cfglfun='config log -1 | cowsay -f dragon-and-cow | lolcat'

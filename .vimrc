@@ -1,4 +1,3 @@
-
 "*****************************************************************************
 " Switched to Neovim 2017-08-07.
 " nvim: ~/.config/nvim/init.vim
@@ -114,6 +113,9 @@ call togglebg#map("<F5>")
 "*****************************************************************************
 " General Vim Config:
 "*****************************************************************************
+
+" Disable sound and bell: 
+set vb t_vb=
 
 set guifontwide=STSong:h14      " gvim Chinesefont
 set hidden              " speed up
