@@ -41,9 +41,6 @@ Plug 'vim-ruby/vim-ruby'
 " Auto closer:
 Plug 'jiangmiao/auto-pairs'
 
-" Vim-snipmate
-Plug 'garbas/vim-snipmate'
-
 " Prequriesite for snipmate
 Plug 'MarcWeber/vim-addon-mw-utils'
 Plug 'tomtom/tlib_vim'
@@ -53,6 +50,17 @@ Plug 'tpope/vim-surround'
 
 " Snippets are separated from the engine. Add this if you want them:
 Plug 'honza/vim-snippets'
+
+" Vim-snipmate
+"Plug 'garbas/vim-snipmate'
+
+" Ultisnips 
+Plug 'SirVer/ultisnips'
+
+" Set ultisnips triggers
+let g:UltiSnipsExpandTrigger="<tab>"                                            
+let g:UltiSnipsJumpForwardTrigger="<tab>"                                       
+let g:UltiSnipsJumpBackwardTrigger="<s-tab>"    
 
 " Supertab:
 Plug 'ervandew/supertab'
@@ -85,9 +93,6 @@ Plug 'chriskempson/base16-vim'
 "*****************************************************************************
 " YCM:
 "Plug 'Valloric/YouCompleteMe'
-
-" Track the engine.
-"Plug 'SirVer/ultisnips'
 
 " Colorschemes packs:
 " NOT USED - Color issue for vim
@@ -124,7 +129,6 @@ set history=100         " speed up
 set number              " line numbers
 set cursorline          " highlight the current line
 set scrolloff=8
-"set nowrap              " don't wrap text
 set showmatch           " highlight matching [{()}]
 
 " Search:
@@ -132,19 +136,29 @@ set incsearch           " like morden search
 set hlsearch            " highlight found words
 
 " Indentation:
-filetype indent on      " file specific indent on
-set autoindent          " auto-indent
-set smartindent         
+
+filetype plugin indent on
 set tabstop=4           " tab spacing
 set softtabstop=4       " number of spaces in tab when editing
 set shiftwidth=4        " indent/outdent by 4 columns
+
 set shiftround          " always indent/outdent to the nearest tabstop
+"set smartindent         
+set autoindent          " auto-indent
 set smarttab            " use tabs at the start of a line, spaces elsewhere
 set expandtab           " use spaces instead of tabs
 
+" Indentation for Ruby:
+"autocmd Filetype ruby setlocal ts=2 sts=2 sw=2
+
 " Text wrap:
+set wrap
+set linebreak
+set nolist  " list disables linebreak
 set textwidth=80
-set wrap linebreak nolist
+set formatoptions-=t
+"set nowrap              " don't wrap text
+"set wrap linebreak nolist
 
 " ruler:
 set colorcolumn=80
@@ -172,7 +186,9 @@ nnoremap <space> za
 " let mapleader=","
 
 " Reload Vim Config Without Having To Restart Editor:
-map <leader>s :source ~/.vimrc<ENTER>
+" Updated, before when source rc, indentation setting are lost,
+" and possibly other settings are lost as well, now add update and edit
+map <leader>s :source ~/.vimrc <bar> :up <bar> :e<ENTER>
 
 " map <ESC> to 'jk':
 inoremap jk <ESC>
