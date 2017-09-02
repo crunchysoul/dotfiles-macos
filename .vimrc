@@ -125,6 +125,10 @@ call togglebg#map("<F5>")
 " General Vim Config:
 "*****************************************************************************
 
+" swap $ and _g: end of line doesn't include the line break
+nmap $ g_
+vmap $ g_
+
 " Disable sound and bell: 
 set vb t_vb=
 
