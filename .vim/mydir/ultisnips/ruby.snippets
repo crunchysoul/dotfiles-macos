@@ -1,0 +1,355 @@
+###############################################################################
+#  Ruby Snipmate to Ultisnip Conversion																				#
+#	 version: 1.0																																#
+#  date: 2017-08-24																														#
+#  auther: funkycrunchy																												#
+#  discription: Conversion snippets from vim-snippet/snipmate for better			#
+#								Ultisnip support, fixed the problem that Ultisnip won't				#
+#								trigger when calling method after "."													#
+#	 method: Using below template:																							#
+###############################################################################
+# snippet "(\S+)\." "." r																											#
+# `!p snip.rv=match.group(1)`.																								#
+# endsnippet																																	#
+###############################################################################
+snippet "(\S+)\.bsearch" ".bsearch { |<item>| <block> }" r
+`!p snip.rv=match.group(1)`.bsearch { |${1:e}| ${0} }
+endsnippet
+
+snippet "(\S+)\.bsearchd" ".bsearch do |<item>| <block> end" r
+`!p snip.rv=match.group(1)`.bsearch do |${1:e}|
+${0}
+end
+endsnippet
+
+snippet "(\S+)\.bsearchi" ".bsearch_index { |<item>| <block> }" r
+`!p snip.rv=match.group(1)`.bsearch_index { |${1:e}| ${0} }
+endsnippet
+
+snippet "(\S+)\.bsearchid" ".bsearch_index do |<item>| <block> end" r
+`!p snip.rv=match.group(1)`.bsearch_index do |${1:e}|
+${0}
+end
+endsnippet
+
+snippet "(\S+)\.deli" ".delete_if { |<item>| <block> }" r
+`!p snip.rv=match.group(1)`.delete_if { |${1:e}| ${0} }
+endsnippet
+
+snippet "(\S+)\.fil" ".fill(range) { |<index>| <block> }" r
+`!p snip.rv=match.group(1)`.fill(${1:range}) { |${2:i}| ${0} }
+endsnippet
+
+snippet "(\S+)\.flao" ".reduce(Array.new) { |<array>,<value>| <array>.push(*<value>) }" r
+`!p snip.rv=match.group(1)`.reduce(Array.new) { |${1:arr}, ${2:a}| $1.push(*$2) }
+endsnippet
+
+snippet "(\S+)\.zip" ".zip(<enums>) { |<array>| <block> }" r
+`!p snip.rv=match.group(1)`.zip(${1:enums}) { |${2:row}| ${0} }
+endsnippet
+
+snippet "(\S+)\.dow" ".downto(<limit>) { |i| <block> }" r
+`!p snip.rv=match.group(1)`.downto(${1:0}) { |${2:n}| ${0} }
+endsnippet
+
+snippet "(\S+)\.ste" ".step(i) { |<obj>| <block> }" r
+`!p snip.rv=match.group(1)`.step(${1:2}) { |${2:n}| ${0} }
+endsnippet
+
+snippet "(\S+)\.tim" ".times { |i| <block> }" r
+`!p snip.rv=match.group(1)`.times { |${1:n}| ${0} }
+endsnippet
+
+snippet "(\S+)\.upt" ".upto(limit) { |i| <block> }" r
+`!p snip.rv=match.group(1)`.upto(${1:1.0/0.0}) { |${2:n}| ${0} }
+endsnippet
+
+snippet "(\S+)\.ea" ".each { |<item>| <block> }" r
+`!p snip.rv=match.group(1)`.each { |${1:e}| ${0} }
+endsnippet
+
+snippet "(\S+)\.ead" ".each do |<item>| <block> end" r
+`!p snip.rv=match.group(1)`.each do |${1:e}|
+	${0}
+end
+endsnippet
+
+snippet "(\S+)\.eab" ".each_byte { |<item>| <block> }" r
+`!p snip.rv=match.group(1)`.each_byte { |${1:byte}| ${0} }
+endsnippet
+
+snippet "(\S+)\.ea_ch" ".each_char { |chr| .. }" r
+`!p snip.rv=match.group(1)`.each_char { |${1:chr}| ${0} }
+endsnippet
+
+snippet "(\S+)\.ea_chd" ".each_char do |chr| <block> end" r
+`!p snip.rv=match.group(1)`.each_char do |${1:chr}|
+	${0}
+end
+endsnippet
+
+snippet "(\S+)\.ea_co" ".each_cons(..) { |group| .. }" r
+`!p snip.rv=match.group(1)`.each_cons(${1:2}) { |${2:group}| ${0} }
+endsnippet
+
+snippet "(\S+)\.ea_cod" ".each_cons(..) do |<group>| <block> end" r
+`!p snip.rv=match.group(1)`.each_cons(${1:2}) do |${2:group}|
+	${0}
+end
+endsnippet
+
+snippet "(\S+)\.eai" ".each_index { |<index>| <block> }" r
+`!p snip.rv=match.group(1)`.each_index { |${1:i}| ${0} }
+endsnippet
+
+snippet "(\S+)\.eaid" ".each_index do |<index>| <block> end" r
+`!p snip.rv=match.group(1)`.each_index do |${1:i}|
+	${0}
+end
+endsnippet
+
+snippet "(\S+)\.eak" ".each_key { |<key>| <block> }" r
+`!p snip.rv=match.group(1)`.each_key { |${1:key}| ${0} }
+endsnippet
+
+snippet "(\S+)\.eakd" ".each_key do |<key>| <block> end" r
+`!p snip.rv=match.group(1)`.each_key do |${1:key}|
+	${0}
+end
+endsnippet
+
+snippet "(\S+)\.eal" ".each_line { |<line>| <block> }" r
+`!p snip.rv=match.group(1)`.each_line { |${1:line}| ${0} }
+endsnippet
+
+snippet "(\S+)\.eald" ".each_line do |<line>| <block> end" r
+`!p snip.rv=match.group(1)`.each_line do |${1:line}|
+	${0}
+end
+endsnippet
+
+snippet "(\S+)\.eap" ".each_pair { |<key>,<value>| <block> }" r
+`!p snip.rv=match.group(1)`.each_pair { |${1:name}, ${2:val}| ${0} }
+endsnippet
+
+snippet "(\S+)\.eapd" ".each_pair do |<key>,<value>| <block> end" r
+`!p snip.rv=match.group(1)`.each_pair do |${1:name}, ${2:val}|
+	${0}
+end
+endsnippet
+
+snippet "(\S+)\.eas" ".each_slice(<size>) { |<array>| <block> }" r
+`!p snip.rv=match.group(1)`.each_slice(${1:2}) { |${2:group}| ${0} }
+endsnippet
+
+snippet "(\S+)\.easd" ".each_slice(<size>) do |<array>| <block> end" r
+`!p snip.rv=match.group(1)`.each_slice(${1:2}) do |${2:group}|
+	${0}
+end
+endsnippet
+
+snippet "(\S+)\.eav" ".each_value { |<value>| <block> }" r
+`!p snip.rv=match.group(1)`.each_value { |${1:val}| ${0} }
+endsnippet
+
+snippet "(\S+)\.eavd" ".each_value do |<value>| <block> end" r
+`!p snip.rv=match.group(1)`.each_value do |${1:val}|
+	${0}
+end
+endsnippet
+
+snippet "(\S+)\.eawi" ".each_with_index { |<item>,<index>| <block> }" r
+`!p snip.rv=match.group(1)`.each_with_index { |${1:e}, ${2:i}| ${0} }
+endsnippet
+
+snippet "(\S+)\.eawid" ".each_with_index do |<item>,<index>| <block> end" r
+`!p snip.rv=match.group(1)`.each_with_index do |${1:e}, ${2:i}|
+	${0}
+end
+endsnippet
+
+snippet "(\S+)\.eawo" ".each_with_object(obj) { |<item>,<index>| <block> }" r
+`!p snip.rv=match.group(1)`.each_with_object(${1:init}) { |${2:e}, ${3:var}| ${0} }
+endsnippet
+
+snippet "(\S+)\.eawod" ".each_with_object(obj) do |<item>,<index>| <block> end" r
+`!p snip.rv=match.group(1)`.each_with_object(${1:init}) do |${2:e}, ${3:var}|
+	${0}
+end
+endsnippet
+
+snippet "(\S+)\.reve" ".reverse_each { |<item>| <block> }" r
+`!p snip.rv=match.group(1)`.reverse_each { |${1:e}| ${0} }
+endsnippet
+
+snippet "(\S+)\.reved" ".reverse_each do |<item>| <block> end" r
+`!p snip.rv=match.group(1)`.reverse_each do |${1:e}|
+	${0}
+end
+endsnippet
+
+snippet "(\S+)\.inj" ".inject(init) { |<mem>,<var>| <block> }" r
+`!p snip.rv=match.group(1)`.inject(${1:init}) { |${2:mem}, ${3:var}| ${0} }
+endsnippet
+
+snippet "(\S+)\.injd" ".inject(${1:init}) do |<mem>,<var>| <block> end" r
+`!p snip.rv=match.group(1)`.inject(${1:init}) do |${2:mem}, ${3:var}|
+	${0}
+end
+endsnippet
+
+snippet "(\S+)\.red" ".reduce(init) { |<mem>,<var>| <block> }" r
+`!p snip.rv=match.group(1)`.reduce(${1:init}) { |${2:mem}, ${3:var}| ${0} }
+endsnippet
+
+snippet "(\S+)\.redd" ".reduce(${1:init}) do |<mem>,<var>| <block> end" r
+`!p snip.rv=match.group(1)`.reduce(${1:init}) do |${2:mem}, ${3:var}|
+	${0}
+end
+endsnippet
+
+snippet "(\S+)\.map" ".map { |<item>| <block> }" r
+`!p snip.rv=match.group(1)`.map { |${1:e}| ${0} }
+endsnippet
+
+snippet "(\S+)\.mapd" ".map do |<item>| <block> end" r
+`!p snip.rv=match.group(1)`.map do |${1:e}|
+	${0}
+end
+endsnippet
+
+snippet "(\S+)\.mapwi" ".enum_with_index.map { |<item>,<index>| <block> }" r
+`!p snip.rv=match.group(1)`.enum_with_index.map { |${1:e}, ${2:i}| ${0} }
+endsnippet
+
+snippet "(\S+)\.sor" ".sort { |<a>,<b>| <block> }" r
+`!p snip.rv=match.group(1)`.sort { |a, b| ${0} }
+endsnippet
+
+snippet "(\S+)\.sorb" ".sort_by { |<item>| <block> }" r
+`!p snip.rv=match.group(1)`.sort_by { |${1:e}| ${0} }
+endsnippet
+
+snippet "(\S+)\.ran" ".sort_by { rand }" r
+`!p snip.rv=match.group(1)`.sort_by { rand }
+endsnippet
+
+snippet "(\S+)\.all" ".all? { |<item>| <block> }" r
+`!p snip.rv=match.group(1)`.all? { |${1:e}| ${0} }
+endsnippet
+
+snippet "(\S+)\.any" ".any? { |<item>| <block> }" r
+`!p snip.rv=match.group(1)`.any? { |${1:e}| ${0} }
+endsnippet
+
+snippet "(\S+)\.cl" ".classify { |<item>| <block> }" r
+`!p snip.rv=match.group(1)`.classify { |${1:e}| ${0} }
+endsnippet
+
+snippet "(\S+)\.col" ".collect { |<item>| <block> }" r
+`!p snip.rv=match.group(1)`.collect { |${1:e}| ${0} }
+endsnippet
+
+snippet "(\S+)\.cold" ".collect do |<item>| <block> end" r
+`!p snip.rv=match.group(1)`.collect do |${1:e}|
+	${0}
+end
+endsnippet
+
+snippet "(\S+)\.det" ".detect { |<item>| <block> }" r
+`!p snip.rv=match.group(1)`.detect { |${1:e}| ${0} }
+endsnippet
+
+snippet "(\S+)\.detd" ".detect do |<item>| <block> end" r
+`!p snip.rv=match.group(1)`.detect do |${1:e}|
+	${0}
+end
+endsnippet
+
+snippet "(\S+)\.fet" ".fetch(<name>) { |<key>| <block> }" r
+`!p snip.rv=match.group(1)`.fetch(${1:name}) { |${2:key}| ${0} }
+endsnippet
+
+snippet "(\S+)\.fin" ".find { |<item>| <block> }" r
+`!p snip.rv=match.group(1)`.find { |${1:e}| ${0} }
+endsnippet
+
+snippet "(\S+)\.find" ".find do |<item>| <block> end" r
+`!p snip.rv=match.group(1)`.find do |${1:e}|
+	${0}
+end
+endsnippet
+
+snippet "(\S+)\.fina" ".find_all { |<item>| <block> }" r
+`!p snip.rv=match.group(1)`.find_all { |${1:e}| ${0} }
+endsnippet
+
+snippet "(\S+)\.finad" ".find_all do |<item>| <block> end" r
+`!p snip.rv=match.group(1)`.find_all do |${1:e}|
+	${0}
+end
+endsnippet
+
+snippet "(\S+)\.gre" ".grep(<pattern>) { |<match>| <block> }" r
+`!p snip.rv=match.group(1)`.grep(${1:/pattern/}) { |${2:match}| ${0} }
+endsnippet
+
+snippet "(\S+)\.sub" ".${1:g}sub(<pattern>) { |<match>| <block> }" r
+`!p snip.rv=match.group(1)`.${1:g}sub(${2:/pattern/}) { |${3:match}| ${0} }
+endsnippet
+
+snippet "(\S+)\.sca" ".scan(<pattern>) { |<match>| <block> }" r
+`!p snip.rv=match.group(1)`.scan(${1:/pattern/}) { |${2:match}| ${0} }
+endsnippet
+
+snippet "(\S+)\.scad" ".scan(<pattern>}) do |<match>|" r
+`!p snip.rv=match.group(1)`.scan(${1:/pattern/}) do |${2:match}|
+	${0}
+end
+endsnippet
+
+snippet "(\S+)\.max" ".max { |a, b| <block> }" r
+`!p snip.rv=match.group(1)`.max { |a, b| ${0} }
+endsnippet
+
+snippet "(\S+)\.min" ".min { |a, b| <block> }" r
+`!p snip.rv=match.group(1)`.min { |a, b| ${0} }
+endsnippet
+
+snippet "(\S+)\.par" ".partition { |<item>}| <block> }" r
+`!p snip.rv=match.group(1)`.partition { |${1:e}| ${0} }
+endsnippet
+
+snippet "(\S+)\.pard" ".partition do |<item>| <block> end" r
+`!p snip.rv=match.group(1)`.partition do |${1:e}|
+	${0}
+end
+endsnippet
+
+snippet "(\S+)\.rej" ".reject { |<item>| <block> }" r
+`!p snip.rv=match.group(1)`.reject { |${1:e}| ${0} }
+endsnippet
+
+snippet "(\S+)\.rejd" ".reject do |<item>| <block> end" r
+`!p snip.rv=match.group(1)`.reject do |${1:e}|
+	${0}
+end
+endsnippet
+
+snippet "(\S+)\.sel" ".select { |<item>| <block> }" r
+`!p snip.rv=match.group(1)`.select { |${1:e}| ${0} }
+endsnippet
+
+snippet "(\S+)\.seld" ".select do |<item>| <block> end" r
+`!p snip.rv=match.group(1)`.select do |${1:e}|
+	${0}
+end
+endsnippet
+
+snippet "(\S+)\.lam" ".lambda { |<args>| <block> }" r
+`!p snip.rv=match.group(1)`.lambda { |${1:args}| ${0} }
+endsnippet
+
+snippet lam "lam"
+lambda { |${1:args}| ${0} }
+endsnippet
