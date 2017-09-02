@@ -13,8 +13,9 @@
 /.rbenv-version
 
 # Bundler binstubs #
+# REMOVED: will cause trouble for Heroku deployment.
 ####################
-/bin/
+# /bin/
 
 # Compiled source #
 ###################

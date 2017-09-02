@@ -4,5 +4,5 @@
 [color]
 	ui = true
 [core]
-	editor = vim
+	editor = nvim
 	excludesfile = /Users/joshuazhao/.gitignore_global

@@ -1,3 +1,5 @@
+# 256 color support for tmux
+export TERM="xterm-256color"
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
@@ -148,6 +150,11 @@ export PATH="$HOME/Library/TeX/texbin:$PATH"
 ##############################################################################
 
 alias vim=nvim
+alias edz='vim ~/.zshrc'
+alias edv='vim ~/.vimrc'
+alias sz='source ~/.zshrc'
+alias song='spotify status'
+
 alias brewup='brew update; brew upgrade; brew prune; brew cleanup; brew cask cleanup; brew doctor'
 alias bcs='brew cask search'
 alias bci='brew cask install'
@@ -156,12 +163,16 @@ alias bco='brew cask outdated'
 alias bs='brew search'
 alias bi='brew install'
 alias bl='brew list'
-alias edz='vim ~/.zshrc'
-alias edv='vim ~/.vimrc'
-alias sz='source ~/.zshrc'
-alias song='spotify status'
+
 alias cfga='config add'
 alias cfgc='config commit -m'
 alias cfgp='config push'
-alias glogfun='git log -1 | cowsay -f dragon-and-cow | lolcat'
 alias cfglfun='config log -1 | cowsay -f dragon-and-cow | lolcat'
+
+alias gadd='git add'
+alias gadd.='git add .'
+alias gcmt='git commit -m'
+alias gadcmt='git add . && git commit -m'
+alias gpsh='git push'
+alias glogs='git log --pretty=oneline --abbrev-commit'
+alias glogfun='git log -1 | cowsay -f dragon-and-cow | lolcat'
