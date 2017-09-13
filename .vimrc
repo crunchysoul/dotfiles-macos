@@ -96,6 +96,12 @@ Plug 'majutsushi/tagbar'
 " Better css syntax
 Plug 'hail2u/vim-css3-syntax'
 
+" Vim-javascript:
+Plug 'pangloss/vim-javascript'
+
+" vim-css-color:
+Plug 'ap/vim-css-color'
+
 "*****************************************************************************
 " YCM:
 "Plug 'Valloric/YouCompleteMe'
