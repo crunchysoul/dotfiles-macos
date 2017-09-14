@@ -102,7 +102,16 @@ Plug 'pangloss/vim-javascript'
 " vim-css-color:
 Plug 'ap/vim-css-color'
 
+" Vim-rails:
+Plug 'tpope/vim-rails'
+
+" Syntastic is a syntax checking plugin:
+Plug 'scrooloose/syntastic'
+
 "*****************************************************************************
+" End of installed plugins
+"*****************************************************************************
+
 " YCM:
 "Plug 'Valloric/YouCompleteMe'
 
@@ -369,5 +378,14 @@ let g:tex_conceal = ""
 let g:tex_fold_enabled = 0
 let g:tex_comment_nospell = 1
 
+"*****************************************************************************
+" Syntastic Beginner Setting:
+"*****************************************************************************
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
 
-
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
