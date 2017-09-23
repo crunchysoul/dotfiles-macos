@@ -108,6 +108,15 @@ Plug 'tpope/vim-rails'
 " Syntastic is a syntax checking plugin:
 Plug 'scrooloose/syntastic'
 
+" Elixir support:
+Plug 'elixir-lang/vim-elixir'
+
+" Distraction free writing:
+Plug 'junegunn/goyo.vim'
+
+" Limelight for Goyo:
+Plug 'junegunn/limelight.vim'
+
 "*****************************************************************************
 " End of installed plugins
 "*****************************************************************************
@@ -280,6 +289,12 @@ set pastetoggle=<f2>
 "inoremap <silent><f2><C-\><C-n>:set nopaste<CR>
 "inoremap <silent><f2>:set nopaste<CR>
 
+" Persistent undo
+if has('persistent_undo')      "check if your vim version supports it
+  set undofile                 "turn on the feature  
+  "directory where the undo files will be stored
+  set undodir=$HOME/.vim/mydir/undodir
+  endif 
 "*****************************************************************************
 " vim-NERDTree config:
 "*****************************************************************************
@@ -310,9 +325,11 @@ let NERDTreeIgnore=['\.DS_Store', '\~$', '\.swp']
 " Reveal current file in NERDTree with <Leader>r:
 map <Leader>r <esc>:NERDTreeFind<cr>
 
+" Toggle NERDTree":
+map <Leader>nn :NERDTreeToggle<cr>
+
 " Start NERDTree Tabs automatically:
 let g:nerdtree_tabs_open_on_console_startup = 1
-
 
 "*****************************************************************************
 " airline-vim config:
@@ -381,6 +398,7 @@ let g:tex_comment_nospell = 1
 "*****************************************************************************
 " Syntastic Beginner Setting:
 "*****************************************************************************
+let g:syntastic_mode_map = { 'mode': 'passive' }
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
@@ -389,3 +407,21 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
+
+"*****************************************************************************
+" Goyo Setting:
+"*****************************************************************************
+function! s:goyo_enter()
+  NERDTreeClose
+  Limelight
+endfunction
+
+function! s:goyo_leave()
+  NERDTree
+  :wincmd w
+  " this is equivalent to :execute \"normal \<C-W>\<C-W>\"
+  Limelight!
+endfunction
+
+autocmd! User GoyoEnter nested call <SID>goyo_enter()
+autocmd! User GoyoLeave nested call <SID>goyo_leave()
