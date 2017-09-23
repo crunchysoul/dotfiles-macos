@@ -117,6 +117,9 @@ Plug 'junegunn/goyo.vim'
 " Limelight for Goyo:
 Plug 'junegunn/limelight.vim'
 
+" Markdown preview:
+Plug 'shime/vim-livedown'
+
 "*****************************************************************************
 " End of installed plugins
 "*****************************************************************************
@@ -429,3 +432,8 @@ autocmd! User GoyoLeave nested call <SID>goyo_leave()
 
 " Goyo trigger (distraction free)
 nnoremap <Leader>fd :Goyo<CR>
+
+"*****************************************************************************
+" Markdown Preview Setting:
+"*****************************************************************************
+nmap <Leader>mm :LivedownToggle<CR>
