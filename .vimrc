@@ -418,6 +418,7 @@ endfunction
 
 function! s:goyo_leave()
   NERDTree
+  NERDTreeTabsOpen
   :wincmd w
   " this is equivalent to :execute \"normal \<C-W>\<C-W>\"
   Limelight!
@@ -427,4 +428,4 @@ autocmd! User GoyoEnter nested call <SID>goyo_enter()
 autocmd! User GoyoLeave nested call <SID>goyo_leave()
 
 " Goyo trigger (distraction free)
-nnoremap <Leader>df :Goyo<CR>
+nnoremap <Leader>fd :Goyo<CR>
