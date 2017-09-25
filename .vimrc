@@ -120,6 +120,9 @@ Plug 'junegunn/limelight.vim'
 " Markdown preview:
 Plug 'shime/vim-livedown'
 
+" Fuzzy search:
+Plug 'ctrlpvim/ctrlp.vim'
+
 "*****************************************************************************
 " End of installed plugins
 "*****************************************************************************
@@ -142,8 +145,8 @@ call plug#end()
 " Colorscheme Vim Config:
 "*****************************************************************************
 syntax enable            " enable syntax processing
-"set background=dark
-set background=light
+set background=dark
+" set background=light
 colorscheme solarized 
 call togglebg#map("<F5>")
 
@@ -431,7 +434,7 @@ autocmd! User GoyoEnter nested call <SID>goyo_enter()
 autocmd! User GoyoLeave nested call <SID>goyo_leave()
 
 " Goyo trigger (distraction free)
-nnoremap <Leader>fd :Goyo<CR>
+nnoremap <Leader>ff :Goyo<CR>
 
 "*****************************************************************************
 " Markdown Preview Setting:
