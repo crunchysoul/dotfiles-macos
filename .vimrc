@@ -124,106 +124,74 @@ Plug 'shime/vim-livedown'
 Plug 'ctrlpvim/ctrlp.vim'
 
 "*****************************************************************************
-" End of installed plugins
+" disabled plugins:
 "*****************************************************************************
-
 " YCM:
 "Plug 'Valloric/YouCompleteMe'
 
 " Colorschemes packs:
 " NOT USED - Color issue for vim
-"Plug 'flazz/vim-colorschemes'
-
-" Solarized
-"Plug 'altercation/vim-colors-solarized'
+" Plug 'flazz/vim-colorschemes'
 
 " List ends here. Plugins become visible to Vim after this call:
 call plug#end()
-
 
 "*****************************************************************************
 " Colorscheme Vim Config:
 "*****************************************************************************
 syntax enable            " enable syntax processing
-set background=dark
-" set background=light
+" set background=dark
+set background=light
 colorscheme solarized 
 call togglebg#map("<F5>")
-
 
 "*****************************************************************************
 " General Vim Config:
 "*****************************************************************************
-
 " swap $ and _g: end of line doesn't include the line break
 nmap $ g_
 vmap $ g_
 
-" Disable sound and bell: 
-set vb t_vb=
-
+set vb t_vb=            " Disable sound and bell:
 set guifontwide=STSong:h14      " gvim Chinesefont
 set hidden              " speed up
 set history=100         " speed up
-
 set number              " line numbers
 set cursorline          " highlight the current line
 set scrolloff=8
 set showmatch           " highlight matching [{()}]
+set linespace=3
 
-" Search:
+" search:
 set incsearch           " like morden search
 set hlsearch            " highlight found words
 
-" Indentation:
-
+" indentation:
 filetype plugin indent on
 set tabstop=2           " tab spacing
 set softtabstop=2       " number of spaces in tab when editing
 set shiftwidth=2        " indent/outdent by 4 columns
-
 set shiftround          " always indent/outdent to the nearest tabstop
-"set smartindent         
 set autoindent          " auto-indent
 set smarttab            " use tabs at the start of a line, spaces elsewhere
 set expandtab           " use spaces instead of tabs
 
-" Indentation for Ruby:
-"autocmd Filetype ruby setlocal ts=2 sts=2 sw=2
-
-" Text wrap:
-"set wrap linebreak nolist
+" text wrap:
 set wrap
 set linebreak
 set nolist  " list disables linebreak
 set textwidth=80
 set formatoptions-=t
+set colorcolumn=80        " ruler:
 "set nowrap              " don't wrap text
 
-" ruler:
-set colorcolumn=80
-
-" line space:
-set linespace=3
-
-" Folding:
+" folding:
 set foldenable          " enable folding
 set foldlevelstart=10   " open most folds by default
 set foldnestmax=10      " 10 nested fold max
 set foldmethod=indent   " fold based on indent level
-
 " space open/closes folds
 nnoremap <space> za
-
-" Set line number colour:
-"highlight LineNr ctermbg=16
-"highlight LineNr ctermfg=grey 
-"highlight LineNr ctermfg=238 
-"highlight clear LineNr ctermbg
-"highlight clear SignColumn
-
-" Set leader key, default is \:
-" let mapleader=","
 
 " Reload Vim Config Without Having To Restart Editor:
 " Updated, before when source rc, indentation setting are lost,
@@ -238,39 +206,6 @@ nnoremap <leader>u :GundoToggle<CR>
 
 "enable :W to :w
 command! W w
-" nnoremap ; :
-" nnoremap : ;
-" vnoremap ; :
-" vnoremap : ;
-
-" tab key to switch windows (and current file path)
-" set autochdir
-" map <Tab> <C-W>W:cd %:p:h<CR>:<CR>
-"map <Tab> <C-W>W
-
-" map gT/gt to H/L for switch tabs:(conflict move window)
-"nnoremap H gT
-"nnoremap L gt
-
-" Supertab keymap:
-let g:SuperTabMappingForward = '<c-j>'
-let g:SuperTabMappingBackward = '<s-c-j>'
-
-" UltiSnip keymap:
-" set runtimepath+=~/.vim/mydir/ultisnips
-let g:UltiSnipsDontReverseSearchPath="1"
-let g:UltiSnipsSnippetsDir="~/.vim/mydir/ultisnips"
-let g:UltiSnipsSnippetDirectories=["mydir/ultisnips", "UltiSnips"]
-let g:UltiSnipsExpandTrigger="<tab>"                                            
-let g:UltiSnipsJumpForwardTrigger="<tab>"                                       
-let g:UltiSnipsJumpBackwardTrigger="<s-tab>"    
-let g:UltiSnipsListSnippets="<c-k>"
-let g:UltiSnipsEditSplit="horizontal"
-
-"let g:UltiSnipsEnableSnipMate=1
-" let g:UltiSnipsExpandTrigger="<c-j>"                                            
-" let g:UltiSnipsJumpForwardTrigger="<c-j>"                                       
-" let g:UltiSnipsJumpBackwardTrigger="<c-k>"    
 
 " tagbar:
 nmap <F8> :TagbarToggle<CR>
@@ -301,6 +236,40 @@ if has('persistent_undo')      "check if your vim version supports it
   "directory where the undo files will be stored
   set undodir=$HOME/.vim/mydir/undodir
   endif 
+
+" tab key to switch windows (and current file path)
+" set autochdir
+" map <Tab> <C-W>W:cd %:p:h<CR>:<CR>
+"map <Tab> <C-W>W
+
+" map gT/gt to H/L for switch tabs:(conflict move window)
+"nnoremap H gT
+"nnoremap L gt
+
+" set line number colour:
+" highlight clear LineNr ctermbg
+
+" set leader key, default is \:
+" let mapleader=","
+
+"*****************************************************************************
+" ultisnips/supertab config:
+"*****************************************************************************
+" Supertab keymap:
+let g:SuperTabMappingForward = '<c-j>'
+let g:SuperTabMappingBackward = '<s-c-j>'
+
+" UltiSnip keymap:
+" set runtimepath+=~/.vim/mydir/ultisnips
+let g:UltiSnipsDontReverseSearchPath="1"
+let g:UltiSnipsSnippetsDir="~/.vim/mydir/ultisnips"
+let g:UltiSnipsSnippetDirectories=["mydir/ultisnips", "UltiSnips"]
+let g:UltiSnipsExpandTrigger="<tab>"                                            
+let g:UltiSnipsJumpForwardTrigger="<tab>"                                       
+let g:UltiSnipsJumpBackwardTrigger="<s-tab>"    
+let g:UltiSnipsListSnippets="<c-k>"
+let g:UltiSnipsEditSplit="horizontal"
+
 "*****************************************************************************
 " vim-NERDTree config:
 "*****************************************************************************
@@ -355,7 +324,6 @@ let g:airline_powerline_fonts = 1
 " theme:
 "let g:airline_theme='dark'
 
-
 "*****************************************************************************
 " gvim(MacVim) specific Config:
 "*****************************************************************************
@@ -386,7 +354,6 @@ if has('nvim')
     " set guicursor+=n-v-c:blinkon0
     " set guicursor+=i:blinkwait10
 endif
-
 
 "*****************************************************************************
 " Latex (latexmk/vimtex) Config: in ~/.latexmk file
