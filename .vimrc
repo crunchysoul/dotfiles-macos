@@ -99,6 +99,9 @@ Plug 'hail2u/vim-css3-syntax'
 " Vim-javascript:
 Plug 'pangloss/vim-javascript'
 
+" React JSX syntax:
+Plug 'mxw/vim-jsx'
+
 " vim-css-color:
 Plug 'ap/vim-css-color'
 
@@ -123,6 +126,12 @@ Plug 'shime/vim-livedown'
 " Fuzzy search:
 Plug 'ctrlpvim/ctrlp.vim'
 
+" Another indent guide:
+Plug 'Yggdroot/indentLine'
+
+" coffeescript syntax:
+Plug 'kchmck/vim-coffee-script'
+
 "*****************************************************************************
 " disabled plugins:
 "*****************************************************************************
@@ -140,8 +149,8 @@ call plug#end()
 " Colorscheme Vim Config:
 "*****************************************************************************
 syntax enable            " enable syntax processing
-" set background=dark
-set background=light
+set background=dark
+" set background=light
 colorscheme solarized 
 call togglebg#map("<F5>")
 
@@ -236,6 +245,20 @@ if has('persistent_undo')      "check if your vim version supports it
   "directory where the undo files will be stored
   set undodir=$HOME/.vim/mydir/undodir
   endif 
+
+" Indent line:
+let g:indentLine_enabled = 0    " Disable by default
+
+" Enable JSX to JS:
+let g:jsx_ext_required = 0
+
+" Set hybird line number:
+" :set number relativenumber
+" :augroup numbertoggle
+" :  autocmd!
+" :  autocmd BufEnter,FocusGained,InsertLeave * set relativenumber
+" :  autocmd BufLeave,FocusLost,InsertEnter   * set norelativenumber
+" :augroup END
 
 " tab key to switch windows (and current file path)
 " set autochdir
