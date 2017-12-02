@@ -134,16 +134,22 @@ export PATH="$HOME/Library/Haskell/bin:$PATH"
 # https://developer.atlassian.com/blog/2016/02/best-way-to-store-dotfiles-git-bare-repo/
 alias config='/usr/local/bin/git --git-dir=/Users/joshuazhao/.dotconfig/ --work-tree=/Users/joshuazhao'
 
-# NVM $PATH and load:
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+# Delete NVM for homebrew node:
+# Heroku and Yarn has dependency issue with nvm:
 
 # Rust $PATH:
 export PATH="$HOME/.cargo/bin:$PATH"
 
 # Latexmk:
 export PATH="$HOME/Library/TeX/texbin:$PATH"
+
+# Python2:
+export PATH="/usr/local/opt/python/libexec/bin:$PATH"
+
+# React Native Android:
+export ANDROID_HOME=$HOME/Library/Android/sdk
+export PATH=$PATH:$ANDROID_HOME/tools
+export PATH=$PATH:$ANDROID_HOME/platform-tools
 
 ##############################################################################
 # My Alias:
@@ -176,3 +182,5 @@ alias gadcmt='git add . && git commit -m'
 alias gpsh='git push'
 alias glogs='git log --pretty=oneline --abbrev-commit'
 alias glogfun='git log -1 | cowsay -f dragon-and-cow | lolcat'
+alias spoofmac="openssl rand -hex 6 | sed 's/\(..\)/\1:/g; s/.$//' | xargs sudo ifconfig en0 ether"
+alias whatmac='ifconfig en0 | grep ether'
