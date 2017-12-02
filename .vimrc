@@ -109,7 +109,7 @@ Plug 'ap/vim-css-color'
 Plug 'tpope/vim-rails'
 
 " Syntastic is a syntax checking plugin:
-Plug 'scrooloose/syntastic'
+" Plug 'scrooloose/syntastic'
 
 " Elixir support:
 Plug 'elixir-lang/vim-elixir'
@@ -132,11 +132,42 @@ Plug 'Yggdroot/indentLine'
 " coffeescript syntax:
 Plug 'kchmck/vim-coffee-script'
 
+" hybird line number:
+Plug 'jeffkreeftmeijer/vim-numbertoggle'
+
+" js-tern
+Plug 'ternjs/tern_for_vim'
+
+" indent jump
+Plug 'jeetsukumaran/vim-indentwise'
+
+" es6 snippets:
+"Plug 'isRuslan/vim-es6'
+
+" better buffer close
+Plug 'qpkorr/vim-bufkill'
+
+" Emoji
+Plug 'junegunn/vim-emoji'
+
+" Node vim
+Plug 'moll/vim-node'
+
+" nove colorscheme
+Plug 'trevordmiller/nova-vim'
+
+" YCM:
+Plug 'Valloric/YouCompleteMe'
+
+" ale
+Plug 'w0rp/ale'
+
+" YACS(yet another color scheme)
+Plug 'rafi/awesome-vim-colorschemes'
+
 "*****************************************************************************
 " disabled plugins:
 "*****************************************************************************
-" YCM:
-"Plug 'Valloric/YouCompleteMe'
 
 " Colorschemes packs:
 " NOT USED - Color issue for vim
@@ -149,10 +180,17 @@ call plug#end()
 " Colorscheme Vim Config:
 "*****************************************************************************
 syntax enable            " enable syntax processing
-set background=dark
+" set background=dark
 " set background=light
-colorscheme solarized 
-call togglebg#map("<F5>")
+" colorscheme solarized 
+" call togglebg#map("<F5>")
+
+"*****************************************************************************
+
+" colorscheme base16-flat 
+" colorscheme base16-atelier-cave-light
+" colorscheme base16-solarized-light 
+colorscheme base16-oceanicnext
 
 "*****************************************************************************
 " General Vim Config:
@@ -198,9 +236,13 @@ set colorcolumn=80        " ruler:
 set foldenable          " enable folding
 set foldlevelstart=10   " open most folds by default
 set foldnestmax=10      " 10 nested fold max
-set foldmethod=indent   " fold based on indent level
+" set foldmethod=indent   " fold based on indent level
+set foldmethod=manual   " fold based on indent level
 " space open/closes folds
 nnoremap <space> za
+" Auto load view and folder
+autocmd BufWinLeave *.* mkview!
+autocmd BufWinEnter *.* silent! loadview 
 
 " Reload Vim Config Without Having To Restart Editor:
 " Updated, before when source rc, indentation setting are lost,
@@ -252,6 +294,52 @@ let g:indentLine_enabled = 0    " Disable by default
 " Enable JSX to JS:
 let g:jsx_ext_required = 0
 
+" Set natural split
+set splitbelow
+set splitright
+
+" map switch windows:
+" map <Leader>` <C-W>W
+map <Leader>j <C-W>W
+map <Leader>k <C-W>w
+
+" map switch tabs:
+:nnoremap <Leader>2 :bnext<CR>
+:nnoremap <Leader>1 :bprevious<CR>
+
+" map switch tabs:
+map <Leader>3 gT
+map <Leader>4 gt
+map <Leader>5 <C-^>
+
+" map write:
+map <Leader>w :w<cr>
+" map write and quite:
+map <Leader>q :x<cr>
+
+" map indentation adjustment:
+map <Leader>, gg=G<C-o><C-o>
+
+" map buffer list
+map <Leader>ll :ls<CR>:b<Space>
+" map delete buffer from list
+map <Leader>ld :ls<CR>:bd
+" map close buffer:
+map <Leader>z :BD <cr>
+" map close buffer and close window:
+map <Leader>bd :bd <cr>
+" map <Leader>z :w <bar> :BD <cr>
+" map delete buffer from list
+" map <Leader>z :w <bar> :bp <bar> bd #<CR>
+" map <Leader>q :w <bar> :bp <bar> sp <bar> bn <bar> bd <CR>
+
+" map leaer x with lead `:
+" map <Leader>xx <Leader>x <bar> <Leader>`
+
+" set leader key, default is \:
+" let mapleader="<Space>"
+map ; <Leader>
+
 " Set hybird line number:
 " :set number relativenumber
 " :augroup numbertoggle
@@ -259,6 +347,21 @@ let g:jsx_ext_required = 0
 " :  autocmd BufEnter,FocusGained,InsertLeave * set relativenumber
 " :  autocmd BufLeave,FocusLost,InsertEnter   * set norelativenumber
 " :augroup END
+" hybrid line number now are setup using vim-plug(doing the exact same thing)
+:nnoremap <silent> <C-n> :set relativenumber!<cr>
+
+" map IndentWise
+map [0 <Plug>(IndentWisePreviousGreaterIndent)
+map ]0 <Plug>(IndentWiseNextGreaterIndent)
+
+" map :noh
+map ;nh :let @/ = "" <CR>
+
+" map for Emoji replacement and clean the search pattern
+:nnoremap <Leader>em :%s/:\([^:]\+\):/\=emoji#for(submatch(1), submatch(0))/g <bar> :let @/ = "" <CR>
+
+" map <Leader>gf for React Components File Jump
+:map <Leader>gf yiw?./components/<C-r>0<CR>;nhgf<CR>
 
 " tab key to switch windows (and current file path)
 " set autochdir
@@ -278,20 +381,40 @@ let g:jsx_ext_required = 0
 "*****************************************************************************
 " ultisnips/supertab config:
 "*****************************************************************************
-" Supertab keymap:
-let g:SuperTabMappingForward = '<c-j>'
-let g:SuperTabMappingBackward = '<s-c-j>'
-
+" " Supertab keymap:
+" let g:SuperTabMappingForward = '<c-j>'
+" let g:SuperTabMappingBackward = '<s-c-j>'
+"
 " UltiSnip keymap:
 " set runtimepath+=~/.vim/mydir/ultisnips
+" let g:UltiSnipsDontReverseSearchPath="1"
+" let g:UltiSnipsSnippetsDir="~/.vim/mydir/ultisnips"
+" let g:UltiSnipsSnippetDirectories=["mydir/ultisnips", "UltiSnips"]
+" let g:UltiSnipsExpandTrigger="<tab>"                                            
+" let g:UltiSnipsJumpForwardTrigger="<tab>"                                       
+" let g:UltiSnipsJumpBackwardTrigger="<s-tab>"    
+" let g:UltiSnipsListSnippets="<c-k>"
+" let g:UltiSnipsEditSplit="horizontal"
+
+" BELOW IS THE SOLUTION FOR YCM:
+" make YCM compatible with UltiSnips (using supertab)
+let g:ycm_key_list_select_completion = ['<tab>', '<Down>']
+let g:ycm_key_list_previous_completion = ['<s-tab>', '<Up>']
+" let g:SuperTabDefaultCompletionType = '<C-n>'
+
+" better key bindings for UltiSnipsExpandTrigger
+set runtimepath+=~/.vim/mydir/ultisnips
 let g:UltiSnipsDontReverseSearchPath="1"
 let g:UltiSnipsSnippetsDir="~/.vim/mydir/ultisnips"
 let g:UltiSnipsSnippetDirectories=["mydir/ultisnips", "UltiSnips"]
-let g:UltiSnipsExpandTrigger="<tab>"                                            
-let g:UltiSnipsJumpForwardTrigger="<tab>"                                       
-let g:UltiSnipsJumpBackwardTrigger="<s-tab>"    
-let g:UltiSnipsListSnippets="<c-k>"
+let g:UltiSnipsExpandTrigger="<c-j>"
+let g:UltiSnipsJumpForwardTrigger="<c-k>"
+let g:UltiSnipsJumpBackwardTrigger="<c-l>"
+" let g:UltiSnipsListSnippets="<c-k>"
 let g:UltiSnipsEditSplit="horizontal"
+
+" Add node to javascript
+" autocmd FileType javascript UltiSnipsAddFiletypes javascript-node
 
 "*****************************************************************************
 " vim-NERDTree config:
@@ -309,7 +432,9 @@ au VimEnter * wincmd p
 let NERDTreeShowHidden=1
 
 " file opened from NERDTree in new tab by default:
-let NERDTreeMapOpenInTab='<ENTER>'
+" let NERDTreeMapOpenInTab='<ENTER>'
+" let NERDTreeMapActivateNode='<Space>'
+let NERDTreeMapActivateNode='<ENTER>'
 
 " close vim if the only window left open is a NERDTree:
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
@@ -327,7 +452,10 @@ map <Leader>r <esc>:NERDTreeFind<cr>
 map <Leader>nn :NERDTreeToggle<cr>
 
 " Start NERDTree Tabs automatically:
-let g:nerdtree_tabs_open_on_console_startup = 1
+let g:nerdtree_tabs_open_on_console_startup = 0
+
+let NERDTreeMinimalUI = 1
+let NERDTreeDirArrows = 1
 
 "*****************************************************************************
 " airline-vim config:
@@ -345,7 +473,10 @@ let g:airline#extensions#tabline#tab_nr_type = 1
 let g:airline_powerline_fonts = 1
 
 " theme:
-"let g:airline_theme='dark'
+let g:airline_theme='base16'
+" let g:airline_solarized_bg='light'
+" let g:airline_theme='solarized'
+" let g:airline_solarized_bg='dark'
 
 "*****************************************************************************
 " gvim(MacVim) specific Config:
@@ -394,30 +525,47 @@ let g:tex_comment_nospell = 1
 "*****************************************************************************
 " Syntastic Beginner Setting:
 "*****************************************************************************
-let g:syntastic_mode_map = { 'mode': 'passive' }
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
+" let g:syntastic_mode_map = { 'mode': 'passive' }
+" nnoremap <f3> :SyntasticToggleMode<CR>
+" set statusline+=%#warningmsg#
+" set statusline+=%{SyntasticStatuslineFlag()}
+" set statusline+=%*
+"
+" let g:syntastic_always_populate_loc_list = 1
+" let g:syntastic_auto_loc_list = 1
+" let g:syntastic_check_on_open = 1
+" let g:syntastic_check_on_wq = 0
 
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
-
+" ale
+" Put this in vimrc or a plugin file of your own.
+" After this is configured, :ALEFix will try and fix your JS code with ESLint.
+let g:ale_linters = {
+\   'javascript': ['eslint'],
+\ }
+let g:ale_fixers = {
+\   'javascript': ['prettier-eslint'],
+\ }
+let g:ale_javascript_eslint_executable = 'eslint_d'
+let g:ale_javascript_eslint_use_global = 1
+let g:ale_javascript_prettier_eslint_executable = 'prettier-eslint'
+let g:ale_javascript_prettier_eslint_use_global = 1
+let g:ale_fix_on_save = 1
 "*****************************************************************************
 " Goyo Setting:
 "*****************************************************************************
 function! s:goyo_enter()
-  NERDTreeClose
+  " NERDTreeClose
   Limelight
+  :set norelativenumber
 endfunction
 
 function! s:goyo_leave()
-  NERDTree
-  NERDTreeTabsOpen
+  " NERDTree
+  " NERDTreeTabsOpen
   :wincmd w
   " this is equivalent to :execute \"normal \<C-W>\<C-W>\"
   Limelight!
+  :set relativenumber
 endfunction
 
 autocmd! User GoyoEnter nested call <SID>goyo_enter()
@@ -430,3 +578,6 @@ nnoremap <Leader>ff :Goyo<CR>
 " Markdown Preview Setting:
 "*****************************************************************************
 nmap <Leader>mm :LivedownToggle<CR>
+
+" Emoji
+" set completefunc=emoji#complete
