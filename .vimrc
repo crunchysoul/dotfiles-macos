@@ -2,242 +2,125 @@
 " Switched to Neovim 2017-08-07.
 " nvim: ~/.config/nvim/init.vim
 "*****************************************************************************
-
-"*****************************************************************************
 " vim-plug:
-" https://github.com/junegunn/vim-plug
-"*****************************************************************************
 " Plugins will be downloaded under the specified directory:
 call plug#begin('~/.vim/plugged')
 
-" Navigate files in a sidebar:
 Plug 'scrooloose/nerdtree'
-
-" Add NERDTree Tabs plugin here:
 Plug 'jistr/vim-nerdtree-tabs'
-
-" Prevent ENTER in NERDTree open directory in tab: 
 Plug 'baumanno/vim-nerdtree-direnter'
-
-" Fancy statusline:
 Plug 'bling/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-
-" XTerm colour table:
 Plug 'guns/xterm-color-table.vim'
-
-" NERDTree-git-plugin:
 Plug 'xuyuanp/nerdtree-git-plugin'
-
-" Fugitive.vim Git wrapper:
 Plug 'tpope/vim-fugitive'
-
-" Latex lervag/vimtex:
 Plug 'lervag/vimtex'
-
-"vim-ruby/vim-ruby:
 Plug 'vim-ruby/vim-ruby'
-
-" Auto closer:
 Plug 'jiangmiao/auto-pairs'
-
-" Prequriesite for snipmate
 Plug 'MarcWeber/vim-addon-mw-utils'
 Plug 'tomtom/tlib_vim'
-
-" Surround:
 Plug 'tpope/vim-surround'
-
-" Snippets are separated from the engine. Add this if you want them:
 Plug 'honza/vim-snippets'
-
-" Vim-snipmate
-"Plug 'garbas/vim-snipmate'
-
-" Ultisnips 
 Plug 'SirVer/ultisnips'
-
-" Supertab:
 Plug 'ervandew/supertab'
-
-" Indent line:
 Plug 'nathanaelkane/vim-indent-guides'
-
-" Comment tool: CTRL + __
 Plug 'vim-scripts/tComment'
-
-" tpope/vim-endwise:
 Plug 'tpope/vim-endwise'
-
-" Dash for vim:
 Plug 'rizzatti/dash.vim'
-
-" Solarized for Neovim
 Plug 'frankier/neovim-colors-solarized-truecolor-only'
-
-" Monokai
 Plug 'crusoexia/vim-monokai'
-
-" Molokai
 Plug 'tomasr/molokai'
-
-" Base16
 Plug 'chriskempson/base16-vim'
-
-" Emmet-vim for html:
 Plug 'mattn/emmet-vim'
-
-" Auto close tag for html:
 Plug 'alvan/vim-closetag'
-
-"View tag of the current file:
 Plug 'majutsushi/tagbar'
-
-" Better css syntax
 Plug 'hail2u/vim-css3-syntax'
-
-" Vim-javascript:
 Plug 'pangloss/vim-javascript'
-
-" React JSX syntax:
 Plug 'mxw/vim-jsx'
-
-" vim-css-color:
 Plug 'ap/vim-css-color'
-
-" Vim-rails:
 Plug 'tpope/vim-rails'
-
-" Syntastic is a syntax checking plugin:
-" Plug 'scrooloose/syntastic'
-
-" Elixir support:
 Plug 'elixir-lang/vim-elixir'
-
-" Distraction free writing:
 Plug 'junegunn/goyo.vim'
-
-" Limelight for Goyo:
 Plug 'junegunn/limelight.vim'
-
-" Markdown preview:
 Plug 'shime/vim-livedown'
-
-" Fuzzy search:
 Plug 'ctrlpvim/ctrlp.vim'
-
-" Another indent guide:
 Plug 'Yggdroot/indentLine'
-
-" coffeescript syntax:
 Plug 'kchmck/vim-coffee-script'
-
-" hybird line number:
 Plug 'jeffkreeftmeijer/vim-numbertoggle'
-
-" js-tern
 Plug 'ternjs/tern_for_vim'
-
-" indent jump
 Plug 'jeetsukumaran/vim-indentwise'
-
-" es6 snippets:
-"Plug 'isRuslan/vim-es6'
-
-" better buffer close
 Plug 'qpkorr/vim-bufkill'
-
-" Emoji
 Plug 'junegunn/vim-emoji'
-
-" Node vim
 Plug 'moll/vim-node'
-
-" nove colorscheme
 Plug 'trevordmiller/nova-vim'
-
-" YCM:
 Plug 'Valloric/YouCompleteMe'
-
-" ale
 Plug 'w0rp/ale'
-
-" YACS(yet another color scheme)
 Plug 'rafi/awesome-vim-colorschemes'
 
-"*****************************************************************************
-" disabled plugins:
-"*****************************************************************************
-
-" Colorschemes packs:
-" NOT USED - Color issue for vim
-" Plug 'flazz/vim-colorschemes'
+" Plug 'scrooloose/syntastic'
 
 " List ends here. Plugins become visible to Vim after this call:
 call plug#end()
 
 "*****************************************************************************
-" Colorscheme Vim Config:
+" Colorscheme:
 "*****************************************************************************
-syntax enable            " enable syntax processing
+syntax enable                   " enable syntax processing
+colorscheme base16-oceanicnext
 " set background=dark
 " set background=light
-" colorscheme solarized 
 " call togglebg#map("<F5>")
-
-"*****************************************************************************
-
+" colorscheme solarized 
 " colorscheme base16-flat 
 " colorscheme base16-atelier-cave-light
 " colorscheme base16-solarized-light 
-colorscheme base16-oceanicnext
 
 "*****************************************************************************
-" General Vim Config:
+" General:
 "*****************************************************************************
 " swap $ and _g: end of line doesn't include the line break
 nmap $ g_
 vmap $ g_
 
-set vb t_vb=            " Disable sound and bell:
+set vb t_vb=                    " Disable sound and bell:
 set guifontwide=STSong:h14      " gvim Chinesefont
-set hidden              " speed up
-set history=100         " speed up
-set number              " line numbers
-set cursorline          " highlight the current line
+set hidden                      " speed up
+set history=100                 " speed up
+set number                      " line numbers
+set cursorline                  " highlight the current line
 set scrolloff=8
-set showmatch           " highlight matching [{()}]
+set showmatch                   " highlight matching [{()}]
 set linespace=3
 
 " search:
-set incsearch           " like morden search
-set hlsearch            " highlight found words
+set incsearch                   " like morden search
+set hlsearch                    " highlight found words
 
 " indentation:
 filetype plugin indent on
-set tabstop=2           " tab spacing
-set softtabstop=2       " number of spaces in tab when editing
-set shiftwidth=2        " indent/outdent by 4 columns
-set shiftround          " always indent/outdent to the nearest tabstop
-set autoindent          " auto-indent
-set smarttab            " use tabs at the start of a line, spaces elsewhere
-set expandtab           " use spaces instead of tabs
+set tabstop=2                   " tab spacing
+set softtabstop=2               " number of spaces in tab when editing
+set shiftwidth=2                " indent/outdent by 4 columns
+set shiftround                  " always indent/outdent to the nearest tabstop
+set autoindent                  " auto-indent
+set smarttab                    " use tabs at the start of a line, spaces elsewhere
+set expandtab                   " use spaces instead of tabs
 
 " text wrap:
 set wrap
 set linebreak
-set nolist  " list disables linebreak
+set nolist                      " list disables linebreak
 set textwidth=80
 set formatoptions-=t
-set colorcolumn=80        " ruler:
-"set nowrap              " don't wrap text
+set colorcolumn=80              " ruler:
+"set nowrap                     " don't wrap text
 
 " folding:
-set foldenable          " enable folding
-set foldlevelstart=10   " open most folds by default
-set foldnestmax=10      " 10 nested fold max
-" set foldmethod=indent   " fold based on indent level
-set foldmethod=manual   " fold based on indent level
+set foldenable                  " enable folding
+set foldlevelstart=10           " open most folds by default
+set foldnestmax=10              " 10 nested fold max
+" set foldmethod=indent         " fold based on indent level
+set foldmethod=manual           " fold based on indent level
 " space open/closes folds
 nnoremap <space> za
 " Auto load view and folder
@@ -340,13 +223,6 @@ map <Leader>bd :bd <cr>
 " let mapleader="<Space>"
 map ; <Leader>
 
-" Set hybird line number:
-" :set number relativenumber
-" :augroup numbertoggle
-" :  autocmd!
-" :  autocmd BufEnter,FocusGained,InsertLeave * set relativenumber
-" :  autocmd BufLeave,FocusLost,InsertEnter   * set norelativenumber
-" :augroup END
 " hybrid line number now are setup using vim-plug(doing the exact same thing)
 :nnoremap <silent> <C-n> :set relativenumber!<cr>
 
