@@ -77,3 +77,7 @@ Thumbs.db
 Network Trash Folder
 Temporary Items
 .apdisk
+
+# .env Credentials Protection #
+#######################################################
+# .env
