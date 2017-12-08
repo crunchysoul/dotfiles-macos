@@ -21,7 +21,6 @@ Plug 'MarcWeber/vim-addon-mw-utils'
 Plug 'tomtom/tlib_vim'
 Plug 'tpope/vim-surround'
 Plug 'honza/vim-snippets'
-Plug 'SirVer/ultisnips'
 Plug 'ervandew/supertab'
 Plug 'nathanaelkane/vim-indent-guides'
 Plug 'vim-scripts/tComment'
@@ -53,9 +52,17 @@ Plug 'qpkorr/vim-bufkill'
 Plug 'junegunn/vim-emoji'
 Plug 'moll/vim-node'
 Plug 'trevordmiller/nova-vim'
+Plug 'SirVer/ultisnips'
 Plug 'Valloric/YouCompleteMe'
 Plug 'w0rp/ale'
 Plug 'rafi/awesome-vim-colorschemes'
+Plug 'diepm/vim-rest-console'
+Plug 'godlygeek/tabular'
+Plug 'junegunn/vim-easy-align'
+Plug 'plasticboy/vim-markdown'
+Plug 'neovimhaskell/haskell-vim'
+" Plug 'tpope/vim-markdown'
+" Plug 'tpope/vim-liquid'
 
 " Plug 'scrooloose/syntastic'
 
@@ -112,7 +119,7 @@ set linebreak
 set nolist                      " list disables linebreak
 set textwidth=80
 set formatoptions-=t
-set colorcolumn=80              " ruler:
+" set colorcolumn=80              " ruler:
 "set nowrap                     " don't wrap text
 
 " folding:
@@ -126,6 +133,8 @@ nnoremap <space> za
 " Auto load view and folder
 autocmd BufWinLeave *.* mkview!
 autocmd BufWinEnter *.* silent! loadview 
+" Not saves vim options
+set viewoptions-=options
 
 " Reload Vim Config Without Having To Restart Editor:
 " Updated, before when source rc, indentation setting are lost,
@@ -169,7 +178,7 @@ if has('persistent_undo')      "check if your vim version supports it
   set undofile                 "turn on the feature  
   "directory where the undo files will be stored
   set undodir=$HOME/.vim/mydir/undodir
-  endif 
+endif 
 
 " Indent line:
 let g:indentLine_enabled = 0    " Disable by default
@@ -198,13 +207,13 @@ map <Leader>5 <C-^>
 " map write:
 map <Leader>w :w<cr>
 " map write and quite:
-map <Leader>q :x<cr>
+map <Leader>qq :x<cr>
 
 " map indentation adjustment:
 map <Leader>, gg=G<C-o><C-o>
 
 " map buffer list
-map <Leader>ll :ls<CR>:b<Space>
+map <Leader>` :ls<CR>:b<Space>
 " map delete buffer from list
 map <Leader>ld :ls<CR>:bd
 " map close buffer:
@@ -237,7 +246,8 @@ map ;nh :let @/ = "" <CR>
 :nnoremap <Leader>em :%s/:\([^:]\+\):/\=emoji#for(submatch(1), submatch(0))/g <bar> :let @/ = "" <CR>
 
 " map <Leader>gf for React Components File Jump
-:map <Leader>gf yiw?./components/<C-r>0<CR>;nhgf<CR>
+" :map <Leader>gf yiw?./components/<C-r>0<CR>;nhgf<CR>
+:map <Leader>gf yiw?./<C-r>0<CR>;nhgf<CR>
 
 " tab key to switch windows (and current file path)
 " set autochdir
@@ -257,22 +267,7 @@ map ;nh :let @/ = "" <CR>
 "*****************************************************************************
 " ultisnips/supertab config:
 "*****************************************************************************
-" " Supertab keymap:
-" let g:SuperTabMappingForward = '<c-j>'
-" let g:SuperTabMappingBackward = '<s-c-j>'
-"
-" UltiSnip keymap:
-" set runtimepath+=~/.vim/mydir/ultisnips
-" let g:UltiSnipsDontReverseSearchPath="1"
-" let g:UltiSnipsSnippetsDir="~/.vim/mydir/ultisnips"
-" let g:UltiSnipsSnippetDirectories=["mydir/ultisnips", "UltiSnips"]
-" let g:UltiSnipsExpandTrigger="<tab>"                                            
-" let g:UltiSnipsJumpForwardTrigger="<tab>"                                       
-" let g:UltiSnipsJumpBackwardTrigger="<s-tab>"    
-" let g:UltiSnipsListSnippets="<c-k>"
-" let g:UltiSnipsEditSplit="horizontal"
-
-" BELOW IS THE SOLUTION FOR YCM:
+" " BELOW IS THE SOLUTION FOR YCM:
 " make YCM compatible with UltiSnips (using supertab)
 let g:ycm_key_list_select_completion = ['<tab>', '<Down>']
 let g:ycm_key_list_previous_completion = ['<s-tab>', '<Up>']
@@ -358,17 +353,17 @@ let g:airline_theme='base16'
 " gvim(MacVim) specific Config:
 "*****************************************************************************
 if has('gui_running')
-    "set encoding=utf-8
-    "set fileencoding=chinese
-    "set fileencodings=ucs-bom,utf-8,chinese,gb18030,gbk,gb2312,cp936,prc,taiwan,latin-1
-    set lines=43 columns=146        " default gvim window size
-    set guifont=Hack:h14            " gvim font
-    set guifontwide=STSong:h14      " gvim Chinesefont
-    set guioptions-=L               " hide left scrollbar
-    set guioptions-=r               " hide right scrollbar
-    set background=light             " background for colorscheme
-    colorscheme solarized
-    let g:airline_theme='solarized'
+  "set encoding=utf-8
+  "set fileencoding=chinese
+  "set fileencodings=ucs-bom,utf-8,chinese,gb18030,gbk,gb2312,cp936,prc,taiwan,latin-1
+  set lines=43 columns=146        " default gvim window size
+  set guifont=Hack:h14            " gvim font
+  set guifontwide=STSong:h14      " gvim Chinesefont
+  set guioptions-=L               " hide left scrollbar
+  set guioptions-=r               " hide right scrollbar
+  set background=light             " background for colorscheme
+  colorscheme solarized
+  let g:airline_theme='solarized'
 endif
 
 au InsertLeave * set nopaste
@@ -376,13 +371,13 @@ au InsertLeave * set nopaste
 " Neovim specific Config:
 "*****************************************************************************
 if has('nvim')
-    set termguicolors
-    " highlight Cursor guifg=white guibg=steelblue
-    " highlight iCursor guifg=white guibg=steelblue
-    " set guicursor=n-v-c:block-Cursor
-    " set guicursor+=i:ver100-iCursor
-    " set guicursor+=n-v-c:blinkon0
-    " set guicursor+=i:blinkwait10
+  set termguicolors
+  " highlight Cursor guifg=white guibg=steelblue
+  " highlight iCursor guifg=white guibg=steelblue
+  " set guicursor=n-v-c:block-Cursor
+  " set guicursor+=i:ver100-iCursor
+  " set guicursor+=n-v-c:blinkon0
+  " set guicursor+=i:blinkwait10
 endif
 
 "*****************************************************************************
@@ -407,24 +402,31 @@ let g:tex_comment_nospell = 1
 " set statusline+=%{SyntasticStatuslineFlag()}
 " set statusline+=%*
 "
+" let g:syntastic_javascript_checkers=['eslint']
 " let g:syntastic_always_populate_loc_list = 1
 " let g:syntastic_auto_loc_list = 1
 " let g:syntastic_check_on_open = 1
 " let g:syntastic_check_on_wq = 0
 
 " ale
+" let g:ale_sign_error = '●' " Less aggressive than the default '>>'
+" let g:ale_sign_warning = '.'
+let g:ale_lint_on_enter = 0 " Less distracting when opening a new file
 " Put this in vimrc or a plugin file of your own.
 " After this is configured, :ALEFix will try and fix your JS code with ESLint.
 let g:ale_linters = {
-\   'javascript': ['eslint'],
-\ }
+      \   'javascript': ['eslint'],
+      \ }
 let g:ale_fixers = {
-\   'javascript': ['prettier-eslint'],
-\ }
-let g:ale_javascript_eslint_executable = 'eslint_d'
-let g:ale_javascript_eslint_use_global = 1
-let g:ale_javascript_prettier_eslint_executable = 'prettier-eslint'
-let g:ale_javascript_prettier_eslint_use_global = 1
+      \   'javascript': ['prettier'],
+      \ }
+nmap <Leader>fx <Plug>(ale_fix)
+
+let g:deoplete#enable_at_startup = 1
+" let g:ale_javascript_eslint_executable = 'eslint'
+" let g:ale_javascript_eslint_use_global = 1
+" let g:ale_javascript_prettier_eslint_executable = 'prettier-eslint'
+" let g:ale_javascript_prettier_eslint_use_global = 1
 let g:ale_fix_on_save = 1
 "*****************************************************************************
 " Goyo Setting:
@@ -457,3 +459,61 @@ nmap <Leader>mm :LivedownToggle<CR>
 
 " Emoji
 " set completefunc=emoji#complete
+
+"*****************************************************************************
+" emmet:
+"*****************************************************************************
+" let g:user_emmet_leader_key='<c-j>'
+" let g:user_emmet_settings = {
+"       \  'javascript.jsx' : {
+"       \      'extends' : 'jsx',
+"       \  },
+"       \}
+
+" Enable syntax highlighting when buffers were loaded through :bufdo, which
+" disables the Syntax autocmd event to speed up processing.
+augroup EnableSyntaxHighlighting
+  " Filetype processing does happen, so we can detect a buffer initially
+  " loaded during :bufdo through a set filetype, but missing b:current_syntax.
+  " Also don't do this when the user explicitly turned off syntax highlighting
+  " via :syntax off.
+  " Note: Must allow nesting of autocmds so that the :syntax enable triggers
+  " the ColorScheme event. Otherwise, some highlighting groups may not be
+  " restored properly.
+  autocmd! BufWinEnter * nested if exists('syntax_on') && ! exists('b:current_syntax') && ! empty(&l:filetype) | syntax enable | endif
+
+  " The above does not handle reloading via :bufdo edit!, because the
+  " b:current_syntax variable is not cleared by that. During the :bufdo,
+  " 'eventignore' contains \"Syntax\", so this can be used to detect this
+  " situation when the file is re-read into the buffer. Due to the
+  " 'eventignore', an immediate :syntax enable is ignored, but by clearing
+  " b:current_syntax, the above handler will do this when the reloaded buffer
+  " is displayed in a window again.
+  autocmd! BufRead * if exists('syntax_on') && exists('b:current_syntax') && ! empty(&l:filetype) && index(split(&eventignore, ','), 'Syntax') != -1 | unlet! b:current_syntax | endif
+augroup END
+
+" Prettier
+autocmd FileType javascript set formatprg=prettier\ --stdin
+
+" Set VRC format to json:
+" let g:vrc_output_buffer_name = '__VRC_OUTPUT.json'
+
+" let g:vrc_include_response_header = 1
+let g:vrc_curl_opts = {'-i': ''}
+
+" Set format
+let s:vrc_auto_format_response_patterns = {
+  \ 'json': 'python -m json.tool',
+  \ 'xml': 'xmllint --format -',
+\}
+
+" Set auto spell for markdown
+autocmd FileType markdown,md,latex,tex,txt,text,liquid setlocal spell spelllang=en_us textwidth=80 complete+=kspell
+let g:vim_markdown_conceal = 0
+let g:markdown_fenced_languages = ['javascript', 'ruby', 'sh', 'yaml', 'html', 'coffee', 'json', 'diff', 'haskell']
+" YAML matter for Jekyll and Liquid
+let g:vim_markdown_frontmatter = 1
+let g:vim_markdown_new_list_item_indent = 0
+" let g:liquid_highlight_types = g:markdown_fenced_languages
+" autocmd FileType markdown,md,latex,tex,txt,text,liquid syntax match Comment /\%^---\_.\{-}---$/
+" autocmd FileType markdown,md,latex,tex,txt,text,liquid syn region lqdHighlight     start=/^{%\s*highlight\(\s\+\w\+\)\{0,1}\s*%}$/ end=/{%\s*endhighlight\s*%}/ contains=@Spell
