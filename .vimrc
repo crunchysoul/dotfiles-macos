@@ -17,9 +17,9 @@
 
 " Vim Config - General:
 "*****************************************************************************
-source ~/.vim/config/nvim.vim
-source ~/.vim/config/general.vim
 source ~/.vim/config/plugins.vim
+source ~/.vim/config/general.vim
+source ~/.vim/config/nvim.vim
 source ~/.vim/config/gvim.vim
 source ~/.vim/config/keymap.vim
 source ~/.vim/config/color.vim
