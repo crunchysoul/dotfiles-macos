@@ -25,6 +25,3 @@ let NERDTreeMinimalUI = 1
 
 " using directional arrows:
 let NERDTreeDirArrows = 1
-
-" disable NERDTree-Tabs automatically:
-let g:nerdtree_tabs_open_on_console_startup = 0

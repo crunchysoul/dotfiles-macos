@@ -8,7 +8,7 @@
 " Last Update: 2017-12-12 16:52
 "
 " Notes:
-" 1. Use "junegunn/vim-plug" plugins manager
+" 1. Use 'junegunn/vim-plug' plugins manager
 "*****************************************************************************
 
 " Plugins - Deploying:
@@ -18,9 +18,9 @@ call plug#begin('~/.vim/plugged')
 
 Plug 'alvan/vim-closetag'
 Plug 'baumanno/vim-nerdtree-direnter'
+Plug 'jistr/vim-nerdtree-tabs'
 Plug 'bling/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-Plug 'jistr/vim-nerdtree-tabs'
 Plug 'scrooloose/nerdtree'
 Plug 'guns/xterm-color-table.vim'
 Plug 'xuyuanp/nerdtree-git-plugin'
@@ -28,21 +28,15 @@ Plug 'tpope/vim-fugitive'
 Plug 'lervag/vimtex'
 Plug 'vim-ruby/vim-ruby'
 Plug 'jiangmiao/auto-pairs'
-Plug 'MarcWeber/vim-addon-mw-utils'
-Plug 'tomtom/tlib_vim'
 Plug 'tpope/vim-surround'
 Plug 'honza/vim-snippets'
 Plug 'ervandew/supertab'
-Plug 'nathanaelkane/vim-indent-guides'
 Plug 'vim-scripts/tComment'
 Plug 'tpope/vim-endwise'
 Plug 'rizzatti/dash.vim'
 Plug 'frankier/neovim-colors-solarized-truecolor-only'
-Plug 'crusoexia/vim-monokai'
-Plug 'tomasr/molokai'
 Plug 'chriskempson/base16-vim'
 Plug 'mattn/emmet-vim'
-Plug 'majutsushi/tagbar'
 Plug 'hail2u/vim-css3-syntax'
 Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx'
@@ -61,14 +55,11 @@ Plug 'jeetsukumaran/vim-indentwise'
 Plug 'qpkorr/vim-bufkill'
 Plug 'junegunn/vim-emoji'
 Plug 'moll/vim-node'
-Plug 'trevordmiller/nova-vim'
 Plug 'SirVer/ultisnips'
 Plug 'Valloric/YouCompleteMe'
 Plug 'w0rp/ale'
-Plug 'rafi/awesome-vim-colorschemes'
 Plug 'diepm/vim-rest-console'
 Plug 'godlygeek/tabular'
-Plug 'junegunn/vim-easy-align'
 Plug 'plasticboy/vim-markdown'
 Plug 'neovimhaskell/haskell-vim'
 
@@ -79,4 +70,12 @@ call plug#end()
 "*****************************************************************************
 " Plug 'tpope/vim-markdown'
 " Plug 'tpope/vim-liquid'
+" Plug 'rafi/awesome-vim-colorschemes'
+" Plug 'crusoexia/vim-monokai'
+" Plug 'tomasr/molokai'
+" Plug 'junegunn/vim-easy-align'
 " Plug 'scrooloose/syntastic'
+" Plug 'majutsushi/tagbar' , { 'on': 'TagbarToggle' }
+" Plug 'jistr/vim-nerdtree-tabs'
+" Plug 'itchyny/lightline.vim'
+" Plug 'nathanaelkane/vim-indent-guides'

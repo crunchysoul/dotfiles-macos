@@ -74,7 +74,7 @@ set splitright
 if has('persistent_undo')      "check if your vim version supports it
   set undofile                 "turn on the feature  
   "directory where the undo files will be stored
-  set undodir=$HOME/.vim/mydir/undodir
+  set undodir=$HOME/.vim/myundos
 endif 
 
 " fix paste issue:
