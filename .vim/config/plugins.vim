@@ -1,7 +1,7 @@
 "*****************************************************************************
 " Vim Plugin List:
 "
-" Path: ~/.vim/splitvimrc/plugins.vim
+" Path: ~/.vim/config/plugins.vim
 " Author: Chen Zhao
 " Github: @crunchysoul
 " Dotfile Links: https://github.com/crunchysoul/dotfiles-macbook-pro

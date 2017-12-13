@@ -1,7 +1,7 @@
 "*****************************************************************************
 " Vim Key Mapping:
 "
-" Path: ~/.vim/splitvimrc/keymap.vim
+" Path: ~/.vim/config/keymap.vim
 " Author: Chen Zhao
 " Github: @crunchysoul
 " Dotfile Links: https://github.com/crunchysoul/dotfiles-macbook-pro

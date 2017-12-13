@@ -1,25 +1,31 @@
-"*****************************************************************************
+"*******************************************************************************
 " Vim General Config:
 "
-" Path: ~/.vim/splitvimrc/general.vim
+" Path: ~/.vim/config/config.vim
 " Author: Chen Zhao
 " Github: @crunchysoul
 " Dotfile Links: https://github.com/crunchysoul/dotfiles-macbook-pro
-" Last Update: 2017-12-12 17:41
+" Last Update: 2017-12-13 14:34
 "
 " Notes:
-" *****************************************************************************
+"
+"*******************************************************************************
 
+"*******************************************************************************
+" Vim General Config - Setting:
+" Last Update: 2017-12-13 14:43
+"*******************************************************************************
+
+" genereal:
 syntax enable                   " enable syntax processing
 set vb t_vb=                    " Disable sound and bell:
 set guifontwide=STSong:h14      " gvim Chinesefont
 set hidden                      " speed up
-set history=100                 " speed up
+set history=200                 " speed up
 set number                      " line numbers
 set cursorline                  " highlight the current line
 set scrolloff=8
 set showmatch                   " highlight matching [{()}]
-set linespace=3
 
 " search:
 set incsearch                   " like morden search
@@ -41,13 +47,12 @@ set linebreak
 set nolist                      " list disables linebreak
 set textwidth=80
 set formatoptions-=t
-"set nowrap                     " don't wrap text
 
 " folding:
 set foldenable                  " enable folding
+set foldmethod=manual           " fold based on indent level
 set foldlevelstart=10           " open most folds by default
 set foldnestmax=10              " 10 nested fold max
-set foldmethod=manual           " fold based on indent level
 
 " Auto load view and folder
 autocmd BufWinLeave *.* mkview!
@@ -77,6 +82,11 @@ if has('persistent_undo')      "check if your vim version supports it
   set undodir=$HOME/.vim/myundos
 endif 
 
+"*******************************************************************************
+" Vim General Config - Issues Remedies:
+" Last Update: 2017-12-13 14:36
+"*****************************************************************************
+
 " fix paste issue:
 set nopaste
 au InsertLeave * set nopaste
@@ -86,3 +96,43 @@ augroup EnableSyntaxHighlighting
   autocmd! BufWinEnter * nested if exists('syntax_on') && ! exists('b:current_syntax') && ! empty(&l:filetype) | syntax enable | endif
   autocmd! BufRead * if exists('syntax_on') && exists('b:current_syntax') && ! empty(&l:filetype) && index(split(&eventignore, ','), 'Syntax') != -1 | unlet! b:current_syntax | endif
 augroup END
+
+"*******************************************************************************
+" Vim General Config - GUI:
+" Last Update: 2017-12-13 14:36
+" Notes:
+" 1. gvim(MacVim) specific config
+"*****************************************************************************
+
+if has('gui_running')
+  set lines=43 columns=146        " default gvim window size
+  set guifont=Hack:h14            " gvim font
+  set guifontwide=STSong:h14      " gvim Chinesefont
+  set guioptions-=L               " hide left scrollbar
+  set guioptions-=r               " hide right scrollbar
+  set linespace=3
+endif
+
+"*******************************************************************************
+" Vim General Config - NeoVim:
+" Last Update: 2017-12-12 17:03
+" Notes:
+" 1. NeoVim specific config
+"*****************************************************************************
+
+if has('nvim')
+  set termguicolors
+endif
+
+"*******************************************************************************
+" Vim General Config - Color Scheme:
+" Last Update: 2017-12-12 16:52
+" Notes:
+" 1. use base16 colorschemes first, works better with nvim
+" *****************************************************************************
+
+colorscheme base16-oceanicnext
+" set background=dark
+" set background=light
+" call togglebg#map("<F5>")
+" colorscheme solarized 
