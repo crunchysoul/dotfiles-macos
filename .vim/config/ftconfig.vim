@@ -11,13 +11,37 @@
 " 1. Put all ftplugin settings here in one place
 " *****************************************************************************
 
-" Textbased:
-autocmd FileType markdown,tex,latex,txt,text setlocal spell spelllang=en_us textwidth=80 complete+=kspell
+" Elixir:
+autocmd BufWritePost *.exs silent :!mix format %
+autocmd BufWritePost *.ex silent :!mix format %
+" autocmd FileType elixir silent :!mix format %
+
+" Elm:
+autocmd FileType elm set tabstop=4            " tab spacing
+autocmd FileType elm set softtabstop=4        " number of spaces in tab when editing
+autocmd FileType elm set shiftwidth=4         " indent/outdent by 2 columns
+" autocmd BufWritePost *.elm ElmMake            " auto make when write
+
+" GO:
+autocmd FileType go set noexpandtab
+autocmd FileType go set shiftwidth=4
+autocmd FileType go set softtabstop=4
+autocmd FileType go set tabstop=4
 
 " JavaScript:
 autocmd FileType javascript set formatprg=prettier\ --stdin
 
 " Ruby:
-autocmd FileType ruby setlocal tabstop=2           " tab spacing
-autocmd FileType ruby setlocal softtabstop=2       " number of spaces in tab when editing
-autocmd FileType ruby setlocal shiftwidth=2        " indent/outdent by 2 columns
+autocmd FileType ruby set expandtab
+autocmd FileType ruby set tabstop=2           " tab spacing
+autocmd FileType ruby set softtabstop=2       " number of spaces in tab when editing
+autocmd FileType ruby set shiftwidth=2        " indent/outdent by 2 columns
+
+" Textbased:
+autocmd FileType markdown,tex,latex,txt,text setlocal spell spelllang=en_us textwidth=80 complete+=kspell
+
+" Wechat:
+augroup filetypedetect
+  au BufRead,BufNewFile *.wxml set filetype=jsx
+  au BufRead,BufNewFile *.wxss set filetype=css
+augroup END

@@ -12,7 +12,7 @@
 "*******************************************************************************
 
 "*******************************************************************************
-" Vim General Config - Setting:
+"" Vim General Config - Setting:
 " Last Update: 2017-12-13 14:43
 "*******************************************************************************
 
@@ -23,9 +23,12 @@ set guifontwide=STSong:h14      " gvim Chinesefont
 set hidden                      " speed up
 set history=200                 " speed up
 set number                      " line numbers
-set cursorline                  " highlight the current line
+" set cursorline                  " highlight the current line
 set scrolloff=8
 set showmatch                   " highlight matching [{()}]
+set nocursorline                " Disable cursor line
+set nocursorcolumn              " Disable cursor column
+set scrolljump=8                " scroll 8 lines at a time at bottom/top
 
 " search:
 set incsearch                   " like morden search
@@ -38,9 +41,7 @@ set softtabstop=2               " number of spaces in tab when editing
 set shiftwidth=2                " indent/outdent by 4 columns
 set shiftround                  " always indent/outdent to the nearest tabstop
 set autoindent                  " auto-indent
-set smarttab                    " use tabs at the start of a line, spaces elsewhere
-set expandtab                   " use spaces instead of tabs
-
+set smarttab                    " use tabs at the start of a line, spaces elsewhere set expandtab                   " use spaces instead of tabs 
 " text wrap:
 set wrap
 set linebreak
@@ -54,9 +55,13 @@ set foldmethod=manual           " fold based on indent level
 set foldlevelstart=10           " open most folds by default
 set foldnestmax=10              " 10 nested fold max
 
+" Auto load leave save regain reload
+au FocusGained,BufEnter * :silent! !
+" au FocusLost,WinLeave * :silent! w
+
 " Auto load view and folder
-autocmd BufWinLeave *.* mkview!
-autocmd BufWinEnter *.* silent! loadview 
+" autocmd BufWinLeave *.* mkview!
+" autocmd BufWinEnter *.* silent! loadview 
 
 " Not saves vim options
 set viewoptions-=options
@@ -82,10 +87,13 @@ if has('persistent_undo')      "check if your vim version supports it
   set undodir=$HOME/.vim/myundos
 endif 
 
+" Disable safe write in your editor to assure hot reloading works properly
+" https://github.com/coryhouse/react-slingshot#initial-machine-setup
+set backupcopy=yes
 "*******************************************************************************
-" Vim General Config - Issues Remedies:
+"" Vim General Config - Issues Remedies:
 " Last Update: 2017-12-13 14:36
-"*****************************************************************************
+"*******************************************************************************
 
 " fix paste issue:
 set nopaste
@@ -98,11 +106,11 @@ augroup EnableSyntaxHighlighting
 augroup END
 
 "*******************************************************************************
-" Vim General Config - GUI:
+"" Vim General Config - GUI:
 " Last Update: 2017-12-13 14:36
 " Notes:
 " 1. gvim(MacVim) specific config
-"*****************************************************************************
+"*******************************************************************************
 
 if has('gui_running')
   set lines=43 columns=146        " default gvim window size
@@ -114,25 +122,25 @@ if has('gui_running')
 endif
 
 "*******************************************************************************
-" Vim General Config - NeoVim:
+"" Vim General Config - NeoVim: {{{
 " Last Update: 2017-12-12 17:03
 " Notes:
 " 1. NeoVim specific config
-"*****************************************************************************
+"*******************************************************************************
 
 if has('nvim')
   set termguicolors
 endif
-
+" }}}
 "*******************************************************************************
-" Vim General Config - Color Scheme:
+"" Vim General Config - Color Scheme:
 " Last Update: 2017-12-12 16:52
 " Notes:
 " 1. use base16 colorschemes first, works better with nvim
-" *****************************************************************************
+"*******************************************************************************
 
 colorscheme base16-oceanicnext
 " set background=dark
 " set background=light
 " call togglebg#map("<F5>")
-" colorscheme solarized 
+" colorscheme solarized

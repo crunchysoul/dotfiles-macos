@@ -1,7 +1,6 @@
 "*****************************************************************************
-" IndentLine Config:
+" Elm Config:
 "*****************************************************************************
 
-" disable indentline by default:
-let g:indentLine_enabled = 0
-let g:indentLine_color_term = 239
+" disable Elm-Vim mappings
+let g:elm_setup_keybindings = 0

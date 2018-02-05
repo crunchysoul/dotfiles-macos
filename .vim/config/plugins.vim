@@ -42,7 +42,7 @@ Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx'
 Plug 'ap/vim-css-color'
 Plug 'tpope/vim-rails'
-Plug 'elixir-lang/vim-elixir'
+Plug 'elixir-editors/vim-elixir'
 Plug 'junegunn/goyo.vim'
 Plug 'junegunn/limelight.vim'
 Plug 'shime/vim-livedown'
@@ -50,7 +50,6 @@ Plug 'ctrlpvim/ctrlp.vim'
 Plug 'Yggdroot/indentLine'
 Plug 'kchmck/vim-coffee-script'
 Plug 'jeffkreeftmeijer/vim-numbertoggle'
-Plug 'ternjs/tern_for_vim'
 Plug 'jeetsukumaran/vim-indentwise'
 Plug 'qpkorr/vim-bufkill'
 Plug 'junegunn/vim-emoji'
@@ -62,10 +61,13 @@ Plug 'diepm/vim-rest-console'
 Plug 'godlygeek/tabular'
 Plug 'plasticboy/vim-markdown'
 Plug 'neovimhaskell/haskell-vim'
-
+Plug 'elmcast/elm-vim'
+Plug 'fatih/vim-go'
+Plug 'keith/swift.vim'
+Plug 'posva/vim-vue'
+Plug 'ternjs/tern_for_vim'
 " list ends here. Plugins become visible to Vim after this call:
 call plug#end()
-
 " Plugins - Retired:
 "*****************************************************************************
 " Plug 'tpope/vim-markdown'

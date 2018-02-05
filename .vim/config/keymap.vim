@@ -87,6 +87,11 @@ nnoremap k gk
 " ALE Fix Toggle:
 nmap <Leader>fx <Plug>(ale_fix)
 
+" Emmet Toggle:
+" map <C-j>, <C-y>,
+map <Leader>[ <C-y>,
+" map <C-;>, <C-y>,
+
 " Goyo Toggle:
 nnoremap <Leader>ff :Goyo<CR>
 

@@ -8,10 +8,29 @@ function* ${1:name}(${2}) {
 endsnippet
 
 # Arrow function
-snippet rf "Arrow function" i
-(${1}) => {
+# snippet rf "Arrow function" i
+# (${1}) => {
+# 	${2}
+# }
+# endsnippet
+
+# Arrow function Return
+snippet afr "Arrow function Return" i
+(${1}) => (
 	${2}
-}
+)
+endsnippet
+
+snippet cfr "constant AF Return"
+const ${1:function_name} = (${2}) => (
+	${0:${VISUAL}}
+)
+endsnippet
+
+snippet hof "Higher Order Function"
+const ${1:function_name} = (${2}) => ({${3}}) => (
+	${0:${VISUAL}}
+)
 endsnippet
 
 # Class

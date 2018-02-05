@@ -1,7 +1,9 @@
 "*****************************************************************************
-" IndentLine Config:
+" Vim Mix Format Config:
 "*****************************************************************************
 
-" disable indentline by default:
-let g:indentLine_enabled = 0
-let g:indentLine_color_term = 239
+" Automatically format on saving
+let g:mix_format_on_save = 1
+
+" Slient error
+let g:mix_format_silent_errors = 1

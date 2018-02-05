@@ -1,7 +1,9 @@
 "*****************************************************************************
-" IndentLine Config:
+" Emmet Config:
 "*****************************************************************************
 
-" disable indentline by default:
-let g:indentLine_enabled = 0
-let g:indentLine_color_term = 239
+let g:user_emmet_settings = {
+\  'javascript.jsx' : {
+\      'extends': 'jsx',
+\  },
+\}

@@ -56,7 +56,7 @@ ZSH_THEME="powerlevel9k/powerlevel9k"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git npm z ruby osx) 
+plugins=(git npm z ruby osx yarn) 
 
 source $ZSH/oh-my-zsh.sh
 
@@ -151,6 +151,12 @@ export ANDROID_HOME=$HOME/Library/Android/sdk
 export PATH=$PATH:$ANDROID_HOME/tools
 export PATH=$PATH:$ANDROID_HOME/platform-tools
 
+# GO:
+export GOROOT=/usr/local/opt/go/libexec
+export GOPATH=$HOME/.go
+export GOBIN=$GOPATH/bin
+export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
+
 ##############################################################################
 # My Alias:
 ##############################################################################
@@ -184,3 +190,5 @@ alias glogs='git log --pretty=oneline --abbrev-commit'
 alias glogfun='git log -1 | cowsay -f dragon-and-cow | lolcat'
 alias spoofmac="openssl rand -hex 6 | sed 's/\(..\)/\1:/g; s/.$//' | xargs sudo ifconfig en0 ether"
 alias whatmac='ifconfig en0 | grep ether'
+
+export PATH=/Users/joshuazhao/.local/bin/luna-studio:$PATH

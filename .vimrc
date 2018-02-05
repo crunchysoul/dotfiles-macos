@@ -58,12 +58,16 @@ source ~/.vim/config/keymap.vim
 "*****************************************************************************
 source ~/.vim/config/plugins_config/airline.vim
 source ~/.vim/config/plugins_config/ale.vim
+source ~/.vim/config/plugins_config/elm.vim
+source ~/.vim/config/plugins_config/emmet.vim
 source ~/.vim/config/plugins_config/goyo.vim
 source ~/.vim/config/plugins_config/indentline.vim
 source ~/.vim/config/plugins_config/jsx.vim
 source ~/.vim/config/plugins_config/latex.vim
 source ~/.vim/config/plugins_config/markdown.vim
+" source ~/.vim/config/plugins_config/mixformat.vim
 source ~/.vim/config/plugins_config/nerdtree.vim
+source ~/.vim/config/plugins_config/tern.vim
 source ~/.vim/config/plugins_config/ultisnips.vim
 source ~/.vim/config/plugins_config/vrc.vim
 source ~/.vim/config/plugins_config/ycm.vim
