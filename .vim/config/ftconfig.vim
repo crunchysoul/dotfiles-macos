@@ -13,7 +13,7 @@
 
 " Elixir:
 autocmd BufWritePost *.exs silent :!mix format %
-autocmd BufWritePost *.ex silent :!mix format %
+autocmd BufWritePost *.exs silent :!mix format %
 " autocmd FileType elixir silent :!mix format %
 
 " Elm:
@@ -39,6 +39,9 @@ autocmd FileType ruby set shiftwidth=2        " indent/outdent by 2 columns
 
 " Textbased:
 autocmd FileType markdown,tex,latex,txt,text setlocal spell spelllang=en_us textwidth=80 complete+=kspell
+autocmd FileType markdown,tex,latex,txt,text set tabstop=2           " tab spacing
+autocmd FileType markdown,tex,latex,txt,text set softtabstop=2       " number of spaces in tab when editing
+autocmd FileType markdown,tex,latex,txt,text set shiftwidth=2        " indent/outdent by 2 columns
 
 " Wechat:
 augroup filetypedetect

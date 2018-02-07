@@ -60,8 +60,8 @@ au FocusGained,BufEnter * :silent! !
 " au FocusLost,WinLeave * :silent! w
 
 " Auto load view and folder
-" autocmd BufWinLeave *.* mkview!
-" autocmd BufWinEnter *.* silent! loadview 
+autocmd BufWinLeave *.* mkview!
+autocmd BufWinEnter *.* silent! loadview 
 
 " Not saves vim options
 set viewoptions-=options
@@ -90,6 +90,7 @@ endif
 " Disable safe write in your editor to assure hot reloading works properly
 " https://github.com/coryhouse/react-slingshot#initial-machine-setup
 set backupcopy=yes
+
 "*******************************************************************************
 "" Vim General Config - Issues Remedies:
 " Last Update: 2017-12-13 14:36
@@ -139,8 +140,8 @@ endif
 " 1. use base16 colorschemes first, works better with nvim
 "*******************************************************************************
 
-colorscheme base16-oceanicnext
+" colorscheme base16-oceanicnext
 " set background=dark
 " set background=light
 " call togglebg#map("<F5>")
-" colorscheme solarized
+colorscheme base16-solarized-dark

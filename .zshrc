@@ -157,6 +157,12 @@ export GOPATH=$HOME/.go
 export GOBIN=$GOPATH/bin
 export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
 
+# Luna-studio:
+export PATH=/Users/joshuazhao/.local/bin/luna-studio:$PATH
+
+# Set CODING globally:
+CODING=/Users/joshuazhao/programming
+
 ##############################################################################
 # My Alias:
 ##############################################################################
@@ -191,4 +197,3 @@ alias glogfun='git log -1 | cowsay -f dragon-and-cow | lolcat'
 alias spoofmac="openssl rand -hex 6 | sed 's/\(..\)/\1:/g; s/.$//' | xargs sudo ifconfig en0 ether"
 alias whatmac='ifconfig en0 | grep ether'
 
-export PATH=/Users/joshuazhao/.local/bin/luna-studio:$PATH

@@ -65,7 +65,6 @@ source ~/.vim/config/plugins_config/indentline.vim
 source ~/.vim/config/plugins_config/jsx.vim
 source ~/.vim/config/plugins_config/latex.vim
 source ~/.vim/config/plugins_config/markdown.vim
-" source ~/.vim/config/plugins_config/mixformat.vim
 source ~/.vim/config/plugins_config/nerdtree.vim
 source ~/.vim/config/plugins_config/tern.vim
 source ~/.vim/config/plugins_config/ultisnips.vim

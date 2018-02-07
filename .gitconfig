@@ -1,11 +1,13 @@
 [user]
 	name = crunchysoul
 	email = zzzcca12@gmail.com
+[includeIf "gitdir:~/programming/projects-isobar/"]
+	path = ~/programming/projects-isobar/.gitconfig
 [color]
 	ui = true
 [core]
 	editor = nvim
-	excludesfile = /Users/joshuazhao/.gitignore_global
+	excludesfile = ~/.gitignore_global
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
 	path = 
@@ -13,4 +15,6 @@
 	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
 	trustExitCode = true
 [commit]
-	template = /Users/joshuazhao/.stCommitMsg
+	template = ~/.stCommitMsg
+[alias]
+	tree = log --graph --decorate --pretty=oneline --abbrev-commit
