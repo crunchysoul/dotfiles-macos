@@ -66,6 +66,9 @@ Plug 'fatih/vim-go'
 Plug 'keith/swift.vim'
 Plug 'posva/vim-vue'
 Plug 'ternjs/tern_for_vim'
+Plug 'airblade/vim-gitgutter'
+Plug 'ryanoasis/vim-devicons'
+
 " list ends here. Plugins become visible to Vim after this call:
 call plug#end()
 " Plugins - Retired:

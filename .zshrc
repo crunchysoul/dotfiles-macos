@@ -14,6 +14,10 @@ ZSH_THEME="powerlevel9k/powerlevel9k"
 #ZSH_THEME="random"
 #ZSH_THEME="agnoster"
 
+# Using Nerd-Fonts
+POWERLEVEL9K_MODE='nerdfont-complete'
+# POWERLEVEL9K_MODE='awesome-fontconfig'
+
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
 
@@ -196,4 +200,3 @@ alias glogs='git log --pretty=oneline --abbrev-commit'
 alias glogfun='git log -1 | cowsay -f dragon-and-cow | lolcat'
 alias spoofmac="openssl rand -hex 6 | sed 's/\(..\)/\1:/g; s/.$//' | xargs sudo ifconfig en0 ether"
 alias whatmac='ifconfig en0 | grep ether'
-
