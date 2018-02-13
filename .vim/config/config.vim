@@ -56,7 +56,7 @@ set foldlevelstart=10           " open most folds by default
 set foldnestmax=10              " 10 nested fold max
 
 " Auto load leave save regain reload
-au FocusGained,BufEnter * :silent! !
+" au FocusGained,BufEnter * :silent! !
 " au FocusLost,WinLeave * :silent! w
 
 " Auto load view and folder

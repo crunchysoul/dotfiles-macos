@@ -18,6 +18,21 @@ ZSH_THEME="powerlevel9k/powerlevel9k"
 POWERLEVEL9K_MODE='nerdfont-complete'
 # POWERLEVEL9K_MODE='awesome-fontconfig'
 
+# Default right prompt:
+# POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status root_indicator background_jobs history time)
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(zsh_showStatus status root_indicator background_jobs time)
+
+# Show Spotify status, usint shpotify:
+prompt_zsh_showStatus () {
+  state=`osascript -e 'tell application "Spotify" to player state as string'`;
+  if [ $state = "playing" ]; then
+    artist=`osascript -e 'tell application "Spotify" to artist of current track as string'`;
+    track=`osascript -e 'tell application "Spotify" to name of current track as string'`;
+
+    echo -n "$artist - $track";
+  fi
+}
+
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
 
@@ -60,7 +75,8 @@ POWERLEVEL9K_MODE='nerdfont-complete'
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git npm z ruby osx yarn) 
+plugins=(git npm z ruby osx yarn mix) 
+
 
 source $ZSH/oh-my-zsh.sh
 
@@ -105,8 +121,17 @@ source $ZSH/oh-my-zsh.sh
 #POWERLEVEL9K_SHORTEN_STRATEGY="truncate_middle"
 #POWERLEVEL9K_SHORTEN_DIR_LENGTH=3
 
+# Fish short path:
+POWERLEVEL9K_SHORTEN_DIR_LENGTH=1
+POWERLEVEL9K_SHORTEN_DELIMITER=""
+POWERLEVEL9K_SHORTEN_STRATEGY="truncate_from_right"
+
 # Empty prompt:
 prompt_context() {}
+
+# # Short path like fish:
+# setopt prompt_subst
+# PS1='%n@%m $(shrink_path -l)>'
 
 # Right prompt:
 #POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status time)
