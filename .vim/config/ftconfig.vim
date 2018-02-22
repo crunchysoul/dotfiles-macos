@@ -28,8 +28,13 @@ autocmd FileType go set shiftwidth=4
 autocmd FileType go set softtabstop=4
 autocmd FileType go set tabstop=4
 
+" HTML:
+autocmd FileType html let indentLine_enabled=1
+
 " JavaScript:
 autocmd FileType javascript set formatprg=prettier\ --stdin
+autocmd FileType javascript let indentLine_enabled=1
+
 
 " Ruby:
 autocmd FileType ruby set expandtab

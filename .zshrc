@@ -212,6 +212,8 @@ alias bl='brew list'
 
 alias cfga='config add'
 alias cfgc='config commit -m'
+alias cfgca='config commit -am'
+alias cfgcae='config commit -a'
 alias cfgp='config push'
 alias cfglfun='config log -1 | cowsay -f dragon-and-cow | lolcat'
 

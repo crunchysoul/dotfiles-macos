@@ -5,7 +5,7 @@
 " Author: Chen Zhao
 " Github: @crunchysoul
 " Dotfile Links: https://github.com/crunchysoul/dotfiles-macbook-pro
-" Last Update: 2017-12-13 15:22
+" Last Update: 2018-02-22 13:39
 "
 " Structure: 
 " ~
