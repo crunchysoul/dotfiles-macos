@@ -1,8 +1,8 @@
 [user]
 	name = crunchysoul
 	email = zzzcca12@gmail.com
-[includeIf "gitdir:~/programming/projects-isobar/"]
-	path = ~/programming/projects-isobar/.gitconfig
+[includeIf "gitdir:~/codes/projects-isobar/"]
+	path = ~/codes/projects-isobar/.gitconfig
 [color]
 	ui = true
 [core]

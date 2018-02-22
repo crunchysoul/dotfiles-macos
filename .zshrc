@@ -4,7 +4,7 @@ export TERM="xterm-256color"
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH=/Users/joshuazhao/.oh-my-zsh
+export ZSH=$HOME/.oh-my-zsh
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
@@ -161,7 +161,9 @@ export PATH="$HOME/Library/Haskell/bin:$PATH"
 
 # Git bare repository dotfiles:
 # https://developer.atlassian.com/blog/2016/02/best-way-to-store-dotfiles-git-bare-repo/
-alias config='/usr/local/bin/git --git-dir=/Users/joshuazhao/.dotconfig/ --work-tree=/Users/joshuazhao'
+# NOTE: use local git from brew, name to .dotconfig
+# NOTE: name is .dotconfig, not .cfg in tutorial
+alias config='/usr/local/bin/git --git-dir=$HOME/.dotconfig/ --work-tree=$HOME'
 
 # Delete NVM for homebrew node:
 # Heroku and Yarn has dependency issue with nvm:
@@ -187,10 +189,7 @@ export GOBIN=$GOPATH/bin
 export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
 
 # Luna-studio:
-export PATH=/Users/joshuazhao/.local/bin/luna-studio:$PATH
-
-# Set CODING globally:
-CODING=/Users/joshuazhao/programming
+export PATH=$HOME/.local/bin/luna-studio:$PATH
 
 ##############################################################################
 # My Alias:

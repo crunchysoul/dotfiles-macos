@@ -87,6 +87,15 @@ if has('persistent_undo')      "check if your vim version supports it
   set undodir=$HOME/.vim/myundos
 endif 
 
+" Customerized comment tag
+if has("autocmd")
+  " Highlight TODO, FIXME, NOTE, etc.
+  if v:version > 701
+    autocmd Syntax * call matchadd('Todo',  '\W\zs\(TODO\|FIXME\|CHANGED\|XXX\|BUG\|HACK\)')
+    autocmd Syntax * call matchadd('Debug', '\W\zs\(NOTE\|INFO\|IDEA\)')
+  endif
+endif
+
 " Disable safe write in your editor to assure hot reloading works properly
 " https://github.com/coryhouse/react-slingshot#initial-machine-setup
 set backupcopy=yes
