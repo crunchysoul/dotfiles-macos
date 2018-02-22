@@ -23,6 +23,8 @@ set guifontwide=STSong:h14      " gvim Chinesefont
 set hidden                      " speed up
 set history=200                 " speed up
 set number                      " line numbers
+set mouse=a                     " enable mouse scroll
+
 " set cursorline                  " highlight the current line
 set scrolloff=8
 set showmatch                   " highlight matching [{()}]
@@ -41,7 +43,9 @@ set softtabstop=2               " number of spaces in tab when editing
 set shiftwidth=2                " indent/outdent by 4 columns
 set shiftround                  " always indent/outdent to the nearest tabstop
 set autoindent                  " auto-indent
-set smarttab                    " use tabs at the start of a line, spaces elsewhere set expandtab                   " use spaces instead of tabs 
+set smarttab                    " use tabs at the start of a line, spaces elsewhere
+set expandtab                   " use spaces instead of tabs 
+
 " text wrap:
 set wrap
 set linebreak
