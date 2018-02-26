@@ -1,5 +1,5 @@
 #!/bin/bash
-#script to automatic update dotfiles
+# script to automatic update dotfiles
 
 # author: crunchysoul
 # create: 2018-02-26 20:31
