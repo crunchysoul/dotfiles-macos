@@ -1,10 +1,10 @@
 #!/bin/bash
+#script to automatic update dotfiles
 
 # author: crunchysoul
 # create: 2018-02-26 20:31
 # copyright: WTFPL
 
-#script to automatic update dotfiles
 
 # vim configs
 NVIM_INIT=$HOME/.config/nvim/init.vim
