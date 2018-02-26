@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# author: crunchysoul
+# create: 2018-02-26 20:31
+
 #script to automatic update dotfiles
 
 # vim configs
