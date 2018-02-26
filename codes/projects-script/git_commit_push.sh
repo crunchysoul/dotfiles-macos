@@ -5,7 +5,6 @@
 # create: 2018-02-26 20:31
 # copyright: WTFPL
 
-
 # bare git dotfile alias does not work
 # assign baregit operation to bash variable $GIT
 GIT=(git --git-dir=$HOME/.dotconfig --work-tree=$HOME)
