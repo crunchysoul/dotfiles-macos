@@ -26,7 +26,9 @@ SCRIPTS=$HOME/codes/projects-script/*
 OTHERS=()
 
 # list all dotfiles in DOTFILES variable
-DOTFILES=(${VIM[*]} $ZSH ${GIT[*]} $OTHERS)
+DOTFILES=(${VIM[*]} $ZSH ${GIT[*]} $SCRIPTS $OTHERS)
 
 # use fswatch listen change and fire script
 fswatch -0 ${DOTFILES[*]} | xargs -0 -n 1 bash git_commit_push.sh
+
+# foo
