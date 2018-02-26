@@ -4,6 +4,7 @@
 # author: crunchysoul
 # create: 2018-02-26 20:31
 # copyright: WTFPL
+# notes: install fswatch
 
 # vim configs
 NVIM_INIT=$HOME/.config/nvim/init.vim
