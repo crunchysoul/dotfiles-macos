@@ -71,5 +71,3 @@ source ~/.vim/config/plugins_config/tern.vim
 source ~/.vim/config/plugins_config/ultisnips.vim
 source ~/.vim/config/plugins_config/vrc.vim
 source ~/.vim/config/plugins_config/ycm.vim
-
-" foo
