@@ -22,6 +22,7 @@ GIT=($GIT_CONFIG $GIT_IGNORE $GIT_CONFIG_ISOBAR)
 
 # bash script
 SCRIPTS=$HOME/codes/projects-script/*
+
 # other configs
 OTHERS=()
 
