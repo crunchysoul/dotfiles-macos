@@ -2,6 +2,7 @@
 
 # author: crunchysoul
 # create: 2018-02-26 20:31
+# copyright: MIT
 
 #script to automatic update dotfiles
 
