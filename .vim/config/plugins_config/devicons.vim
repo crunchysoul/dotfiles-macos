@@ -25,3 +25,4 @@ let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols['mobi'] = ''
 let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols['epub'] = ''
 let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols['flac'] = ''
 
+" foo
