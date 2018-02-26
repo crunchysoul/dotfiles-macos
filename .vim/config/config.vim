@@ -157,4 +157,5 @@ endif
 " set background=dark
 " set background=light
 " call togglebg#map("<F5>")
-colorscheme base16-solarized-dark
+" colorscheme base16-solarized-dark
+colorscheme base16-solarized-light

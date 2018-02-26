@@ -53,4 +53,3 @@ augroup filetypedetect
   au BufRead,BufNewFile *.wxml set filetype=jsx
   au BufRead,BufNewFile *.wxss set filetype=css
 augroup END
-" foo
