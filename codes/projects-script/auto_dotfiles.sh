@@ -2,7 +2,7 @@
 
 # author: crunchysoul
 # create: 2018-02-26 20:31
-# copyright: MIT
+# copyright: WTFPL
 
 #script to automatic update dotfiles
 
