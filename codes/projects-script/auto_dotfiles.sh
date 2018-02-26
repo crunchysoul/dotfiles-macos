@@ -5,7 +5,6 @@
 # create: 2018-02-26 20:31
 # copyright: WTFPL
 
-
 # vim configs
 NVIM_INIT=$HOME/.config/nvim/init.vim
 VIMRC=$HOME/.vimrc
