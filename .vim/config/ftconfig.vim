@@ -12,7 +12,7 @@
 " *****************************************************************************
 
 " Elixir:
-autocmd BufWritePost *.exs silent :!mix format %
+autocmd BufWritePost *.ex silent :!mix format %
 autocmd BufWritePost *.exs silent :!mix format %
 " autocmd FileType elixir silent :!mix format %
 

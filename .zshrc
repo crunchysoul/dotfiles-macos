@@ -154,7 +154,7 @@ export PATH="/usr/local/opt/sqlite/bin:$PATH"
 eval "$(rbenv init -)"
 
 # JAVA_HOME:
-export JAVA_HOME="$(/usr/libexec/java_home -v 1.8)"
+export JAVA_HOME="$(/usr/libexec/java_home)"
 
 # Haskell Cabal:
 export PATH="$HOME/Library/Haskell/bin:$PATH"
@@ -190,6 +190,10 @@ export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
 
 # Luna-studio:
 export PATH=$HOME/.local/bin/luna-studio:$PATH
+
+# Elixir:
+# shell history
+export ERL_AFLAGS="-kernel shell_history enabled"
 
 ##############################################################################
 # My Alias:
