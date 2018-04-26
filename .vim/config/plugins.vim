@@ -69,6 +69,7 @@ Plug 'ternjs/tern_for_vim'
 Plug 'airblade/vim-gitgutter'
 Plug 'ryanoasis/vim-devicons'
 Plug 'mhinz/vim-mix-format'
+Plug 'digitaltoad/vim-pug'
 
 
 " list ends here. Plugins become visible to Vim after this call:
