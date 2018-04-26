@@ -3,11 +3,13 @@
 	email = joshua.chenzhao@isobar.com
 [core]
 	excludesfile = ~/.gitignore_global
+	name = Joshua Chenzhao
+	email = joshua.chenzhao@isobar.com
+[core]
+	excludesfile = $HOME/.gitignore_global
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
 	path = 
 [mergetool "sourcetree"]
 	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
 	trustExitCode = true
-[commit]
-	template = ~/.stCommitMsg

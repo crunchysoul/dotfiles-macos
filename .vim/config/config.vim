@@ -95,7 +95,7 @@ endif
 if has("autocmd")
   " Highlight TODO, FIXME, NOTE, etc.
   if v:version > 701
-    autocmd Syntax * call matchadd('Todo',  '\W\zs\(TODO\|FIXME\|CHANGED\|XXX\|BUG\|HACK\)')
+    autocmd Syntax * call matchadd('Todo',  '\W\zs\(TODO\|DOING\|FIXME\|CHANGED\|XXX\|BUG\|HACK\)')
     autocmd Syntax * call matchadd('Debug', '\W\zs\(NOTE\|INFO\|IDEA\)')
   endif
 endif
@@ -128,11 +128,14 @@ augroup END
 
 if has('gui_running')
   set lines=43 columns=146        " default gvim window size
-  set guifont=Hack:h14            " gvim font
+  set guifont=Monaco\ for\ Crunchy:h12            " gvim font
+  " set guifont=Hack\ Nerd\ Font:h12            " gvim font
   set guifontwide=STSong:h14      " gvim Chinesefont
   set guioptions-=L               " hide left scrollbar
   set guioptions-=r               " hide right scrollbar
-  set linespace=3
+  set linespace=0
+  let g:WebDevIconsUnicodeGlyphDoubleWidth=0
+  let g:WebDevIconsNerdTreeAfterGlyphPadding=' '
 endif
 
 "*******************************************************************************
@@ -157,5 +160,6 @@ endif
 " set background=dark
 " set background=light
 " call togglebg#map("<F5>")
+
 colorscheme base16-solarized-dark
 " colorscheme base16-solarized-light
