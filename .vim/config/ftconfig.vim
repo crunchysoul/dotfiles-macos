@@ -13,7 +13,7 @@
 
 " Elixir:
 autocmd BufWritePost *.exs silent :!mix format %
-autocmd BufWritePost *.exs silent :!mix format %
+autocmd BufWritePost *.ex silent :!mix format %
 " autocmd FileType elixir silent :!mix format %
 
 " Elm:
@@ -28,13 +28,17 @@ autocmd FileType go set shiftwidth=4
 autocmd FileType go set softtabstop=4
 autocmd FileType go set tabstop=4
 
+" Haskell:
+autocmd FileType haskell let indentLine_enabled=0
+autocmd FileType haskell let indentLine_leadingSpaceEnabled=0
+
 " HTML:
 autocmd FileType html let indentLine_enabled=1
 
 " JavaScript:
 autocmd FileType javascript set formatprg=prettier\ --stdin
 autocmd FileType javascript let indentLine_enabled=1
-
+autocmd FileType javascript let indentLine_leadingSpaceEnabled=1
 
 " Ruby:
 autocmd FileType ruby set expandtab

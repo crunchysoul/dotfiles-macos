@@ -1,5 +1,6 @@
 # 256 color support for tmux
-export TERM="xterm-256color"
+# export TERM="xterm-256color"
+export TERM="screen-256color"
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
@@ -154,7 +155,7 @@ export PATH="/usr/local/opt/sqlite/bin:$PATH"
 eval "$(rbenv init -)"
 
 # JAVA_HOME:
-export JAVA_HOME="$(/usr/libexec/java_home -v 1.8)"
+export JAVA_HOME="$(/usr/libexec/java_home)"
 
 # Haskell Cabal:
 export PATH="$HOME/Library/Haskell/bin:$PATH"
@@ -191,13 +192,19 @@ export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
 # Luna-studio:
 export PATH=$HOME/.local/bin/luna-studio:$PATH
 
+# Elixir:
+# shell history
+export ERL_AFLAGS="-kernel shell_history enabled"
+
 ##############################################################################
 # My Alias:
 ##############################################################################
 
 alias vim=nvim
-alias edz='vim ~/.zshrc'
+alias eda='vim ~/.config/alacritty/alacritty.yml'
+alias edt='vim ~/.tmux.conf'
 alias edv='vim ~/.vimrc'
+alias edz='vim ~/.zshrc'
 alias sz='source ~/.zshrc'
 alias song='spotify status'
 
