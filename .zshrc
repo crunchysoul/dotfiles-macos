@@ -1,5 +1,6 @@
 # 256 color support for tmux
-export TERM="xterm-256color"
+# export TERM="xterm-256color"
+export TERM="screen-256color"
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
@@ -200,8 +201,10 @@ export ERL_AFLAGS="-kernel shell_history enabled"
 ##############################################################################
 
 alias vim=nvim
-alias edz='vim ~/.zshrc'
+alias eda='vim ~/.config/alacritty/alacritty.yml'
+alias edt='vim ~/.tmux.conf'
 alias edv='vim ~/.vimrc'
+alias edz='vim ~/.zshrc'
 alias sz='source ~/.zshrc'
 alias song='spotify status'
 
