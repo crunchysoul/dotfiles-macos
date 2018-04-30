@@ -70,6 +70,7 @@ Plug 'airblade/vim-gitgutter'
 Plug 'ryanoasis/vim-devicons'
 Plug 'mhinz/vim-mix-format'
 Plug 'digitaltoad/vim-pug'
+Plug 'slashmili/alchemist.vim'
 
 " list ends here. Plugins become visible to Vim after this call:
 call plug#end()

@@ -206,6 +206,7 @@ alias edt='vim ~/.tmux.conf'
 alias edv='vim ~/.vimrc'
 alias edz='vim ~/.zshrc'
 alias sz='source ~/.zshrc'
+alias stmux='tmux source ~/.tmux.conf'
 alias song='spotify status'
 
 alias brewup='brew update; brew upgrade; brew prune; brew cleanup; brew cask cleanup; brew doctor'
