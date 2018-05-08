@@ -67,8 +67,6 @@ source ~/.vim/config/plugins_config/jsx.vim
 source ~/.vim/config/plugins_config/latex.vim
 source ~/.vim/config/plugins_config/markdown.vim
 source ~/.vim/config/plugins_config/nerdtree.vim
-source ~/.vim/config/plugins_config/rainbow_parentheses.vim
-source ~/.vim/config/plugins_config/rainbow.vim
 source ~/.vim/config/plugins_config/tern.vim
 source ~/.vim/config/plugins_config/ultisnips.vim
 source ~/.vim/config/plugins_config/vrc.vim

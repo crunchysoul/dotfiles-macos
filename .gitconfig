@@ -2,12 +2,12 @@
 	name = crunchysoul
 	email = zzzcca12@gmail.com
 [includeIf "gitdir:~/codes/projects-isobar/"]
-	path = ~/codes/projects-isobar/.gitconfig
+	path = $HOME/codes/projects-isobar/.gitconfig
 [color]
 	ui = true
 [core]
 	editor = nvim
-	excludesfile = /Users/joshua.chenzhao/.gitignore_global
+	excludesfile = $HOME/.gitignore_global
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
 	path = 

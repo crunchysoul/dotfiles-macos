@@ -87,5 +87,3 @@ call plug#end()
 " Plug 'jistr/vim-nerdtree-tabs'
 " Plug 'itchyny/lightline.vim'
 " Plug 'nathanaelkane/vim-indent-guides'
-" Plug 'junegunn/rainbow_parentheses.vim'
-" Plug 'luochen1990/rainbow'
