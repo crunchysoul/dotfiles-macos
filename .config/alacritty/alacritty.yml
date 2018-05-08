@@ -58,7 +58,6 @@ font:
     # style: Italic
 
   # Point size of the font
-  # size: 12.0
   size: 12.0
 
   # Offset is the extra space around each character. offset.y can be thought of
@@ -478,3 +477,5 @@ key_bindings:
   - { key: F10,      mods: Command, chars: "\x1b[21;3~"                  }
   - { key: F11,      mods: Command, chars: "\x1b[23;3~"                  }
   - { key: F12,      mods: Command, chars: "\x1b[24;3~"                  }
+  - { key: LBracket, mods: Command, command: { program: "/usr/local/bin/tmux", args: ["prev"] }                  }
+  - { key: RBracket, mods: Command, command: { program: "/usr/local/bin/tmux", args: ["next"] }                  }

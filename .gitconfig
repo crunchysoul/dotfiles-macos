@@ -1,6 +1,6 @@
 [user]
-	name = crunchysoul
-	email = zzzcca12@gmail.com
+	name = Joshua ChenZhao
+	email = joshua.chenzhao@isobar.com
 [includeIf "gitdir:~/codes/projects-isobar/"]
 	path = ~/codes/projects-isobar/.gitconfig
 [color]
