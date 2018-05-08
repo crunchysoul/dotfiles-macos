@@ -21,7 +21,10 @@ POWERLEVEL9K_MODE='nerdfont-complete'
 
 # Default right prompt:
 # POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status root_indicator background_jobs history time)
-POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(zsh_showStatus status root_indicator background_jobs time)
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(zsh_showStatus status root_indicator background_jobs battery time)
+
+# No show time of battery
+POWERLEVEL9K_BATTERY_VERBOSE='false'
 
 # Show Spotify status, usint shpotify:
 prompt_zsh_showStatus () {
