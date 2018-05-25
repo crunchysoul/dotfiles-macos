@@ -2,17 +2,11 @@
 	name = crunchysoul
 	email = zzzcca12@gmail.com
 [includeIf "gitdir:~/codes/projects-isobar/"]
-	path = $HOME/codes/projects-isobar/.gitconfig
+	path = ~/codes/projects-isobar/.gitconfig
 [color]
 	ui = true
 [core]
 	editor = nvim
-	excludesfile = $HOME/.gitignore_global
-[difftool "sourcetree"]
-	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-	path = 
-[mergetool "sourcetree"]
-	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
-	trustExitCode = true
+	excludesfile = ~/.gitignore_global
 [alias]
 	tree = log --graph --decorate --pretty=oneline --abbrev-commit

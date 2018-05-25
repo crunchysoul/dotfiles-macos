@@ -71,6 +71,8 @@ Plug 'ryanoasis/vim-devicons'
 Plug 'mhinz/vim-mix-format'
 Plug 'digitaltoad/vim-pug'
 Plug 'slashmili/alchemist.vim'
+Plug 'c-brenn/phoenix.vim'
+Plug 'tpope/vim-projectionist' " required for some navigation features
 
 " list ends here. Plugins become visible to Vim after this call:
 call plug#end()

@@ -120,3 +120,6 @@ nnoremap <Leader>em :%s/:\([^:]\+\):/\=emoji#for(submatch(1), submatch(0))/g <ba
 
 " Tagbar Toggle:
 nmap <F8> :TagbarToggle<CR>
+
+" Mix Formatter:
+nmap <Leader>mf :MixFormat<CR>
