@@ -80,7 +80,7 @@ Temporary Items
 
 # .env Credentials Protection #
 #######################################################
-# .env
+.env
 
 # prevent recursive dotfile git
 .dotconfig
