@@ -30,7 +30,6 @@ Plug 'vim-ruby/vim-ruby'
 Plug 'jiangmiao/auto-pairs'
 Plug 'tpope/vim-surround'
 Plug 'honza/vim-snippets'
-Plug 'ervandew/supertab'
 Plug 'vim-scripts/tComment'
 Plug 'tpope/vim-endwise'
 Plug 'rizzatti/dash.vim'
@@ -55,7 +54,6 @@ Plug 'qpkorr/vim-bufkill'
 Plug 'junegunn/vim-emoji'
 Plug 'moll/vim-node'
 Plug 'SirVer/ultisnips'
-Plug 'Valloric/YouCompleteMe'
 Plug 'w0rp/ale'
 Plug 'diepm/vim-rest-console'
 Plug 'godlygeek/tabular'
@@ -73,11 +71,21 @@ Plug 'digitaltoad/vim-pug'
 Plug 'slashmili/alchemist.vim'
 Plug 'c-brenn/phoenix.vim'
 Plug 'tpope/vim-projectionist' " required for some navigation features
+" neoplete:
+if has('nvim')
+  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+else
+  Plug 'Shougo/deoplete.nvim'
+  Plug 'roxma/nvim-yarp'
+  Plug 'roxma/vim-hug-neovim-rpc'
+endif
 
 " list ends here. Plugins become visible to Vim after this call:
 call plug#end()
 " Plugins - Retired:
 "*****************************************************************************
+" Plug 'ervandew/supertab'
+" Plug 'Valloric/YouCompleteMe'
 " Plug 'tpope/vim-markdown'
 " Plug 'tpope/vim-liquid'
 " Plug 'rafi/awesome-vim-colorschemes'
