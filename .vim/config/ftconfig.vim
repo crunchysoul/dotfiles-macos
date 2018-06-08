@@ -14,6 +14,8 @@
 " Elixir:
 autocmd BufWritePost *.ex silent :!mix format %
 autocmd BufWritePost *.exs silent :!mix format %
+autocmd FileType elixir let indentLine_enabled=0
+autocmd FileType elixir let indentLine_leadingSpaceEnabled=0
 " autocmd FileType elixir silent :!mix format %
 
 " Elm:
@@ -39,6 +41,13 @@ autocmd FileType html let indentLine_enabled=1
 autocmd FileType javascript set formatprg=prettier\ --stdin
 autocmd FileType javascript let indentLine_enabled=1
 autocmd FileType javascript let indentLine_leadingSpaceEnabled=1
+
+" JSON:
+" autocmd FileType json set formatprg=prettier\ --stdin
+autocmd FileType json set foldmethod=syntax
+autocmd FileType json let indentLine_enabled=1
+autocmd FileType json let indentLine_leadingSpaceEnabled=1
+autocmd FileType json let indentLine_concealcursor=""
 
 " Ruby:
 autocmd FileType ruby set expandtab
