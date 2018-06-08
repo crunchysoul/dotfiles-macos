@@ -79,6 +79,7 @@ else
   Plug 'roxma/nvim-yarp'
   Plug 'roxma/vim-hug-neovim-rpc'
 endif
+Plug 'elzr/vim-json'
 
 " list ends here. Plugins become visible to Vim after this call:
 call plug#end()

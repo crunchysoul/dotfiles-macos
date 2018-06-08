@@ -199,6 +199,9 @@ export PATH=$HOME/.local/bin/luna-studio:$PATH
 # shell history
 export ERL_AFLAGS="-kernel shell_history enabled"
 
+# Grep:
+export PATH="/usr/local/opt/grep/libexec/gnubin:$PATH"
+
 ##############################################################################
 # My Alias:
 ##############################################################################
@@ -208,6 +211,7 @@ alias eda='vim ~/.config/alacritty/alacritty.yml'
 alias edt='vim ~/.tmux.conf'
 alias edv='vim ~/.vimrc'
 alias edz='vim ~/.zshrc'
+alias edtp='vim ~/.tmux-powerlinerc'
 alias sz='source ~/.zshrc'
 alias stmux='tmux source ~/.tmux.conf'
 alias song='spotify status'
