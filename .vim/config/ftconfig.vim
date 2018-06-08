@@ -14,6 +14,8 @@
 " Elixir:
 autocmd BufWritePost *.ex silent :!mix format %
 autocmd BufWritePost *.exs silent :!mix format %
+autocmd FileType elixir let indentLine_enabled=0
+autocmd FileType elixir let indentLine_leadingSpaceEnabled=0
 " autocmd FileType elixir silent :!mix format %
 
 " Elm:
