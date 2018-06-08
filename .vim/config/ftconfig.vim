@@ -44,10 +44,10 @@ autocmd FileType javascript let indentLine_leadingSpaceEnabled=1
 
 " JSON:
 " autocmd FileType json set formatprg=prettier\ --stdin
-autocmd FileType json set foldmethod=syntax
-autocmd FileType json let indentLine_enabled=1
-autocmd FileType json let indentLine_leadingSpaceEnabled=1
-autocmd FileType json let indentLine_concealcursor=""
+autocmd FileType json setlocal foldmethod=syntax
+" autocmd FileType json let indentLine_enabled=1
+" autocmd FileType json let indentLine_leadingSpaceEnabled=1
+" autocmd FileType json let indentLine_concealcursor=""
 
 " Ruby:
 autocmd FileType ruby set expandtab
