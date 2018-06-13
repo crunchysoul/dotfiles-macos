@@ -84,3 +84,6 @@ Temporary Items
 
 # prevent recursive dotfile git
 .dotconfig
+
+# ignore tags files
+tags

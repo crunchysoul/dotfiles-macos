@@ -80,6 +80,7 @@ else
   Plug 'roxma/vim-hug-neovim-rpc'
 endif
 Plug 'elzr/vim-json'
+Plug 'majutsushi/tagbar'
 
 " list ends here. Plugins become visible to Vim after this call:
 call plug#end()
