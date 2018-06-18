@@ -48,12 +48,18 @@ map <Leader>gf yiw?./<C-r>0<CR>;nhgf<CR>
 map <Leader>j <C-W>W
 map <Leader>k <C-W>w
 " switch buffers:
-nnoremap <Leader>2 :bnext<CR>
 nnoremap <Leader>1 :bprevious<CR>
+nnoremap <Leader>2 :bnext<CR>
+" go NERDTree Window:
+map <Leader>3 1<C-W>W
+" back from nerdtree/tagbar
+map <Leader>4 1<C-W><C-P>
+" go tagbar windows:
+map <Leader>5 :TagbarOpen j<CR>
 " switch tabs:
-map <Leader>5 gT
-map <Leader>6 gt
-map <Leader>7 <C-^>
+map <Leader>6 gT
+map <Leader>7 gt
+map <Leader>8 <C-^>
 " buffer list:
 map <Leader>` :ls<CR>:b<Space>
 " delete buffer from list:
@@ -62,10 +68,6 @@ map <Leader>ld :ls<CR>:bd
 map <Leader>z :BD <cr>
 " close buffer and close window:
 map <Leader>bd :bd <cr>
-" go NERDTree Window:
-map <Leader>3 1<C-W>W
-" back from nerdtree
-map <Leader>4 1<C-W><C-P>
 
 
 " Key Mapping - Edit:
@@ -122,9 +124,6 @@ map <Leader>r <esc>:NERDTreeFind<cr>
 " Substitute Emoji:
 " Emoji replacement and clean the search pattern:
 nnoremap <Leader>em :%s/:\([^:]\+\):/\=emoji#for(submatch(1), submatch(0))/g <bar> :let @/ = "" <CR>
-
-" Tagbar Toggle:
-nmap <F8> :TagbarToggle<CR>
 
 " Mix Formatter:
 nmap <Leader>mf :MixFormat<CR>
