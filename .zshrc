@@ -205,6 +205,9 @@ export PATH="/usr/local/opt/grep/libexec/gnubin:$PATH"
 # Mono: To use the assemblies from other formulae:
 export MONO_GAC_PREFIX="/usr/local"
 
+# set system editor to nvim:
+export EDITOR=nvim
+
 ##############################################################################
 # My Alias:
 ##############################################################################

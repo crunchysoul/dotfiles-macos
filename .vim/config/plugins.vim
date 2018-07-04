@@ -63,7 +63,6 @@ Plug 'elmcast/elm-vim'
 Plug 'fatih/vim-go'
 Plug 'keith/swift.vim'
 Plug 'posva/vim-vue'
-Plug 'ternjs/tern_for_vim'
 Plug 'airblade/vim-gitgutter'
 Plug 'ryanoasis/vim-devicons'
 Plug 'mhinz/vim-mix-format'
@@ -71,6 +70,9 @@ Plug 'digitaltoad/vim-pug'
 Plug 'slashmili/alchemist.vim'
 Plug 'c-brenn/phoenix.vim'
 Plug 'tpope/vim-projectionist' " required for some navigation features
+Plug 'wokalski/autocomplete-flow'
+Plug 'elzr/vim-json'
+Plug 'majutsushi/tagbar'
 " neoplete:
 if has('nvim')
   Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
@@ -79,8 +81,6 @@ else
   Plug 'roxma/nvim-yarp'
   Plug 'roxma/vim-hug-neovim-rpc'
 endif
-Plug 'elzr/vim-json'
-Plug 'majutsushi/tagbar'
 
 " list ends here. Plugins become visible to Vim after this call:
 call plug#end()
@@ -99,3 +99,4 @@ call plug#end()
 " Plug 'jistr/vim-nerdtree-tabs'
 " Plug 'itchyny/lightline.vim'
 " Plug 'nathanaelkane/vim-indent-guides'
+" Plug 'ternjs/tern_for_vim'

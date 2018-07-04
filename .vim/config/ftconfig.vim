@@ -35,18 +35,18 @@ autocmd FileType haskell let indentLine_enabled=0
 autocmd FileType haskell let indentLine_leadingSpaceEnabled=0
 
 " HTML:
-autocmd FileType html let indentLine_enabled=1
+autocmd FileType html let indentLine_enabled=0
 
 " JavaScript:
 autocmd FileType javascript set formatprg=prettier\ --stdin
-autocmd FileType javascript let indentLine_enabled=1
-autocmd FileType javascript let indentLine_leadingSpaceEnabled=1
+autocmd FileType javascript let indentLine_enabled=0
+autocmd FileType javascript let indentLine_leadingSpaceEnabled=0
 
 " JSON:
 " autocmd FileType json set formatprg=prettier\ --stdin
 autocmd FileType json setlocal foldmethod=syntax
-autocmd FileType json let indentLine_enabled=1
-autocmd FileType json let indentLine_leadingSpaceEnabled=1
+autocmd FileType json let indentLine_enabled=0
+autocmd FileType json let indentLine_leadingSpaceEnabled=0
 autocmd FileType json let indentLine_concealcursor=""
 
 " Ruby:
