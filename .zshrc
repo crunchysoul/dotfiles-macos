@@ -213,6 +213,7 @@ export EDITOR=nvim
 ##############################################################################
 
 alias vim=nvim
+alias v=nvim
 alias eda='vim ~/.config/alacritty/alacritty.yml'
 alias edt='vim ~/.tmux.conf'
 alias edv='vim ~/.vimrc'
