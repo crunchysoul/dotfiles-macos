@@ -73,6 +73,7 @@ Plug 'tpope/vim-projectionist' " required for some navigation features
 Plug 'wokalski/autocomplete-flow'
 Plug 'elzr/vim-json'
 Plug 'majutsushi/tagbar'
+Plug 'chrisbra/csv.vim'
 " neoplete:
 if has('nvim')
   Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }

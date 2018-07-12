@@ -58,6 +58,7 @@ source ~/.vim/config/keymap.vim
 "*****************************************************************************
 source ~/.vim/config/plugins_config/airline.vim
 source ~/.vim/config/plugins_config/ale.vim
+source ~/.vim/config/plugins_config/csv.vim
 source ~/.vim/config/plugins_config/devicons.vim
 source ~/.vim/config/plugins_config/elm.vim
 source ~/.vim/config/plugins_config/emmet.vim
