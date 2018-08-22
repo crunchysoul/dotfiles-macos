@@ -208,6 +208,13 @@ export MONO_GAC_PREFIX="/usr/local"
 # set system editor to nvim:
 export EDITOR=nvim
 
+# elixir nerves:
+export PATH="/usr/local/opt/libarchive/bin:$PATH"
+export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
+
+# asdf:
+. $HOME/.asdf/asdf.sh
+. $HOME/.asdf/completions/asdf.bash
 ##############################################################################
 # My Alias:
 ##############################################################################
@@ -238,6 +245,7 @@ alias cfgca='config commit -am'
 alias cfgcae='config commit -a'
 alias cfgp='config push'
 alias cfglfun='config log -1 | cowsay -f dragon-and-cow | lolcat'
+alias glfun='git log -1 | cowsay -f dragon-and-cow | lolcat'
 
 alias gadd='git add'
 alias gadd.='git add .'
