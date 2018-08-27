@@ -215,6 +215,9 @@ export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
 # asdf:
 . $HOME/.asdf/asdf.sh
 . $HOME/.asdf/completions/asdf.bash
+
+# prevent tmux C-d exist
+set -o ignoreeof
 ##############################################################################
 # My Alias:
 ##############################################################################
@@ -230,7 +233,7 @@ alias sz='source ~/.zshrc'
 alias stmux='tmux source ~/.tmux.conf'
 alias song='spotify status'
 
-alias brewup='brew update; brew upgrade; brew prune; brew cleanup; brew cask cleanup; brew doctor'
+alias brewup='brew update; brew upgrade; brew prune; brew cleanup; brew doctor'
 alias bcs='brew cask search'
 alias bci='brew cask install'
 alias bcl='brew cask list'
