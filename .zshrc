@@ -208,6 +208,16 @@ export MONO_GAC_PREFIX="/usr/local"
 # set system editor to nvim:
 export EDITOR=nvim
 
+# elixir nerves:
+export PATH="/usr/local/opt/libarchive/bin:$PATH"
+export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
+
+# asdf:
+. $HOME/.asdf/asdf.sh
+. $HOME/.asdf/completions/asdf.bash
+
+# prevent tmux C-d exist
+set -o ignoreeof
 ##############################################################################
 # My Alias:
 ##############################################################################
@@ -223,7 +233,7 @@ alias sz='source ~/.zshrc'
 alias stmux='tmux source ~/.tmux.conf'
 alias song='spotify status'
 
-alias brewup='brew update; brew upgrade; brew prune; brew cleanup; brew cask cleanup; brew doctor'
+alias brewup='brew update; brew upgrade; brew prune; brew cleanup; brew doctor'
 alias bcs='brew cask search'
 alias bci='brew cask install'
 alias bcl='brew cask list'
@@ -238,6 +248,7 @@ alias cfgca='config commit -am'
 alias cfgcae='config commit -a'
 alias cfgp='config push'
 alias cfglfun='config log -1 | cowsay -f dragon-and-cow | lolcat'
+alias glfun='git log -1 | cowsay -f dragon-and-cow | lolcat'
 
 alias gadd='git add'
 alias gadd.='git add .'

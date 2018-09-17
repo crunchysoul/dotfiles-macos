@@ -23,8 +23,8 @@ let g:ale_linters = {
 
 " fixer:
 let g:ale_fixers = {
-      \   'javascript': ['eslint'],
-      \   'json': ['eslint'],
+      \   'javascript': ['prettier'],
+      \   'json': ['prettier'],
       \   'go': ['gofmt'],
       \ }
 

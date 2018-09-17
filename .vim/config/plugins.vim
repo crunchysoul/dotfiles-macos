@@ -74,6 +74,7 @@ Plug 'wokalski/autocomplete-flow'
 Plug 'elzr/vim-json'
 Plug 'majutsushi/tagbar'
 Plug 'chrisbra/csv.vim'
+Plug 'dermusikman/sonicpi.vim'
 " neoplete:
 if has('nvim')
   Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
