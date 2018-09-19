@@ -25,7 +25,11 @@ set history=200                 " speed up
 set number                      " line numbers
 set mouse=a                     " enable mouse scroll
 
-" set cursorline                  " highlight the current line
+" set the invisible characters:
+" set list                            " display invisible characters
+" set listchars=tab:▸\ ,eol:¬,trail:  " set invisible characters
+
+" set cursorline                " highlight the current line
 set scrolloff=8
 set showmatch                   " highlight matching [{()}]
 set nocursorline                " Disable cursor line

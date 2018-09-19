@@ -45,9 +45,9 @@ map <Leader>gf yiw?./<C-r>0<CR>;nhgf<CR>
 " Key Mapping - Git:
 "*****************************************************************************
 " Gstatus:
-:command Gs :Gstatus
+:command! Gs :Gstatus
 " Gpush:
-:command Gp :Gpush
+:command! Gp :Gpush
 
 " Key Mapping - File Navigation:
 "*****************************************************************************

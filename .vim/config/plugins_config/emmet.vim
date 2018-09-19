@@ -7,3 +7,6 @@ let g:user_emmet_settings = {
 \      'extends': 'jsx',
 \  },
 \}
+
+" lead key:
+let g:user_emmet_leader_key=',,'

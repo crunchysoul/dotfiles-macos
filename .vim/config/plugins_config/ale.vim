@@ -16,19 +16,20 @@ let g:ale_javascript_prettier_options = '--trailing-comma all --no-bracket-spaci
 
 " linter:
 let g:ale_linters = {
-      \   'javascript': ['eslint'],
+      \   'javascript': ['prettier'],
       \   'json': ['eslint'],
       \   'go': ['gofmt'],
       \ }
 
 " fixer:
 let g:ale_fixers = {
-      \   'javascript': ['prettier'],
+      \   'javascript': ['eslint'],
       \   'json': ['prettier'],
       \   'go': ['gofmt'],
       \ }
 
 " let g:ale_fixers = {}
 " let g:ale_fixers['javascript'] = ['prettier-eslint']
+      " \   'javascript': ['eslint'],
       " \   'javascript': ['prettier'],
       " \   'json': ['prettier'],
