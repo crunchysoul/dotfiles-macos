@@ -23,12 +23,13 @@ let g:ale_linters = {
 
 " fixer:
 let g:ale_fixers = {
-      \   'javascript': ['prettier'],
+      \   'javascript': ['eslint'],
       \   'json': ['prettier'],
       \   'go': ['gofmt'],
       \ }
 
 " let g:ale_fixers = {}
 " let g:ale_fixers['javascript'] = ['prettier-eslint']
+      " \   'javascript': ['eslint'],
       " \   'javascript': ['prettier'],
       " \   'json': ['prettier'],
