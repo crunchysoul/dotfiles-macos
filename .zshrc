@@ -216,6 +216,10 @@ export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
 . $HOME/.asdf/asdf.sh
 . $HOME/.asdf/completions/asdf.bash
 
+# fastlane
+export PATH="$HOME/.fastlane/bin:$PATH"
+
+
 # prevent tmux C-d exist
 set -o ignoreeof
 ##############################################################################

@@ -16,7 +16,7 @@ let g:ale_javascript_prettier_options = '--trailing-comma all --no-bracket-spaci
 
 " linter:
 let g:ale_linters = {
-      \   'javascript': ['eslint'],
+      \   'javascript': ['prettier'],
       \   'json': ['eslint'],
       \   'go': ['gofmt'],
       \ }

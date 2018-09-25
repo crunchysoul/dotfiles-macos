@@ -37,6 +37,7 @@ autocmd FileType haskell let indentLine_leadingSpaceEnabled=0
 " HTML:
 autocmd FileType html let indentLine_enabled=0
 
+
 " JavaScript:
 autocmd FileType javascript set formatprg=prettier\ --stdin
 autocmd FileType javascript let indentLine_enabled=0

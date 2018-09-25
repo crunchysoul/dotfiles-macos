@@ -75,6 +75,7 @@ Plug 'elzr/vim-json'
 Plug 'majutsushi/tagbar'
 Plug 'chrisbra/csv.vim'
 Plug 'dermusikman/sonicpi.vim'
+Plug 'kristijanhusak/vim-carbon-now-sh'
 " neoplete:
 if has('nvim')
   Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
