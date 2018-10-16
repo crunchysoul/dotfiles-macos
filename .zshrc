@@ -235,7 +235,7 @@ alias edz='vim ~/.zshrc'
 alias edtp='vim ~/.tmux-powerlinerc'
 alias sz='source ~/.zshrc'
 alias stmux='tmux source ~/.tmux.conf'
-alias song='spotify status'
+# alias song='spotify status'
 
 alias brewup='brew update; brew upgrade; brew prune; brew cleanup; brew doctor'
 alias bcs='brew cask search'

@@ -9,7 +9,8 @@ let g:ale_lint_on_enter = 0
 let g:ale_fix_on_save = 1
 
 " prettier rules
-let g:ale_javascript_prettier_options = '--trailing-comma all --no-bracket-spacing'
+let g:ale_javascript_prettier_options = '--single-quote --trailing-comma all --arrow-parens always'
+
 
 " " user config files
 " let g:ale_javascript_prettier_use_local_config = 1
@@ -23,7 +24,7 @@ let g:ale_linters = {
 
 " fixer:
 let g:ale_fixers = {
-      \   'javascript': ['eslint'],
+      \   'javascript': ['prettier'],
       \   'json': ['prettier'],
       \   'go': ['gofmt'],
       \ }
