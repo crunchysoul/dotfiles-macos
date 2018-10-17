@@ -166,3 +166,4 @@ endif
 
 colorscheme base16-solarized-dark
 " colorscheme base16-solarized-light
+hi Search guibg=Blue guifg=yellow
