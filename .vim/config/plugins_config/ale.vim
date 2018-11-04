@@ -8,11 +8,7 @@ let g:ale_lint_on_enter = 0
 " do fix when save
 let g:ale_fix_on_save = 1
 
-" prettier rules
-let g:ale_javascript_prettier_options = '--single-quote --trailing-comma all es5'
-
-" using local file if exist
-let g:ale_javascript_prettier_use_local_config = 1
+let g:ale_javascript_prettier_options = '--single-quote --trailing-comma all --arrow-parens always'
 
 " " user config files
 " let g:ale_javascript_prettier_use_local_config = 1

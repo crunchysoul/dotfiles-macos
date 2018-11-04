@@ -19,7 +19,6 @@
 " genereal:
 syntax enable                   " enable syntax processing
 set vb t_vb=                    " Disable sound and bell:
-set guifontwide=STSong:h14      " gvim Chinesefont
 set hidden                      " speed up
 set history=200                 " speed up
 set number                      " line numbers
@@ -124,22 +123,22 @@ augroup EnableSyntaxHighlighting
 augroup END
 
 "*******************************************************************************
-"" Vim General Config - GUI:
+"" Vim General Config - MacVim:
 " Last Update: 2017-12-13 14:36
 " Notes:
 " 1. gvim(MacVim) specific config
 "*******************************************************************************
 
-if has('gui_running')
-  set lines=43 columns=146        " default gvim window size
-  set guifont=Monaco\ for\ Crunchy:h12            " gvim font
+if has('gui_macvim')
+  set lines=80 columns=400        " default gvim window size
+  set guifont=Monaco\ for\ Crunchy:h10            " gvim font
   " set guifont=Hack\ Nerd\ Font:h12            " gvim font
-  set guifontwide=STSong:h14      " gvim Chinesefont
+  " set guifontwide=STSong:h10      " gvim Chinesefont
   set guioptions-=L               " hide left scrollbar
   set guioptions-=r               " hide right scrollbar
   set linespace=0
   let g:WebDevIconsUnicodeGlyphDoubleWidth=0
-  let g:WebDevIconsNerdTreeAfterGlyphPadding=' '
+  " let g:WebDevIconsNerdTreeAfterGlyphPadding=' '
 endif
 
 "*******************************************************************************
@@ -167,3 +166,4 @@ endif
 
 colorscheme base16-solarized-dark
 " colorscheme base16-solarized-light
+hi Search guibg=Blue guifg=yellow
