@@ -12,16 +12,16 @@ export ZSH=$HOME/.oh-my-zsh
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 ################################################################################
 ZSH_THEME="powerlevel9k/powerlevel9k"
-#ZSH_THEME="random"
-#ZSH_THEME="agnoster"
+# ZSH_THEME="random"
+# ZSH_THEME="agnoster"
 
 # Using Nerd-Fonts
 POWERLEVEL9K_MODE='nerdfont-complete'
 # POWERLEVEL9K_MODE='awesome-fontconfig'
 
-# Default right prompt:
-# POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status root_indicator background_jobs history time)
+# Right prompt:
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(zsh_showStatus status root_indicator background_jobs battery time)
+# POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status root_indicator background_jobs battery time)
 
 # No show time of battery
 POWERLEVEL9K_BATTERY_VERBOSE='false'
@@ -80,7 +80,6 @@ prompt_zsh_showStatus () {
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git npm z ruby osx yarn mix) 
-
 
 source $ZSH/oh-my-zsh.sh
 
@@ -219,6 +218,8 @@ export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
 # fastlane
 export PATH="$HOME/.fastlane/bin:$PATH"
 
+# Homebrew
+export HOMEBREW_GITHUB_API_TOKEN=$(security find-generic-password -s 'Homebrew GitHub Token' -w)
 
 # prevent tmux C-d exist
 set -o ignoreeof
