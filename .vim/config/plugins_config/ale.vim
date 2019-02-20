@@ -3,19 +3,22 @@
 "*****************************************************************************
 
 " Less distracting when opening a new file
-let g:ale_lint_on_enter = 0 
+" let g:ale_lint_on_enter = 0 
 
 " do fix when save
 let g:ale_fix_on_save = 1
 
+" run only lint explicitly configured
+let g:ale_linters_explicit = 1
+
 let g:ale_javascript_prettier_options = '--single-quote --trailing-comma all --arrow-parens always'
 
-" " user config files
+" user config files
 " let g:ale_javascript_prettier_use_local_config = 1
 
 " linter:
 let g:ale_linters = {
-      \   'javascript': ['prettier'],
+      \   'javascript': ['eslint'],
       \   'json': ['eslint'],
       \   'go': ['gofmt'],
       \ }

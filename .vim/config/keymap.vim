@@ -99,7 +99,7 @@ nnoremap k gk
 " Key Mapping - Plugins:  
 "*****************************************************************************
 " ALE Fix Toggle:
-nmap <Leader>fx <Plug>(ale_fix)
+" nmap <Leader>fx <Plug>(ale_fix)
 
 " Emmet Toggle:
 " map <C-j>, <C-y>,
@@ -107,7 +107,7 @@ map <Leader>[ <C-y>,
 " map <C-;>, <C-y>,
 
 " Goyo Toggle:
-nnoremap <Leader>ff :Goyo<CR>
+" nnoremap <Leader>ff :Goyo<CR>
 
 " Gundo Toggle:
 nnoremap <leader>u :GundoToggle<CR>
@@ -134,3 +134,14 @@ nnoremap <Leader>em :%s/:\([^:]\+\):/\=emoji#for(submatch(1), submatch(0))/g <ba
 
 " Mix Formatter:
 nmap <Leader>mf :MixFormat<CR>
+
+" EasyMotion: <Leader>f{char} to move to {char}
+map  <Leader>f <Plug>(easymotion-bd-f)
+nmap <Leader>f <Plug>(easymotion-overwin-f)
+
+" EasyMotion: s{char}{char} to move to {char}{char}
+nmap m, <Plug>(easymotion-overwin-f2)
+
+" EasyMotion: Move to line
+map <Leader>L <Plug>(easymotion-bd-jk)
+nmap <Leader>L <Plug>(easymotion-overwin-line)

@@ -20,11 +20,14 @@ POWERLEVEL9K_MODE='nerdfont-complete'
 # POWERLEVEL9K_MODE='awesome-fontconfig'
 
 # Right prompt:
-POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(zsh_showStatus status root_indicator background_jobs battery time)
 # POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status root_indicator background_jobs battery time)
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(zsh_showStatus status root_indicator background_jobs battery time)
 
 # No show time of battery
 POWERLEVEL9K_BATTERY_VERBOSE='false'
+
+# Set to true to display the hash / changeset in the segment.
+POWERLEVEL9K_SHOW_CHANGESET='true'
 
 # Show Spotify status, usint shpotify:
 prompt_zsh_showStatus () {
@@ -129,6 +132,14 @@ POWERLEVEL9K_SHORTEN_DIR_LENGTH=1
 POWERLEVEL9K_SHORTEN_DELIMITER=""
 POWERLEVEL9K_SHORTEN_STRATEGY="truncate_from_right"
 
+# Short vcs rules
+# XXX: does not seem to work
+POWERLEVEL9K_VCS_SHORTEN_LENGTH=4
+POWERLEVEL9K_VCS_SHORTEN_MIN_LENGTH=11
+POWERLEVEL9K_VCS_SHORTEN_STRATEGY="truncate_from_right"
+POWERLEVEL9K_VCS_SHORTEN_DELIMITER=""
+
+
 # Empty prompt:
 prompt_context() {}
 
@@ -157,7 +168,8 @@ export PATH="/usr/local/opt/sqlite/bin:$PATH"
 eval "$(rbenv init -)"
 
 # JAVA_HOME:
-export JAVA_HOME="$(/usr/libexec/java_home)"
+# export JAVA_HOME="$(/usr/libexec/java_home -v 1.8)"
+export JAVA_HOME='/Applications/Android Studio.app/Contents/jre/jdk/Contents/Home'
 
 # Haskell Cabal:
 export PATH="$HOME/Library/Haskell/bin:$PATH"
@@ -238,7 +250,7 @@ alias sz='source ~/.zshrc'
 alias stmux='tmux source ~/.tmux.conf'
 # alias song='spotify status'
 
-alias brewup='brew update; brew upgrade; brew prune; brew cleanup; brew doctor'
+alias brewup='brew update; brew upgrade; brew cleanup; brew doctor'
 alias bcs='brew cask search'
 alias bci='brew cask install'
 alias bcl='brew cask list'

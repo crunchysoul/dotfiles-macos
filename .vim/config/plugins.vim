@@ -76,6 +76,9 @@ Plug 'majutsushi/tagbar'
 Plug 'chrisbra/csv.vim'
 Plug 'dermusikman/sonicpi.vim'
 Plug 'kristijanhusak/vim-carbon-now-sh'
+Plug 'easymotion/vim-easymotion'
+Plug 'HerringtonDarkholme/yats.vim'
+Plug 'mhartington/nvim-typescript', {'do': './install.sh'}
 " neoplete:
 if has('nvim')
   Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }

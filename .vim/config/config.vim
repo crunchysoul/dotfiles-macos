@@ -28,7 +28,7 @@ set mouse=a                     " enable mouse scroll
 " set list                            " display invisible characters
 " set listchars=tab:▸\ ,eol:¬,trail:  " set invisible characters
 
-" set cursorline                " highlight the current line
+set cursorline                  " highlight the current line
 set scrolloff=8
 set showmatch                   " highlight matching [{()}]
 set nocursorline                " Disable cursor line
