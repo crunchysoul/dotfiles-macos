@@ -40,8 +40,9 @@ autocmd FileType html let indentLine_enabled=0
 
 " JavaScript:
 autocmd FileType javascript set formatprg=prettier\ --stdin
-autocmd FileType javascript let indentLine_enabled=0
-autocmd FileType javascript let indentLine_leadingSpaceEnabled=0
+autocmd FileType javascript let indent_guides_enable_on_vim_startup=1 "doesn't work somehow
+" autocmd FileType javascript let indentLine_enabled=0
+" autocmd FileType javascript let indentLine_leadingSpaceEnabled=0
 
 " JSON:
 " autocmd FileType json set formatprg=prettier\ --stdin
