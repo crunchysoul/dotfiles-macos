@@ -76,3 +76,5 @@ source ~/.vim/config/plugins_config/ycm.vim
 source ~/.vim/config/plugins_config/neoplete.vim
 source ~/.vim/config/plugins_config/flutter.vim
 " source ~/.vim/config/plugins_config/easymotion.vim
+" source ~/.vim/config/plugins_config/easymotion.vim
+" source ~/.vim/config/plugins_config/vim_indent_guides.vim
