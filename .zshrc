@@ -230,6 +230,9 @@ export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
 # fastlane
 export PATH="$HOME/.fastlane/bin:$PATH"
 
+# flutter
+export PATH="$PATH:$HOME/codes/projects-flutter/flutter/bin"
+
 # Homebrew
 export HOMEBREW_GITHUB_API_TOKEN=$(security find-generic-password -s 'Homebrew GitHub Token' -w)
 

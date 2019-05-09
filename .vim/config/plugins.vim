@@ -79,6 +79,9 @@ Plug 'kristijanhusak/vim-carbon-now-sh'
 Plug 'easymotion/vim-easymotion'
 Plug 'HerringtonDarkholme/yats.vim'
 Plug 'mhartington/nvim-typescript', {'do': './install.sh'}
+Plug 'dart-lang/dart-vim-plugin'
+Plug 'thosakwe/vim-flutter'
+Plug 'reisub0/hot-reload.vim'
 " neoplete:
 if has('nvim')
   Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
