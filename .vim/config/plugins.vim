@@ -79,18 +79,20 @@ Plug 'dermusikman/sonicpi.vim'
 Plug 'kristijanhusak/vim-carbon-now-sh'
 Plug 'easymotion/vim-easymotion'
 Plug 'HerringtonDarkholme/yats.vim'
-Plug 'mhartington/nvim-typescript', {'do': './install.sh'}
+" Plug 'mhartington/nvim-typescript', {'do': './install.sh'}
 Plug 'dart-lang/dart-vim-plugin'
 Plug 'thosakwe/vim-flutter'
 Plug 'reisub0/hot-reload.vim'
-" neoplete:
-if has('nvim')
-  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-else
-  Plug 'Shougo/deoplete.nvim'
-  Plug 'roxma/nvim-yarp'
-  Plug 'roxma/vim-hug-neovim-rpc'
-endif
+" " neoplete:
+" if has('nvim')
+"   Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+" else
+"   Plug 'Shougo/deoplete.nvim'
+"   Plug 'roxma/nvim-yarp'
+"   Plug 'roxma/vim-hug-neovim-rpc'
+" endif
+Plug 'neoclide/coc.nvim', {'do': { -> coc#util#install()}}
+Plug 'carlitux/deoplete-ternjs', { 'do': 'npm install -g tern' }
 
 " list ends here. Plugins become visible to Vim after this call:
 call plug#end()
