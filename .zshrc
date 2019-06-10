@@ -280,3 +280,5 @@ alias glogfun='git log -1 | cowsay -f dragon-and-cow | lolcat'
 alias spoofmac="openssl rand -hex 6 | sed 's/\(..\)/\1:/g; s/.$//' | xargs sudo ifconfig en0 ether"
 alias whatmac='ifconfig en0 | grep ether'
 alias gprune='git fetch --prune && git branch -r | awk '"'"'{print $1}'"'"' | egrep -v -f /dev/fd/0 <(git branch -vv | grep origin) | awk '"'"'{print $1}'"'"' | xargs git branch -d'
+alias ls='lsd'
+alias lsla='ls -la'

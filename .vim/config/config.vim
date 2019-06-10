@@ -17,6 +17,7 @@
 "*******************************************************************************
 
 " genereal:
+set updatetime=300              " increase floation window speed
 syntax enable                   " enable syntax processing
 set vb t_vb=                    " Disable sound and bell:
 set hidden                      " speed up
@@ -106,6 +107,9 @@ endif
 " Disable safe write in your editor to assure hot reloading works properly
 " https://github.com/coryhouse/react-slingshot#initial-machine-setup
 set backupcopy=yes
+
+" Setup Coc Prettier command
+command! -nargs=0 Prettier :call CocAction('runCommand', 'prettier.formatFile')
 
 "*******************************************************************************
 "" Vim General Config - Issues Remedies:

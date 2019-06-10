@@ -5,7 +5,7 @@
 " Author: Chen Zhao
 " Github: @crunchysoul
 " Dotfile Links: https://github.com/crunchysoul/dotfiles-macbook-pro
-" Last Update: 2017-12-12 16:52
+" Last Update: 2019-06-10 21:59
 "
 " Notes:
 " 1. Use 'junegunn/vim-plug' plugins manager
@@ -35,14 +35,12 @@ Plug 'tpope/vim-endwise'
 Plug 'rizzatti/dash.vim'
 Plug 'frankier/neovim-colors-solarized-truecolor-only'
 Plug 'chriskempson/base16-vim'
-Plug 'mattn/emmet-vim'
 Plug 'hail2u/vim-css3-syntax'
 Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx'
 Plug 'ap/vim-css-color'
 Plug 'tpope/vim-rails'
 Plug 'elixir-editors/vim-elixir'
-" Plug 'crunchysoul/vim-elixir'
 Plug 'junegunn/goyo.vim'
 Plug 'junegunn/limelight.vim'
 Plug 'shime/vim-livedown'
@@ -54,7 +52,6 @@ Plug 'jeetsukumaran/vim-indentwise'
 Plug 'qpkorr/vim-bufkill'
 Plug 'junegunn/vim-emoji'
 Plug 'moll/vim-node'
-Plug 'SirVer/ultisnips'
 Plug 'w0rp/ale'
 Plug 'diepm/vim-rest-console'
 Plug 'godlygeek/tabular'
@@ -66,12 +63,10 @@ Plug 'keith/swift.vim'
 Plug 'posva/vim-vue'
 Plug 'airblade/vim-gitgutter'
 Plug 'ryanoasis/vim-devicons'
-Plug 'mhinz/vim-mix-format'
 Plug 'digitaltoad/vim-pug'
 Plug 'slashmili/alchemist.vim'
 Plug 'c-brenn/phoenix.vim'
 Plug 'tpope/vim-projectionist' " required for some navigation features
-Plug 'wokalski/autocomplete-flow'
 Plug 'elzr/vim-json'
 Plug 'majutsushi/tagbar'
 Plug 'chrisbra/csv.vim'
@@ -79,23 +74,14 @@ Plug 'dermusikman/sonicpi.vim'
 Plug 'kristijanhusak/vim-carbon-now-sh'
 Plug 'easymotion/vim-easymotion'
 Plug 'HerringtonDarkholme/yats.vim'
-" Plug 'mhartington/nvim-typescript', {'do': './install.sh'}
 Plug 'dart-lang/dart-vim-plugin'
 Plug 'thosakwe/vim-flutter'
 Plug 'reisub0/hot-reload.vim'
-" " neoplete:
-" if has('nvim')
-"   Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-" else
-"   Plug 'Shougo/deoplete.nvim'
-"   Plug 'roxma/nvim-yarp'
-"   Plug 'roxma/vim-hug-neovim-rpc'
-" endif
 Plug 'neoclide/coc.nvim', {'do': { -> coc#util#install()}}
-Plug 'carlitux/deoplete-ternjs', { 'do': 'npm install -g tern' }
 
 " list ends here. Plugins become visible to Vim after this call:
 call plug#end()
+
 " Plugins - Retired:
 "*****************************************************************************
 " Plug 'ervandew/supertab'
@@ -112,3 +98,18 @@ call plug#end()
 " Plug 'itchyny/lightline.vim'
 " Plug 'ternjs/tern_for_vim'
 " Plug 'Yggdroot/indentLine'
+" Plug 'mattn/emmet-vim'
+" Plug 'crunchysoul/vim-elixir'
+" Plug 'SirVer/ultisnips'
+" Plug 'mhartington/nvim-typescript', {'do': './install.sh'}
+" Plug 'carlitux/deoplete-ternjs', { 'do': 'npm install -g tern' }
+" Plug 'mhinz/vim-mix-format'
+" Plug 'wokalski/autocomplete-flow'
+" " neoplete:
+" if has('nvim')
+"   Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+" else
+"   Plug 'Shougo/deoplete.nvim'
+"   Plug 'roxma/nvim-yarp'
+"   Plug 'roxma/vim-hug-neovim-rpc'
+" endif

@@ -1,0 +1,18 @@
+{
+  "languageserver": {
+     "elixirLS": {
+      "command": "~/codes/projects-elixir/clone/elixir-ls/rel/language_server.sh",
+      "filetypes": ["elixir", "eelixir"]
+     }
+  },
+  "snippets.extends": {
+    "cpp": ["c"],
+    "javascriptreact": ["javascript"],
+    "javascript.jsx": ["javascript"],
+    "typescript": ["javascript"]
+  },
+  "tsserver.implicitProjectConfig.experimentalDecorators": true,
+  "tsserver.enableJavascript": true,
+  "coc.preferences.formatOnSaveFiletypes": ["css", "Markdown" ],
+  "emmet.includeLanguages": {"javascript.jsx": "javascriptreact"}
+}

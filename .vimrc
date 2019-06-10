@@ -58,7 +58,6 @@ source ~/.vim/config/keymap.vim
 "*****************************************************************************
 source ~/.vim/config/plugins_config/airline.vim
 source ~/.vim/config/plugins_config/ale.vim
-" source ~/.vim/config/plugins_config/csv.vim
 source ~/.vim/config/plugins_config/devicons.vim
 source ~/.vim/config/plugins_config/elm.vim
 source ~/.vim/config/plugins_config/emmet.vim
@@ -69,12 +68,13 @@ source ~/.vim/config/plugins_config/latex.vim
 source ~/.vim/config/plugins_config/markdown.vim
 source ~/.vim/config/plugins_config/nerdtree.vim
 source ~/.vim/config/plugins_config/tagbar.vim
-source ~/.vim/config/plugins_config/tern.vim
-source ~/.vim/config/plugins_config/ultisnips.vim
 source ~/.vim/config/plugins_config/vrc.vim
-source ~/.vim/config/plugins_config/ycm.vim
-source ~/.vim/config/plugins_config/neoplete.vim
 source ~/.vim/config/plugins_config/flutter.vim
+" source ~/.vim/config/plugins_config/ycm.vim
+" source ~/.vim/config/plugins_config/csv.vim
+" source ~/.vim/config/plugins_config/tern.vim
+" source ~/.vim/config/plugins_config/neoplete.vim
+" source ~/.vim/config/plugins_config/ultisnips.vim
 " source ~/.vim/config/plugins_config/easymotion.vim
 " source ~/.vim/config/plugins_config/easymotion.vim
 " source ~/.vim/config/plugins_config/vim_indent_guides.vim
