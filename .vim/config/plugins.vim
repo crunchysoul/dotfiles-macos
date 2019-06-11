@@ -77,7 +77,12 @@ Plug 'HerringtonDarkholme/yats.vim'
 Plug 'dart-lang/dart-vim-plugin'
 Plug 'thosakwe/vim-flutter'
 Plug 'reisub0/hot-reload.vim'
+Plug 'mhinz/vim-mix-format'
 Plug 'neoclide/coc.nvim', {'do': { -> coc#util#install()}}
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf.vim'
+Plug 'dyng/ctrlsf.vim'
+Plug 'airblade/vim-rooter'
 
 " list ends here. Plugins become visible to Vim after this call:
 call plug#end()
@@ -103,7 +108,6 @@ call plug#end()
 " Plug 'SirVer/ultisnips'
 " Plug 'mhartington/nvim-typescript', {'do': './install.sh'}
 " Plug 'carlitux/deoplete-ternjs', { 'do': 'npm install -g tern' }
-" Plug 'mhinz/vim-mix-format'
 " Plug 'wokalski/autocomplete-flow'
 " " neoplete:
 " if has('nvim')

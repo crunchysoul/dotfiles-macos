@@ -24,6 +24,9 @@ set hidden                      " speed up
 set history=200                 " speed up
 set number                      " line numbers
 set mouse=a                     " enable mouse scroll
+" set autochdir                   " autoset working dir to current
+" auto set working dir to current
+" autocmd BufEnter * silent! lcd %:p:h
 
 " set the invisible characters:
 " set list                            " display invisible characters
@@ -171,3 +174,16 @@ endif
 colorscheme base16-solarized-dark
 " colorscheme base16-solarized-light
 hi Search guibg=Blue guifg=yellow
+
+
+" The Silver Searcher
+if executable('ag')
+  " Use ag over grep
+  set grepprg=ag\ --nogroup\ --nocolor
+
+  " Use ag in CtrlP for listing files. Lightning fast and respects .gitignore
+  let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
+
+  " ag is fast enough that CtrlP doesn't need to cache
+  let g:ctrlp_use_caching = 0
+endif
