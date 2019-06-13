@@ -81,7 +81,6 @@ Plug 'chrisbra/csv.vim'
 Plug 'dart-lang/dart-vim-plugin'
 Plug 'thosakwe/vim-flutter'
 Plug 'reisub0/hot-reload.vim'
-Plug 'mhinz/vim-mix-format'
 
 " list ends here. Plugins become visible to Vim after this call:
 call plug#end()
@@ -110,6 +109,7 @@ call plug#end()
 " Plug 'wokalski/autocomplete-flow'
 " Plug 'dyng/ctrlsf.vim'
 " Plug 'HerringtonDarkholme/yats.vim'
+" Plug 'mhinz/vim-mix-format'
 " " neoplete:
 " if has('nvim')
 "   Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
