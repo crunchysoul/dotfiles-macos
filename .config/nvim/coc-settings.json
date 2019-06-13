@@ -13,7 +13,9 @@
   },
   "tsserver.implicitProjectConfig.experimentalDecorators": true,
   "tsserver.enableJavascript": true,
-  "coc.preferences.formatOnSaveFiletypes": ["css", "Markdown", "javascript", "javascriptreact" ],
-  "prettier.requireConfig": true,
-  "emmet.includeLanguages": {"javascript.jsx": "javascriptreact"}
+  "coc.preferences.formatOnSaveFiletypes": ["css", "Markdown", "javascript", "javascriptreact", "json" ],
+  "emmet.includeLanguages": {"javascript.jsx": "javascriptreact"},
+  "prettier.singleQuote": true,
+  "prettier.trailingComma": "all",
+  "prettier.arrowParens": "always"
 }
