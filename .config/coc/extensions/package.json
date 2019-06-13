@@ -4,7 +4,7 @@
     "coc-emmet": "^1.0.9",
     "coc-highlight": "^1.1.3",
     "coc-html": "^1.0.7",
-    "coc-json": "^1.0.17",
+    "coc-json": "^1.1.0",
     "coc-lists": "^1.1.6",
     "coc-prettier": "^1.1.1",
     "coc-snippets": "^2.0.16",
