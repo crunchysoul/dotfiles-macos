@@ -163,3 +163,6 @@ let g:coc_snippet_next = '<c-j>'
 " Coc: Use <Tab> and <S-Tab> to navigate the completion list:
 inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
 inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+
+" FZF: set \ag to search under cursor
+nnoremap <silent> <Leader>ag :Ag <C-R><C-W><CR>

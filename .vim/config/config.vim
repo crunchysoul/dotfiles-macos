@@ -5,7 +5,7 @@
 " Author: Chen Zhao
 " Github: @crunchysoul
 " Dotfile Links: https://github.com/crunchysoul/dotfiles-macbook-pro
-" Last Update: 2017-12-13 14:34
+" Last Update: 2019-06-13 18:10
 "
 " Notes:
 "
@@ -13,7 +13,7 @@
 
 "*******************************************************************************
 "" Vim General Config - Setting:
-" Last Update: 2017-12-13 14:43
+" Last Update: 2019-06-13 18:11
 "*******************************************************************************
 
 " genereal:
@@ -176,7 +176,7 @@ colorscheme base16-solarized-dark
 hi Search guibg=Blue guifg=yellow
 
 
-" The Silver Searcher
+" The Silver Searcher:
 if executable('ag')
   " Use ag over grep
   set grepprg=ag\ --nogroup\ --nocolor
@@ -186,4 +186,11 @@ if executable('ag')
 
   " ag is fast enough that CtrlP doesn't need to cache
   let g:ctrlp_use_caching = 0
+endif
+
+
+" CtrlP Performance Setting:
+let g:ctrlp_cache_dir = $HOME . '/.cache/ctrlp'
+if executable('ag')
+  let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
 endif
