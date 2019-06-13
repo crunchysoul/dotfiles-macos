@@ -13,6 +13,7 @@
   },
   "tsserver.implicitProjectConfig.experimentalDecorators": true,
   "tsserver.enableJavascript": true,
-  "coc.preferences.formatOnSaveFiletypes": ["css", "Markdown" ],
+  "coc.preferences.formatOnSaveFiletypes": ["css", "Markdown", "javascript", "javascriptreact" ],
+  "prettier.requireConfig": true,
   "emmet.includeLanguages": {"javascript.jsx": "javascriptreact"}
 }

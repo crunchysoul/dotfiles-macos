@@ -43,7 +43,6 @@ Plug 'jeffkreeftmeijer/vim-numbertoggle'
 Plug 'jeetsukumaran/vim-indentwise'
 Plug 'qpkorr/vim-bufkill'
 Plug 'junegunn/vim-emoji'
-Plug 'w0rp/ale'
 Plug 'diepm/vim-rest-console'
 Plug 'godlygeek/tabular'
 Plug 'airblade/vim-gitgutter'
@@ -74,8 +73,6 @@ Plug 'elixir-editors/vim-elixir'
 Plug 'kchmck/vim-coffee-script'
 Plug 'moll/vim-node'
 Plug 'slashmili/alchemist.vim'
-Plug 'c-brenn/phoenix.vim'
-Plug 'tpope/vim-projectionist' " required for some navigation features
 Plug 'elzr/vim-json'
 Plug 'chrisbra/csv.vim'
 Plug 'dart-lang/dart-vim-plugin'
@@ -110,6 +107,10 @@ call plug#end()
 " Plug 'dyng/ctrlsf.vim'
 " Plug 'HerringtonDarkholme/yats.vim'
 " Plug 'mhinz/vim-mix-format'
+" Plug 'c-brenn/phoenix.vim'
+" Plug 'crunchysoul/phoenix.vim'
+" Plug 'tpope/vim-projectionist'
+" Plug 'w0rp/ale'
 " " neoplete:
 " if has('nvim')
 "   Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }

@@ -27,7 +27,7 @@
 map ; <Leader>
 
 " Source:
-map <leader>s :source ~/.vimrc <bar> :up <bar> :e<ENTER>
+map <Leader>s :source ~/.vimrc <bar> :up <bar> :e<ENTER>
 
 " Exit Paste Mode:
 set pastetoggle=<f2>
@@ -110,7 +110,7 @@ map <Leader>[ <C-y>,
 " nnoremap <Leader>ff :Goyo<CR>
 
 " Gundo Toggle:
-nnoremap <leader>u :GundoToggle<CR>
+nnoremap <Leader>u :GundoToggle<CR>
 
 " Hybrid Line Number:
 nnoremap <silent> <C-n> :set relativenumber!<cr>"
@@ -166,3 +166,6 @@ inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 
 " FZF: set \ag to search under cursor
 nnoremap <silent> <Leader>ag :Ag <C-R><C-W><CR>
+
+" CtrlP: ctrlp search under cursor
+nmap <silent> <Leader><C-P> :CtrlP<CR><C-\>w
