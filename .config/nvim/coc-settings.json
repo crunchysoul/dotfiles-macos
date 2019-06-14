@@ -2,7 +2,12 @@
   "languageserver": {
      "elixirLS": {
       "command": "~/codes/projects-elixir/clone/elixir-ls/rel/language_server.sh",
-      "filetypes": ["elixir", "eelixir"]
+      "filetypes": ["elixir", "eelixir"],
+      "settings": {
+        "elixirLS": {
+          "dialyzerEnabled": false
+        }
+      }
      }
   },
   "snippets.extends": {

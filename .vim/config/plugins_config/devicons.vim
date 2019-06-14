@@ -15,6 +15,7 @@
 let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols = {} " needed
 let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols['exs'] = ''
 let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols['ex'] = ''
+let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols['eex'] = ''
 let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols['svg'] = ''
 let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols['elm'] = ''
 let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols['pdf'] = ''
