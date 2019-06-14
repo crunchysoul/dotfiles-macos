@@ -24,9 +24,6 @@ set hidden                      " speed up
 set history=200                 " speed up
 set number                      " line numbers
 set mouse=a                     " enable mouse scroll
-" set autochdir                   " autoset working dir to current
-" auto set working dir to current
-" autocmd BufEnter * silent! lcd %:p:h
 
 " set the invisible characters:
 " set list                            " display invisible characters
@@ -71,6 +68,7 @@ set foldnestmax=10              " 10 nested fold max
 " au FocusLost,WinLeave * :silent! w
 
 " Auto load view and folder
+" If working dir is wrong, empty .local/share/nvim/view
 autocmd BufWinLeave *.* mkview!
 autocmd BufWinEnter *.* silent! loadview 
 

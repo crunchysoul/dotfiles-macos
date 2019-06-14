@@ -55,7 +55,7 @@ Plug 'easymotion/vim-easymotion'
 Plug 'neoclide/coc.nvim', {'do': { -> coc#util#install()}}
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
-Plug 'airblade/vim-rooter'
+" Plug 'airblade/vim-rooter'
 " Filetype:
 Plug 'plasticboy/vim-markdown'
 Plug 'neovimhaskell/haskell-vim'
@@ -67,7 +67,6 @@ Plug 'vim-ruby/vim-ruby'
 Plug 'hail2u/vim-css3-syntax'
 Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx'
-Plug 'ap/vim-css-color'
 Plug 'tpope/vim-rails'
 Plug 'elixir-editors/vim-elixir'
 Plug 'kchmck/vim-coffee-script'
@@ -111,6 +110,7 @@ call plug#end()
 " Plug 'crunchysoul/phoenix.vim'
 " Plug 'tpope/vim-projectionist'
 " Plug 'w0rp/ale'
+" Plug 'ap/vim-css-color'
 " " neoplete:
 " if has('nvim')
 "   Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }

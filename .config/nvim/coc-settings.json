@@ -16,10 +16,10 @@
     "javascript.jsx": ["javascript"],
     "typescript": ["javascript"]
   },
-  "tsserver.implicitProjectConfig.experimentalDecorators": true,
-  "tsserver.enableJavascript": true,
   "coc.preferences.formatOnSaveFiletypes": ["css", "Markdown", "javascript", "javascriptreact", "json" ],
   "emmet.includeLanguages": {"javascript.jsx": "javascriptreact"},
+  "tsserver.implicitProjectConfig.experimentalDecorators": true,
+  "tsserver.enableJavascript": true,
   "prettier.singleQuote": true,
   "prettier.trailingComma": "all",
   "prettier.arrowParens": "always"
