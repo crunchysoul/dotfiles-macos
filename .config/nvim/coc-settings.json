@@ -22,5 +22,6 @@
   "tsserver.enableJavascript": true,
   "prettier.singleQuote": true,
   "prettier.trailingComma": "all",
-  "prettier.arrowParens": "always"
+  "prettier.arrowParens": "always",
+  "prettier.eslintIntegration": true
 }
