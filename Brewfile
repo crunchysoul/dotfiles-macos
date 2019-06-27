@@ -50,7 +50,7 @@ brew "gnupg"
 brew "go"
 brew "gource"
 brew "gradle"
-brew "graphviz", args: ["with-librsvg", "with-pango"]
+brew "graphviz"
 brew "grep"
 brew "gtkdatabox"
 brew "gzip"
@@ -190,7 +190,7 @@ cask "vlc"
 cask "vox"
 cask "wireshark"
 cask "wkhtmltopdf"
-mas "com.huawei.hisuite", id: 1232508288
-mas "com.shazam.mac.Shazam", id: 897118787
-mas "com.tencent.xinWeChat", id: 836500024
-mas "cx.c3.theunarchiver", id: 425424353
+mas "HiSuite", id: 1232508288
+mas "Shazam", id: 897118787
+mas "The Unarchiver", id: 425424353
+mas "WeChat", id: 836500024

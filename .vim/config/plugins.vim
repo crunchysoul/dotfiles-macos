@@ -57,6 +57,7 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 " Plug 'airblade/vim-rooter'
 " Filetype:
+Plug 'mattn/emmet-vim'
 Plug 'plasticboy/vim-markdown'
 Plug 'neovimhaskell/haskell-vim'
 Plug 'elmcast/elm-vim'
