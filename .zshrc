@@ -7,16 +7,14 @@ export TERM="screen-256color"
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
 
-# Homebrew’s ZSH completions
-# should call before compinit and oh-my-zsh.sh
-if type brew &>/dev/null; then
-  FPATH=$(brew --prefix)/share/zsh/site-functions:$FPATH
-fi
-
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-################################################################################
+
+##############################################################################
+# My powerlevel9k Config
+##############################################################################
+
 ZSH_THEME="powerlevel9k/powerlevel9k"
 # ZSH_THEME="random"
 # ZSH_THEME="agnoster"
@@ -26,7 +24,6 @@ POWERLEVEL9K_MODE='nerdfont-complete'
 # POWERLEVEL9K_MODE='awesome-fontconfig'
 
 # Right prompt:
-# POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status root_indicator background_jobs battery time)
 # POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(zsh_showStatus status root_indicator background_jobs battery time)
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status root_indicator background_jobs battery time)
 
@@ -91,7 +88,34 @@ prompt_zsh_showStatus () {
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git npm z ruby osx yarn mix) 
 
+
+# # Homebrew’s ZSH completions
+# # should call before compinit and oh-my-zsh.sh
+# if type brew &>/dev/null; then
+#   FPATH=$(brew --prefix)/share/zsh/site-functions:$FPATH
+# fi
+
 source $ZSH/oh-my-zsh.sh
+
+# Fish short path:
+POWERLEVEL9K_SHORTEN_DIR_LENGTH=1
+POWERLEVEL9K_SHORTEN_DELIMITER=""
+POWERLEVEL9K_SHORTEN_STRATEGY="truncate_from_right"
+
+# Short vcs rules
+# XXX: does not seem to work
+POWERLEVEL9K_VCS_SHORTEN_LENGTH=4
+POWERLEVEL9K_VCS_SHORTEN_MIN_LENGTH=11
+POWERLEVEL9K_VCS_SHORTEN_STRATEGY="truncate_from_right"
+POWERLEVEL9K_VCS_SHORTEN_DELIMITER=""
+
+# Empty prompt:
+prompt_context() {}
+
+# # Short path like fish:
+# setopt prompt_subst
+# PS1='%n@%m $(shrink_path -l)>'
+
 
 # User configuration
 
@@ -121,41 +145,6 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-
-##############################################################################
-# My powerlevel9k Config
-##############################################################################
-
-# Light powerline color:
-#POWERLEVEL9K_COLOR_SCHEME='light'
-#POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(time context dir vcs)
-#POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status rbenv)
-#POWERLEVEL9K_STATUS_VERBOSE=false
-#POWERLEVEL9K_SHORTEN_STRATEGY="truncate_middle"
-#POWERLEVEL9K_SHORTEN_DIR_LENGTH=3
-
-# Fish short path:
-POWERLEVEL9K_SHORTEN_DIR_LENGTH=1
-POWERLEVEL9K_SHORTEN_DELIMITER=""
-POWERLEVEL9K_SHORTEN_STRATEGY="truncate_from_right"
-
-# Short vcs rules
-# XXX: does not seem to work
-POWERLEVEL9K_VCS_SHORTEN_LENGTH=4
-POWERLEVEL9K_VCS_SHORTEN_MIN_LENGTH=11
-POWERLEVEL9K_VCS_SHORTEN_STRATEGY="truncate_from_right"
-POWERLEVEL9K_VCS_SHORTEN_DELIMITER=""
-
-
-# Empty prompt:
-prompt_context() {}
-
-# # Short path like fish:
-# setopt prompt_subst
-# PS1='%n@%m $(shrink_path -l)>'
-
-# Right prompt:
-#POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status time)
 
 ##############################################################################
 # My Config System & Homebrew
@@ -236,6 +225,7 @@ export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
 
 # asdf installed from homebrew:
 . /usr/local/opt/asdf/asdf.sh
+. /usr/local/opt/asdf/etc/bash_completion.d/asdf.bash
 
 # fastlane
 export PATH="$HOME/.fastlane/bin:$PATH"
@@ -300,4 +290,5 @@ alias gprune='git fetch --prune && git branch -r | awk '"'"'{print $1}'"'"' | eg
 alias ls='lsd'
 alias lsla='ls -la'
 
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+# fzf completion
+# [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
