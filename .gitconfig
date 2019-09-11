@@ -3,6 +3,8 @@
 	email = zzzcca12@gmail.com
 [includeIf "gitdir:~/codes/projects-isobar/"]
 	path = ~/codes/projects-isobar/.gitconfig
+[includeIf "gitdir:~/codes/projects-handdii/"]
+	path = ~/codes/projects-handdii/.gitconfig
 [color]
 	ui = true
 [core]

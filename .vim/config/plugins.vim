@@ -55,6 +55,7 @@ Plug 'easymotion/vim-easymotion'
 Plug 'neoclide/coc.nvim', {'do': { -> coc#util#install()}}
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
+Plug 'vim-scripts/VimIM'
 " Plug 'airblade/vim-rooter'
 " Filetype:
 Plug 'mattn/emmet-vim'
@@ -78,6 +79,9 @@ Plug 'chrisbra/csv.vim'
 Plug 'dart-lang/dart-vim-plugin'
 Plug 'thosakwe/vim-flutter'
 Plug 'reisub0/hot-reload.vim'
+Plug 'leafgarland/typescript-vim'
+Plug 'peitalin/vim-jsx-typescript'
+Plug 'amadeus/vim-mjml'
 
 " list ends here. Plugins become visible to Vim after this call:
 call plug#end()

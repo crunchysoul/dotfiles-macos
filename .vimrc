@@ -69,6 +69,8 @@ source ~/.vim/config/plugins_config/nerdtree.vim
 source ~/.vim/config/plugins_config/tagbar.vim
 source ~/.vim/config/plugins_config/vrc.vim
 source ~/.vim/config/plugins_config/flutter.vim
+source ~/.vim/config/plugins_config/jsxtypescript.vim
+source ~/.vim/config/plugins_config/vimim.vim
 " source ~/.vim/config/plugins_config/ale.vim
 " source ~/.vim/config/plugins_config/ycm.vim
 " source ~/.vim/config/plugins_config/csv.vim

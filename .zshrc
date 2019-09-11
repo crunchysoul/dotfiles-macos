@@ -7,6 +7,12 @@ export TERM="screen-256color"
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
 
+# Homebrew’s ZSH completions
+# should call before compinit and oh-my-zsh.sh
+if type brew &>/dev/null; then
+  FPATH=$(brew --prefix)/share/zsh/site-functions:$FPATH
+fi
+
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
@@ -21,7 +27,8 @@ POWERLEVEL9K_MODE='nerdfont-complete'
 
 # Right prompt:
 # POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status root_indicator background_jobs battery time)
-POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(zsh_showStatus status root_indicator background_jobs battery time)
+# POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(zsh_showStatus status root_indicator background_jobs battery time)
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status root_indicator background_jobs battery time)
 
 # No show time of battery
 POWERLEVEL9K_BATTERY_VERBOSE='false'
@@ -223,9 +230,12 @@ export EDITOR=nvim
 export PATH="/usr/local/opt/libarchive/bin:$PATH"
 export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
 
-# asdf:
-. $HOME/.asdf/asdf.sh
-. $HOME/.asdf/completions/asdf.bash
+# asdf installed from git:
+# . $HOME/.asdf/asdf.sh
+# . $HOME/.asdf/completions/asdf.bash
+
+# asdf installed from homebrew:
+. /usr/local/opt/asdf/asdf.sh
 
 # fastlane
 export PATH="$HOME/.fastlane/bin:$PATH"
@@ -238,6 +248,11 @@ export HOMEBREW_GITHUB_API_TOKEN=$(security find-generic-password -s 'Homebrew G
 
 # prevent tmux C-d exist
 set -o ignoreeof
+
+# yarn
+export PATH="$PATH:$HOME/.yarn/bin:$PATH"
+export PATH="$PATH:`yarn global bin`"
+
 ##############################################################################
 # My Alias:
 ##############################################################################
@@ -253,7 +268,9 @@ alias sz='source ~/.zshrc'
 alias stmux='tmux source ~/.tmux.conf'
 # alias song='spotify status'
 
-alias brewup='brew update; brew upgrade; brew cleanup; brew doctor'
+alias brewup='brew update; brew upgrade; brew cleanup; brewdoctor'
+# skip Homebrew stray header, dylibs, static_libs checks
+alias brewdoctor="brew doctor \$(brew doctor --list-checks | grep -vE 'check_for_stray_(dylibs|static_libs|headers)')"
 alias bcs='brew cask search'
 alias bci='brew cask install'
 alias bcl='brew cask list'
