@@ -55,7 +55,6 @@ Plug 'easymotion/vim-easymotion'
 Plug 'neoclide/coc.nvim', {'do': { -> coc#util#install()}}
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
-Plug 'vim-scripts/VimIM'
 " Plug 'airblade/vim-rooter'
 " Filetype:
 Plug 'mattn/emmet-vim'

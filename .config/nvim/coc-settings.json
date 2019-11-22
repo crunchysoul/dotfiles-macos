@@ -16,7 +16,7 @@
     "javascript.jsx": ["javascript"],
     "typescript": ["javascript"]
   },
-  "coc.preferences.formatOnSaveFiletypes": ["css", "Markdown", "javascript", "javascriptreact", "json" ],
+  "coc.preferences.formatOnSaveFiletypes": ["css", "Markdown", "javascript", "javascriptreact", "json", "typescript", "typescriptreact" ],
   "emmet.includeLanguages": {"javascript.jsx": "javascriptreact"},
   "tsserver.implicitProjectConfig.experimentalDecorators": true,
   "tsserver.enableJavascript": true,

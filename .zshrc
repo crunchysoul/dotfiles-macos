@@ -1,3 +1,7 @@
+# bash completion
+autoload -U +X bashcompinit && bashcompinit
+autoload -U +X compinit && compinit
+
 # 256 color support for tmux
 # export TERM="xterm-256color"
 export TERM="screen-256color"
@@ -88,7 +92,6 @@ prompt_zsh_showStatus () {
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git npm z ruby osx yarn mix) 
 
-
 # # Homebrew’s ZSH completions
 # # should call before compinit and oh-my-zsh.sh
 # if type brew &>/dev/null; then
@@ -104,10 +107,10 @@ POWERLEVEL9K_SHORTEN_STRATEGY="truncate_from_right"
 
 # Short vcs rules
 # XXX: does not seem to work
-POWERLEVEL9K_VCS_SHORTEN_LENGTH=4
-POWERLEVEL9K_VCS_SHORTEN_MIN_LENGTH=11
-POWERLEVEL9K_VCS_SHORTEN_STRATEGY="truncate_from_right"
-POWERLEVEL9K_VCS_SHORTEN_DELIMITER=""
+# POWERLEVEL9K_VCS_SHORTEN_LENGTH=4
+# POWERLEVEL9K_VCS_SHORTEN_MIN_LENGTH=11
+# POWERLEVEL9K_VCS_SHORTEN_STRATEGY="truncate_from_right"
+# POWERLEVEL9K_VCS_SHORTEN_DELIMITER=""
 
 # Empty prompt:
 prompt_context() {}
@@ -224,14 +227,14 @@ export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
 # . $HOME/.asdf/completions/asdf.bash
 
 # asdf installed from homebrew:
-. /usr/local/opt/asdf/asdf.sh
-. /usr/local/opt/asdf/etc/bash_completion.d/asdf.bash
+# . /usr/local/opt/asdf/asdf.sh
+# . /usr/local/opt/asdf/etc/bash_completion.d/asdf.bash
 
 # fastlane
 export PATH="$HOME/.fastlane/bin:$PATH"
 
 # flutter
-export PATH="$PATH:$HOME/codes/projects-flutter/flutter/bin"
+export PATH="$HOME/codes/projects-flutter/flutter/bin:$PATH"
 
 # Homebrew
 export HOMEBREW_GITHUB_API_TOKEN=$(security find-generic-password -s 'Homebrew GitHub Token' -w)
@@ -240,8 +243,19 @@ export HOMEBREW_GITHUB_API_TOKEN=$(security find-generic-password -s 'Homebrew G
 set -o ignoreeof
 
 # yarn
-export PATH="$PATH:$HOME/.yarn/bin:$PATH"
-export PATH="$PATH:`yarn global bin`"
+export PATH="$HOME/.yarn/bin:$PATH"
+export PATH="`yarn global bin`:$PATH"
+
+# reduce duplicate PATH
+# NOTE: run after all PATH export
+# PATH=$(printf "%s" "$PATH" | awk -v RS=':' '!a[$1]++ { if (NR > 1) printf RS; printf $1 }')
+
+# or use in zsh
+typeset -aU path
+
+# asdf
+. /usr/local/opt/asdf/asdf.sh
+. /usr/local/opt/asdf/etc/bash_completion.d/asdf.bash
 
 ##############################################################################
 # My Alias:
@@ -289,6 +303,8 @@ alias whatmac='ifconfig en0 | grep ether'
 alias gprune='git fetch --prune && git branch -r | awk '"'"'{print $1}'"'"' | egrep -v -f /dev/fd/0 <(git branch -vv | grep origin) | awk '"'"'{print $1}'"'"' | xargs git branch -d'
 alias ls='lsd'
 alias lsla='ls -la'
+
+alias ts_h='tmuxinator start handdii'
 
 # fzf completion
 # [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
