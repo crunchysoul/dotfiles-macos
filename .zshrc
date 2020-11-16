@@ -153,6 +153,9 @@ prompt_context() {}
 # My Config System & Homebrew
 ##############################################################################
 
+# ~/codes env variable:
+export CODE=$HOME/codes
+
 # Homebrew $PATH:
 export PATH=/usr/local/bin:/usr/local/sbin:~/bin:$PATH
 

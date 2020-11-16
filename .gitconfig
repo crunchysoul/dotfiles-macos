@@ -1,19 +1,19 @@
 [user]
   name = crunchysoul
 	email = zzzcca12@gmail.com
-[includeIf "gitdir:~/codes/projects-isobar/"]
-	path = ~/codes/projects-isobar/.gitconfig
-[includeIf "gitdir:~/codes/projects-handdii/"]
-	path = ~/codes/projects-handdii/.gitconfig
-[includeIf "gitdir:~/codes/projects-crypto-com/"]
-	path = ~/codes/projects-crypto-com/.gitconfig
-[includeIf "gitdir:~/codes/projects-crunchysouldev/"]
-	path = ~/codes/projects-crunchysouldev/.gitconfig
+[includeIf "gitdir:$CODE/projects-isobar/"]
+	path = $CODE/projects-isobar/.gitconfig
+[includeIf "gitdir:$CODE/projects-handdii/"]
+	path = $CODE/projects-handdii/.gitconfig
+[includeIf "gitdir:$CODE/projects-crypto-com/"]
+	path = $CODE/projects-crypto-com/.gitconfig
+[includeIf "gitdir:$CODE/projects-crunchysouldev/"]
+	path = $CODE/projects-crunchysouldev/.gitconfig
 [color]
 	ui = true
 [core]
 	editor = nvim
-	excludesfile = /Users/joshua.chenzhao/.gitignore_global
+	excludesfile = $HOME/.gitignore_global
 [alias]
 	tree = log --graph --decorate --pretty=oneline --abbrev-commit
 [difftool "sourcetree"]
