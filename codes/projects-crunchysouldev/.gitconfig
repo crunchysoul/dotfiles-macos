@@ -1,0 +1,7 @@
+[user]
+	name = Joshua Chen Zhao
+	email = crunchysouldev@gmail.com
+[core]
+	excludesfile = ~/.gitignore_global
+	name = Joshua Chen zhao
+	email = crunchysouldev@gmail.com
