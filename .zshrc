@@ -90,7 +90,7 @@ prompt_zsh_showStatus () {
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git npm z ruby osx yarn mix) 
+plugins=(git npm z ruby osx yarn mix asdf) 
 
 # # Homebrew’s ZSH completions
 # # should call before compinit and oh-my-zsh.sh
@@ -250,13 +250,16 @@ export PATH="`yarn global bin`:$PATH"
 # NOTE: run after all PATH export
 # PATH=$(printf "%s" "$PATH" | awk -v RS=':' '!a[$1]++ { if (NR > 1) printf RS; printf $1 }')
 
+# asdf
+. $HOME/.asdf/asdf.sh
+
+# Homebrew asdf
+# . /usr/local/opt/asdf/asdf.sh
+# . /usr/local/opt/asdf/etc/bash_completion.d/asdf.bash
+
+
 # or use in zsh
 typeset -aU path
-
-# asdf
-. /usr/local/opt/asdf/asdf.sh
-. /usr/local/opt/asdf/etc/bash_completion.d/asdf.bash
-
 ##############################################################################
 # My Alias:
 ##############################################################################
@@ -308,3 +311,4 @@ alias ts_h='tmuxinator start handdii'
 
 # fzf completion
 # [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+export PATH="/usr/local/opt/avr-gcc@8/bin:$PATH"

@@ -17,8 +17,6 @@
 call plug#begin('~/.vim/plugged')
 
 Plug 'alvan/vim-closetag'
-" Plug 'baumanno/vim-nerdtree-direnter'
-" Plug 'jistr/vim-nerdtree-tabs'
 Plug 'bling/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'scrooloose/nerdtree'
@@ -28,11 +26,12 @@ Plug 'tpope/vim-fugitive'
 Plug 'lervag/vimtex'
 Plug 'jiangmiao/auto-pairs'
 Plug 'tpope/vim-surround'
-Plug 'honza/vim-snippets'
 Plug 'vim-scripts/tComment'
 Plug 'tpope/vim-endwise'
 Plug 'rizzatti/dash.vim'
 Plug 'frankier/neovim-colors-solarized-truecolor-only'
+Plug 'overcache/NeoSolarized'
+Plug 'elixir-editors/vim-elixir'
 Plug 'chriskempson/base16-vim'
 Plug 'junegunn/goyo.vim'
 Plug 'junegunn/limelight.vim'
@@ -46,18 +45,17 @@ Plug 'junegunn/vim-emoji'
 Plug 'diepm/vim-rest-console'
 Plug 'godlygeek/tabular'
 Plug 'airblade/vim-gitgutter'
-Plug 'ryanoasis/vim-devicons'
 Plug 'digitaltoad/vim-pug'
 Plug 'majutsushi/tagbar'
 Plug 'dermusikman/sonicpi.vim'
 Plug 'kristijanhusak/vim-carbon-now-sh'
 Plug 'easymotion/vim-easymotion'
-Plug 'neoclide/coc.nvim', {'do': { -> coc#util#install()}}
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
-" Plug 'airblade/vim-rooter'
 " Filetype:
-Plug 'mattn/emmet-vim'
+" emmet-vim and vim-elixir has conflict, disable
+" Plug 'mattn/emmet-vim'
 Plug 'plasticboy/vim-markdown'
 Plug 'neovimhaskell/haskell-vim'
 Plug 'elmcast/elm-vim'
@@ -69,7 +67,6 @@ Plug 'hail2u/vim-css3-syntax'
 Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx'
 Plug 'tpope/vim-rails'
-Plug 'elixir-editors/vim-elixir'
 Plug 'kchmck/vim-coffee-script'
 Plug 'moll/vim-node'
 Plug 'slashmili/alchemist.vim'
@@ -78,7 +75,6 @@ Plug 'chrisbra/csv.vim'
 Plug 'dart-lang/dart-vim-plugin'
 Plug 'thosakwe/vim-flutter'
 Plug 'reisub0/hot-reload.vim'
-Plug 'leafgarland/typescript-vim'
 Plug 'peitalin/vim-jsx-typescript'
 Plug 'amadeus/vim-mjml'
 
@@ -87,6 +83,7 @@ call plug#end()
 
 " Plugins - Retired:
 "*****************************************************************************
+" Plug 'ryanoasis/vim-devicons'
 " Plug 'ervandew/supertab'
 " Plug 'Valloric/YouCompleteMe'
 " Plug 'tpope/vim-markdown'
@@ -114,7 +111,13 @@ call plug#end()
 " Plug 'crunchysoul/phoenix.vim'
 " Plug 'tpope/vim-projectionist'
 " Plug 'w0rp/ale'
+" Plug 'leafgarland/typescript-vim'
 " Plug 'ap/vim-css-color'
+" Plug 'baumanno/vim-nerdtree-direnter'
+" Plug 'jistr/vim-nerdtree-tabs'
+" Plug 'airblade/vim-rooter'
+" Plug 'neoclide/coc.nvim', {'do': { -> coc#util#install()}}
+" Plug 'honza/vim-snippets'
 " " neoplete:
 " if has('nvim')
 "   Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }

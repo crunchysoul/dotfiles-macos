@@ -87,3 +87,6 @@ Temporary Items
 
 # ignore tags files
 tags
+
+#elixir
+.elixir_ls/

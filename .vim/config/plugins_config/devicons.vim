@@ -25,3 +25,7 @@ let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols['latex'] = ''
 let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols['mobi'] = ''
 let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols['epub'] = ''
 let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols['flac'] = ''
+
+let g:WebDevIconsUnicodeDecorateFolderNodes = 1
+let g:DevIconsEnableFoldersOpenClose = 1
+let g:DevIconsEnableFolderExtensionPatternMatching = 1

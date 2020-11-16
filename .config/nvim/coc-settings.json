@@ -16,12 +16,20 @@
     "javascript.jsx": ["javascript"],
     "typescript": ["javascript"]
   },
-  "coc.preferences.formatOnSaveFiletypes": ["css", "Markdown", "javascript", "javascriptreact", "json", "typescript", "typescriptreact" ],
+  "snippets.ultisnips.directories": [
+    "UltiSnips",
+    "~/.vim/plugged/vim-snippets/snippets"
+  ],
+  "coc.preferences.formatOnSaveFiletypes": ["css", "Markdown", "javascript", "javascriptreact", "json", "typescript", "typescript.tsx", "typescriptreact" ],
   "emmet.includeLanguages": {"javascript.jsx": "javascriptreact"},
   "tsserver.implicitProjectConfig.experimentalDecorators": true,
   "tsserver.enableJavascript": true,
+  "typescript.suggest.completeFunctionCalls": false,
+  "javascript.suggest.completeFunctionCalls": false,
   "prettier.singleQuote": true,
   "prettier.trailingComma": "all",
   "prettier.arrowParens": "always",
-  "prettier.eslintIntegration": true
+  "prettier.eslintIntegration": true,
+  "prettier.disableSuccessMessage": true
 }
+

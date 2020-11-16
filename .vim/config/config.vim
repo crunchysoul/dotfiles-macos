@@ -169,9 +169,17 @@ endif
 " set background=light
 " call togglebg#map("<F5>")
 
+" customization of base16
+"
 colorscheme base16-solarized-dark
+" colorscheme solarized
 " colorscheme base16-solarized-light
 hi Search guibg=Blue guifg=yellow
+
+" augroup on_change_colorschema
+"   autocmd!
+"   autocmd ColorScheme * call s:base16_customize()
+" augroup END
 
 
 " CtrlP Silver Searcher:
