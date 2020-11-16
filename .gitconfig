@@ -5,8 +5,10 @@
 	path = ~/codes/projects-isobar/.gitconfig
 [includeIf "gitdir:~/codes/projects-handdii/"]
 	path = ~/codes/projects-handdii/.gitconfig
-[includeIf "gitdir:~/codes/projects-alt-github/"]
-	path = ~/codes/projects-alt-github/.gitconfig
+[includeIf "gitdir:~/codes/projects-crypto-com/"]
+	path = ~/codes/projects-crypto-com/.gitconfig
+[includeIf "gitdir:~/codes/projects-crunchysouldev/"]
+	path = ~/codes/projects-crunchysouldev/.gitconfig
 [color]
 	ui = true
 [core]
